@@ -1,0 +1,259 @@
+{
+  "symbol": "BTCUSDT",
+  "interval": "5m",
+  "candles": 8640,
+  "resolved_candidates": 79,
+  "fixed_horizon": {
+    "trades": 38,
+    "skipped_overlap": 41
+  },
+  "actual_profit_lock_pl050": {
+    "trades": 39,
+    "skipped_overlap": 40
+  },
+  "entry_difference": {
+    "only_fixed_horizon": [],
+    "only_actual_profit_lock": [
+      "2026-09-16T18:10:00+00:00"
+    ]
+  },
+  "stored_research_pl050": {
+    "trades": 39,
+    "rows": [
+      {
+        "entry_time": "2026-09-05T12:40:00+00:00",
+        "actual_exit_time": "2026-09-05T14:20:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-05T14:20:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-05T17:10:00+00:00",
+        "actual_exit_time": "2026-09-05T18:50:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-05T18:50:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-06T20:25:00+00:00",
+        "actual_exit_time": "2026-09-06T22:05:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-06T22:05:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-09T04:05:00+00:00",
+        "actual_exit_time": "2026-09-09T05:30:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-09-09T05:45:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-11T12:30:00+00:00",
+        "actual_exit_time": "2026-09-11T14:10:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-11T14:10:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-12T13:00:00+00:00",
+        "actual_exit_time": "2026-09-12T14:40:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-12T14:40:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-13T00:55:00+00:00",
+        "actual_exit_time": "2026-09-13T02:35:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-13T02:35:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-14T06:45:00+00:00",
+        "actual_exit_time": "2026-09-14T08:25:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-14T08:25:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-14T13:45:00+00:00",
+        "actual_exit_time": "2026-09-14T14:20:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-09-14T15:25:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-15T17:40:00+00:00",
+        "actual_exit_time": "2026-09-15T19:20:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-15T19:20:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-16T11:45:00+00:00",
+        "actual_exit_time": "2026-09-16T13:25:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-16T13:25:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-16T18:00:00+00:00",
+        "actual_exit_time": "2026-09-16T18:10:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-09-16T19:40:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-16T18:10:00+00:00",
+        "actual_exit_time": "2026-09-16T19:50:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-16T19:50:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-17T12:05:00+00:00",
+        "actual_exit_time": "2026-09-17T13:10:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-09-17T13:45:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-18T03:20:00+00:00",
+        "actual_exit_time": "2026-09-18T05:00:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-18T05:00:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-18T13:40:00+00:00",
+        "actual_exit_time": "2026-09-18T15:20:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-18T15:20:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-19T01:00:00+00:00",
+        "actual_exit_time": "2026-09-19T02:40:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-19T02:40:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-19T08:25:00+00:00",
+        "actual_exit_time": "2026-09-19T10:05:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-19T10:05:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-21T00:15:00+00:00",
+        "actual_exit_time": "2026-09-21T01:25:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-09-21T01:55:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-21T08:30:00+00:00",
+        "actual_exit_time": "2026-09-21T10:10:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-21T10:10:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-21T19:35:00+00:00",
+        "actual_exit_time": "2026-09-21T20:30:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-09-21T21:15:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-22T08:40:00+00:00",
+        "actual_exit_time": "2026-09-22T09:00:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-09-22T10:20:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-22T13:35:00+00:00",
+        "actual_exit_time": "2026-09-22T15:15:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-22T15:15:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-23T04:25:00+00:00",
+        "actual_exit_time": "2026-09-23T06:05:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-23T06:05:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-23T22:10:00+00:00",
+        "actual_exit_time": "2026-09-23T23:50:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-23T23:50:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-24T13:35:00+00:00",
+        "actual_exit_time": "2026-09-24T14:45:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-09-24T15:15:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-25T00:10:00+00:00",
+        "actual_exit_time": "2026-09-25T01:50:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-25T01:50:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-25T11:10:00+00:00",
+        "actual_exit_time": "2026-09-25T12:50:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-25T12:50:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-26T08:35:00+00:00",
+        "actual_exit_time": "2026-09-26T10:15:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-26T10:15:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-26T15:40:00+00:00",
+        "actual_exit_time": "2026-09-26T17:20:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-26T17:20:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-27T02:10:00+00:00",
+        "actual_exit_time": "2026-09-27T03:50:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-27T03:50:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-27T05:40:00+00:00",
+        "actual_exit_time": "2026-09-27T07:20:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-27T07:20:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-27T08:05:00+00:00",
+        "actual_exit_time": "2026-09-27T09:45:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-27T09:45:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-27T13:35:00+00:00",
+        "actual_exit_time": "2026-09-27T15:15:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-09-27T15:15:00+00:00"
+      },
+      {
+        "entry_time": "2026-09-30T12:35:00+00:00",
+        "actual_exit_time": "2026-09-30T13:35:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-09-30T14:15:00+00:00"
+      },
+      {
+        "entry_time": "2026-10-01T13:40:00+00:00",
+        "actual_exit_time": "2026-10-01T14:45:00+00:00",
+        "exit_type": "PROFIT_LOCK",
+        "fixed_exit_time": "2026-10-01T15:20:00+00:00"
+      },
+      {
+        "entry_time": "2026-10-02T04:30:00+00:00",
+        "actual_exit_time": "2026-10-02T06:10:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-10-02T06:10:00+00:00"
+      },
+      {
+        "entry_time": "2026-10-02T12:35:00+00:00",
+        "actual_exit_time": "2026-10-02T14:15:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-10-02T14:15:00+00:00"
+      },
+      {
+        "entry_time": "2026-10-03T11:05:00+00:00",
+        "actual_exit_time": "2026-10-03T12:45:00+00:00",
+        "exit_type": "FIXED_FALLBACK",
+        "fixed_exit_time": "2026-10-03T12:45:00+00:00"
+      }
+    ]
+  }
+}
