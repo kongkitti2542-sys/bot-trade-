@@ -1,0 +1,153 @@
+{
+  "version": "EXIT_SIMULATION_V1",
+  "symbol": "BTCUSDT",
+  "interval": "5m",
+  "candles": 100000,
+  "candidates": 867,
+  "starting_pot_thb": 1500.0,
+  "round_trip_cost": 0.0014,
+  "tp_levels": [
+    0.002,
+    0.003,
+    0.005,
+    0.0075,
+    0.01,
+    0.015,
+    0.02
+  ],
+  "results": {
+    "0.002": {
+      "tp": 0.002,
+      "stats": {
+        "trades": 867,
+        "wins": 571,
+        "losses": 296,
+        "win_rate": 0.6585928489042676,
+        "avg_net_return": -0.0014528613742161728,
+        "median_net_return": 0.0006000000000000001,
+        "ending_pot": 422.00976952920377,
+        "net_profit": -1077.9902304707962,
+        "return": -0.7186601536471975,
+        "max_drawdown": -0.7198389501932112,
+        "max_loss_streak": 11
+      },
+      "tp_hits": 563,
+      "fixed_exits": 298,
+      "ambiguous": 6
+    },
+    "0.003": {
+      "tp": 0.003,
+      "stats": {
+        "trades": 867,
+        "wins": 487,
+        "losses": 380,
+        "win_rate": 0.5617070357554786,
+        "avg_net_return": -0.0013692888376972902,
+        "median_net_return": 0.0016,
+        "ending_pot": 452.73036831528094,
+        "net_profit": -1047.2696316847191,
+        "return": -0.6981797544564794,
+        "max_drawdown": -0.7015386101629228,
+        "max_loss_streak": 14
+      },
+      "tp_hits": 467,
+      "fixed_exits": 392,
+      "ambiguous": 8
+    },
+    "0.005": {
+      "tp": 0.005,
+      "stats": {
+        "trades": 867,
+        "wins": 404,
+        "losses": 463,
+        "win_rate": 0.4659746251441753,
+        "avg_net_return": -0.0011834737468716583,
+        "median_net_return": -0.0007895590875017806,
+        "ending_pot": 529.9553391281353,
+        "net_profit": -970.0446608718647,
+        "return": -0.6466964405812432,
+        "max_drawdown": -0.6500432906045173,
+        "max_loss_streak": 14
+      },
+      "tp_hits": 346,
+      "fixed_exits": 515,
+      "ambiguous": 6
+    },
+    "0.0075": {
+      "tp": 0.0075,
+      "stats": {
+        "trades": 867,
+        "wins": 352,
+        "losses": 515,
+        "win_rate": 0.405997693194925,
+        "avg_net_return": -0.0011030913818470389,
+        "median_net_return": -0.0012882155561787095,
+        "ending_pot": 565.7580471967485,
+        "net_profit": -934.2419528032515,
+        "return": -0.6228279685355009,
+        "max_drawdown": -0.6372601534450273,
+        "max_loss_streak": 15
+      },
+      "tp_hits": 241,
+      "fixed_exits": 623,
+      "ambiguous": 3
+    },
+    "0.01": {
+      "tp": 0.01,
+      "stats": {
+        "trades": 867,
+        "wins": 325,
+        "losses": 542,
+        "win_rate": 0.3748558246828143,
+        "avg_net_return": -0.0011796599411468256,
+        "median_net_return": -0.0015610485910646284,
+        "ending_pot": 527.6915908059533,
+        "net_profit": -972.3084091940467,
+        "return": -0.6482056061293644,
+        "max_drawdown": -0.6591153154860455,
+        "max_loss_streak": 17
+      },
+      "tp_hits": 161,
+      "fixed_exits": 703,
+      "ambiguous": 3
+    },
+    "0.015": {
+      "tp": 0.015,
+      "stats": {
+        "trades": 867,
+        "wins": 314,
+        "losses": 553,
+        "win_rate": 0.3621683967704729,
+        "avg_net_return": -0.001145833696536147,
+        "median_net_return": -0.0016205326064224336,
+        "ending_pot": 541.2482842861708,
+        "net_profit": -958.7517157138292,
+        "return": -0.6391678104758861,
+        "max_drawdown": -0.6752268117796789,
+        "max_loss_streak": 20
+      },
+      "tp_hits": 75,
+      "fixed_exits": 789,
+      "ambiguous": 3
+    },
+    "0.02": {
+      "tp": 0.02,
+      "stats": {
+        "trades": 867,
+        "wins": 309,
+        "losses": 558,
+        "win_rate": 0.356401384083045,
+        "avg_net_return": -0.0011774243330186457,
+        "median_net_return": -0.0016293913876136198,
+        "ending_pot": 525.8493969988458,
+        "net_profit": -974.1506030011542,
+        "return": -0.6494337353341029,
+        "max_drawdown": -0.7070454210927569,
+        "max_loss_streak": 20
+      },
+      "tp_hits": 35,
+      "fixed_exits": 832,
+      "ambiguous": 0
+    }
+  }
+}

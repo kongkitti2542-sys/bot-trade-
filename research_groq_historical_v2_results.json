@@ -1,0 +1,214 @@
+{
+  "research_version": "GROQ_HISTORICAL_V2",
+  "generated_at": "2026-10-03T09:29:21.213345+00:00",
+  "symbol": "BTCUSDT",
+  "interval": "5m",
+  "requested_candle_limit": 100000,
+  "actual_candles": 100000,
+  "first_candle": "2025-10-21T04:05:00+00:00",
+  "last_candle": "2026-10-03T09:20:00+00:00",
+  "candidates_found": 864,
+  "evaluated": 7,
+  "summary": {
+    "all_resolved": {
+      "n": 7,
+      "win_rate": 57.14285714285714,
+      "sum_return": -0.16755779012233038,
+      "avg_return": -0.02393682716033291
+    },
+    "groq_pass": {
+      "n": 4,
+      "win_rate": 100.0,
+      "sum_return": 0.8476289680188048,
+      "avg_return": 0.2119072420047012
+    },
+    "groq_wait": {
+      "n": 2,
+      "win_rate": 0.0,
+      "sum_return": -0.7002633712018336,
+      "avg_return": -0.3501316856009168
+    },
+    "safe_fallback": {
+      "n": 1,
+      "win_rate": 0.0,
+      "sum_return": -0.3149233869393016,
+      "avg_return": -0.3149233869393016
+    },
+    "budget_guard": {
+      "n": 0,
+      "win_rate": 0.0,
+      "sum_return": 0.0,
+      "avg_return": 0.0
+    },
+    "unresolved": 0
+  },
+  "results": [
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-10-21T10:45:00+00:00",
+      "entry_time": "2025-10-21T10:50:00+00:00",
+      "entry": 108588.56,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-10-21T12:30:00+00:00",
+      "reference_exit": 108910.03,
+      "actual_exit_close": 108910.03,
+      "outcome_return": 0.0029604407683461423,
+      "ai": {
+        "decision": "PASS",
+        "quality": "MEDIUM",
+        "reasons": [
+          "Signal and entry/exit times provided",
+          "Features indicate bullish breakout and high volume"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 39
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-10-21T10:50:00+00:00",
+      "entry_time": "2025-10-21T10:55:00+00:00",
+      "entry": 108707.64,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-10-21T12:35:00+00:00",
+      "reference_exit": 109013.61,
+      "actual_exit_close": 109013.61,
+      "outcome_return": 0.0028146135818972904,
+      "ai": {
+        "decision": "PASS",
+        "quality": "HIGH",
+        "reasons": [
+          "Consistent timeframe and horizon alignment",
+          "Sufficient technical features provided"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 40
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-10-22T13:35:00+00:00",
+      "entry_time": "2025-10-22T13:40:00+00:00",
+      "entry": 108457.98,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-10-22T15:20:00+00:00",
+      "reference_exit": 108017.99,
+      "actual_exit_close": 108017.99,
+      "outcome_return": -0.004056778486930982,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Missing explicit stop‑loss and target details",
+          "Incomplete exit strategy and risk metrics"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 41
+      },
+      "ai_bucket": "GROQ_WAIT"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-10-22T13:50:00+00:00",
+      "entry_time": "2025-10-22T13:55:00+00:00",
+      "entry": 108301.77,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-10-22T15:35:00+00:00",
+      "reference_exit": 108488.07,
+      "actual_exit_close": 108488.07,
+      "outcome_return": 0.0017201934926825563,
+      "ai": {
+        "decision": "PASS",
+        "quality": "HIGH",
+        "reasons": [
+          "Complete signal and entry/exit data provided",
+          "All required features present and consistent"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 42
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-10-22T13:55:00+00:00",
+      "entry_time": "2025-10-22T14:00:00+00:00",
+      "entry": 108783.35,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-10-22T15:40:00+00:00",
+      "reference_exit": 108462.89,
+      "actual_exit_close": 108462.89,
+      "outcome_return": -0.002945855225087354,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Exit price lower than entry for BUY signal",
+          "Missing explicit stop loss / take profit definitions"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 43
+      },
+      "ai_bucket": "GROQ_WAIT"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-10-22T14:05:00+00:00",
+      "entry_time": "2025-10-22T14:10:00+00:00",
+      "entry": 108333.81,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-10-22T15:50:00+00:00",
+      "reference_exit": 108440.09,
+      "actual_exit_close": 108440.09,
+      "outcome_return": 0.0009810418372620592,
+      "ai": {
+        "decision": "PASS",
+        "quality": "MEDIUM",
+        "reasons": [
+          "Signal includes entry/exit times, price, and key features",
+          "Stop loss not specified but risk context provided"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 44
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-10-23T06:15:00+00:00",
+      "entry_time": "2025-10-23T06:20:00+00:00",
+      "entry": 109855.29,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-10-23T08:00:00+00:00",
+      "reference_exit": 109509.33,
+      "actual_exit_close": 109509.33,
+      "outcome_return": -0.003149233869393016,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Groq HTTP error: 429"
+        ],
+        "source": "SAFE_FALLBACK",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 45
+      },
+      "ai_bucket": "SAFE_FALLBACK"
+    }
+  ]
+}

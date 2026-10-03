@@ -1,0 +1,210 @@
+from datetime import datetime, timezone
+
+from capital_config import STARTING_CAPITAL_USDT
+
+from database import (
+    initialize_database,
+    get_account_state,
+    save_account_state,
+    get_open_position,
+    save_open_position,
+    delete_open_position,
+    save_trade,
+)
+
+
+class PaperTrader:
+
+    def __init__(self, starting_capital=STARTING_CAPITAL_USDT):
+        initialize_database()
+
+        account_state = get_account_state()
+
+        if account_state is None:
+            now = datetime.now(timezone.utc).isoformat()
+
+            self.starting_capital = starting_capital
+            self.capital = starting_capital
+            self.daily_pnl = 0.0
+
+            save_account_state(
+                starting_capital=self.starting_capital,
+                capital=self.capital,
+                daily_pnl=self.daily_pnl,
+                updated_at=now,
+            )
+        else:
+            self.starting_capital = account_state["starting_capital"]
+            self.capital = account_state["capital"]
+            self.daily_pnl = account_state["daily_pnl"]
+
+        self.position = get_open_position()
+
+    def open_position(
+        self,
+        symbol,
+        side,
+        price,
+        position_size,
+        position_value,
+        stop_loss,
+        decision
+    ):
+
+        if self.position is not None:
+            return False, "POSITION_ALREADY_OPEN"
+
+        position = {
+            "symbol": symbol,
+            "side": side,
+            "entry_price": price,
+            "position_size": position_size,
+            "position_value": position_value,
+            "stop_loss": stop_loss,
+            "strategy_score": decision["score"],
+            "confidence": decision["confidence"],
+            "regime": decision["regime"],
+            "reason": ", ".join(decision["reasons"]),
+            "opened_at": datetime.now(timezone.utc).isoformat(),
+        }
+
+        save_open_position(position)
+
+        self.position = get_open_position()
+
+        if self.position is None:
+            return False, "POSITION_SAVE_FAILED"
+
+        return True, "POSITION_OPENED"
+
+    def close_position(
+        self,
+        price,
+        exit_reason
+    ):
+
+        if self.position is None:
+            return False, "NO_POSITION"
+
+        position = self.position
+
+        entry = position["entry_price"]
+        size = position["position_size"]
+        side = position["side"]
+
+        if side == "BUY":
+            pnl = (price - entry) * size
+
+        elif side == "SELL":
+            pnl = (entry - price) * size
+
+        else:
+            return False, "INVALID_SIDE"
+
+        new_capital = self.capital + pnl
+        new_daily_pnl = self.daily_pnl + pnl
+
+        trade = {
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+
+            "symbol": position["symbol"],
+            "side": side,
+            "status": "CLOSED",
+
+            "entry_price": entry,
+            "exit_price": price,
+
+            "position_size": size,
+            "position_value": position["position_value"],
+
+            "stop_loss": position["stop_loss"],
+
+            "pnl": pnl,
+
+            "strategy_score": position["strategy_score"],
+            "confidence": position["confidence"],
+            "regime": position["regime"],
+
+            "reason": position["reason"],
+            "exit_reason": exit_reason,
+        }
+
+        save_trade(trade)
+
+        delete_open_position(position["id"])
+
+        save_account_state(
+            starting_capital=self.starting_capital,
+            capital=new_capital,
+            daily_pnl=new_daily_pnl,
+            updated_at=datetime.now(timezone.utc).isoformat(),
+        )
+
+        self.capital = new_capital
+        self.daily_pnl = new_daily_pnl
+        self.position = None
+
+        return True, trade
+
+
+if __name__ == "__main__":
+    initialize_database()
+
+    trader = PaperTrader()
+
+    print("ACCOUNT:")
+    print(f"Starting Capital: ${trader.starting_capital:.4f}")
+    print(f"Current Capital:  ${trader.capital:.4f}")
+    print(f"Daily P/L:        ${trader.daily_pnl:.4f}")
+
+    print()
+    print("OPEN POSITION:")
+    print(trader.position)
+
+    if trader.position is None:
+
+        decision = {
+            "score": 78,
+            "confidence": 78,
+            "regime": "TREND_UP",
+            "reasons": [
+                "Trend confirmation",
+                "Momentum confirmation",
+            ],
+        }
+
+        opened, message = trader.open_position(
+            symbol="BTCUSDT",
+            side="BUY",
+            price=83000.0,
+            position_size=0.001,
+            position_value=83.0,
+            stop_loss=82600.0,
+            decision=decision,
+        )
+
+        print()
+        print("OPEN:")
+        print(opened, message)
+
+        closed, result = trader.close_position(
+            price=83500.0,
+            exit_reason="TAKE_PROFIT"
+        )
+
+        print()
+        print("CLOSE:")
+        print(closed)
+
+        if closed:
+            print(
+                f"P/L: ${result['pnl']:.4f}"
+            )
+            print(
+                f"Capital: ${trader.capital:.4f}"
+            )
+
+    else:
+        print()
+        print("Existing position detected.")
+        print("Test trade was NOT opened.")

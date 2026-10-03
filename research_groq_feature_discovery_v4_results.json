@@ -1,0 +1,745 @@
+{
+  "research_version": "GROQ_FEATURE_DISCOVERY_V4",
+  "generated_at": "2026-10-03T09:45:55.136890+00:00",
+  "symbol": "BTCUSDT",
+  "interval": "5m",
+  "requested_candle_limit": 100000,
+  "actual_candles": 100000,
+  "first_candle": "2025-10-21T04:20:00+00:00",
+  "last_candle": "2026-10-03T09:35:00+00:00",
+  "candidates_found": 864,
+  "feature_strata": [
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "n": 1,
+      "win_rate": 100.0,
+      "sum_return": 0.436097964615958,
+      "avg_return": 0.436097964615958
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "n": 1,
+      "win_rate": 100.0,
+      "sum_return": 0.33459657008935706,
+      "avg_return": 0.33459657008935706
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '<0.0025'}",
+      "n": 8,
+      "win_rate": 50.0,
+      "sum_return": 0.5597511998167555,
+      "avg_return": 0.06996889997709443
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '>=0.01'}",
+      "n": 3,
+      "win_rate": 66.66666666666666,
+      "sum_return": -1.1634896417759697,
+      "avg_return": -0.3878298805919899
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "n": 8,
+      "win_rate": 37.5,
+      "sum_return": -1.8745625375184138,
+      "avg_return": -0.23432031718980173
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "n": 6,
+      "win_rate": 83.33333333333334,
+      "sum_return": 2.2704880761516435,
+      "avg_return": 0.37841467935860723
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '<0.0025'}",
+      "n": 13,
+      "win_rate": 61.53846153846154,
+      "sum_return": 0.7393122123926389,
+      "avg_return": 0.05687017018404914
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '>=0.01'}",
+      "n": 8,
+      "win_rate": 50.0,
+      "sum_return": -0.6021258321781014,
+      "avg_return": -0.07526572902226268
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "n": 26,
+      "win_rate": 26.923076923076923,
+      "sum_return": -2.120556078641039,
+      "avg_return": -0.0815598491785015
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "n": 38,
+      "win_rate": 44.73684210526316,
+      "sum_return": -2.2810804550982633,
+      "avg_return": -0.06002843302890167
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '<0.0025'}",
+      "n": 11,
+      "win_rate": 36.36363636363637,
+      "sum_return": -0.4149175823508833,
+      "avg_return": -0.037719780213716664
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '>=0.01'}",
+      "n": 39,
+      "win_rate": 41.02564102564102,
+      "sum_return": -5.309369629218599,
+      "avg_return": -0.1361376828004769
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '2.0-2.5', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '<0.0025'}",
+      "n": 1,
+      "win_rate": 0.0,
+      "sum_return": -0.1159543769554605,
+      "avg_return": -0.1159543769554605
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '2.0-2.5', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '>=0.01'}",
+      "n": 1,
+      "win_rate": 100.0,
+      "sum_return": 0.9892563668532367,
+      "avg_return": 0.9892563668532367
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '2.0-2.5', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "n": 4,
+      "win_rate": 75.0,
+      "sum_return": -0.04074580144083205,
+      "avg_return": -0.010186450360208012
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '2.0-2.5', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "n": 5,
+      "win_rate": 60.0,
+      "sum_return": 1.7278753784330019,
+      "avg_return": 0.34557507568660034
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '2.0-2.5', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '<0.0025'}",
+      "n": 4,
+      "win_rate": 25.0,
+      "sum_return": 2.155485413976582,
+      "avg_return": 0.5388713534941455
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '2.0-2.5', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '>=0.01'}",
+      "n": 10,
+      "win_rate": 50.0,
+      "sum_return": 2.6718720591469745,
+      "avg_return": 0.26718720591469747
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "n": 35,
+      "win_rate": 51.42857142857142,
+      "sum_return": -2.8275504006318326,
+      "avg_return": -0.08078715430376664
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "n": 19,
+      "win_rate": 26.31578947368421,
+      "sum_return": -4.129116345114688,
+      "avg_return": -0.21732191290077305
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '<0.0025'}",
+      "n": 55,
+      "win_rate": 40.0,
+      "sum_return": -0.029589587296813415,
+      "avg_return": -0.0005379924963056985
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '>=0.01'}",
+      "n": 17,
+      "win_rate": 76.47058823529412,
+      "sum_return": 14.95520472774105,
+      "avg_return": 0.8797179251612383
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "n": 59,
+      "win_rate": 49.152542372881356,
+      "sum_return": 4.857640003454531,
+      "avg_return": 0.08233288141448358
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "n": 57,
+      "win_rate": 54.385964912280706,
+      "sum_return": 10.112503859888758,
+      "avg_return": 0.177412348419101
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '<0.0025'}",
+      "n": 50,
+      "win_rate": 38.0,
+      "sum_return": -9.102997440019342,
+      "avg_return": -0.18205994880038684
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '>=0.01'}",
+      "n": 27,
+      "win_rate": 48.148148148148145,
+      "sum_return": 0.9247165552599291,
+      "avg_return": 0.034248761305923296
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "n": 73,
+      "win_rate": 46.57534246575342,
+      "sum_return": 2.6336631414795297,
+      "avg_return": 0.036077577280541506
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "n": 150,
+      "win_rate": 49.333333333333336,
+      "sum_return": 15.739040675476554,
+      "avg_return": 0.10492693783651036
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '<0.0025'}",
+      "n": 72,
+      "win_rate": 54.166666666666664,
+      "sum_return": 4.243366793430068,
+      "avg_return": 0.058935649908750956
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '<1.5', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '>=0.01'}",
+      "n": 62,
+      "win_rate": 40.32258064516129,
+      "sum_return": -6.6738143745955245,
+      "avg_return": -0.10764216733218587
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '>=2.5', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "n": 1,
+      "win_rate": 0.0,
+      "sum_return": -0.191570104265333,
+      "avg_return": -0.191570104265333
+    }
+  ],
+  "ai_sample_requested": 24,
+  "ai_sample_selected": 24,
+  "ai_evaluated": 9,
+  "local_full_summary": {
+    "n": 864,
+    "win_rate": 47.10648148148148,
+    "sum_return": 28.473430811105477,
+    "avg_return": 0.03295535973507578
+  },
+  "ai_summary": {
+    "GROQ_PASS": {
+      "n": 5,
+      "win_rate": 80.0,
+      "sum_return": 1.4786828227996442,
+      "avg_return": 0.29573656455992886
+    },
+    "GROQ_WAIT": {
+      "n": 3,
+      "win_rate": 33.33333333333333,
+      "sum_return": -1.9352677353907783,
+      "avg_return": -0.6450892451302594
+    },
+    "SAFE_FALLBACK": {
+      "n": 1,
+      "win_rate": 0.0,
+      "sum_return": -0.9181337836862079,
+      "avg_return": -0.9181337836862079
+    },
+    "OTHER": {
+      "n": 0,
+      "win_rate": 0.0,
+      "sum_return": 0.0,
+      "avg_return": 0.0
+    }
+  },
+  "ai_stratum_summary": [
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "sample_n": 1,
+      "pass_n": 1,
+      "wait_n": 0,
+      "sample_win_rate": 100.0,
+      "sample_sum_return": 0.436097964615958
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "sample_n": 1,
+      "pass_n": 1,
+      "wait_n": 0,
+      "sample_win_rate": 100.0,
+      "sample_sum_return": 0.33459657008935706
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '<0.0025'}",
+      "sample_n": 1,
+      "pass_n": 1,
+      "wait_n": 0,
+      "sample_win_rate": 0.0,
+      "sample_sum_return": -0.019514682607300503
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '1.5-2.0', 'ema50_distance_bucket': '>=0.01'}",
+      "sample_n": 1,
+      "pass_n": 0,
+      "wait_n": 1,
+      "sample_win_rate": 0.0,
+      "sample_sum_return": -1.7998579575656088
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "sample_n": 1,
+      "pass_n": 1,
+      "wait_n": 0,
+      "sample_win_rate": 100.0,
+      "sample_sum_return": 0.0925108006591738
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '0.005-0.01'}",
+      "sample_n": 1,
+      "pass_n": 0,
+      "wait_n": 1,
+      "sample_win_rate": 100.0,
+      "sample_sum_return": 0.003072801764886684
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '<0.0025'}",
+      "sample_n": 1,
+      "pass_n": 0,
+      "wait_n": 1,
+      "sample_win_rate": 0.0,
+      "sample_sum_return": -0.13848257959005614
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '2.0-3.0', 'ema50_distance_bucket': '>=0.01'}",
+      "sample_n": 1,
+      "pass_n": 1,
+      "wait_n": 0,
+      "sample_win_rate": 100.0,
+      "sample_sum_return": 0.634992170042456
+    },
+    {
+      "stratum": "{'atr_expansion_bucket': '1.5-2.0', 'relative_volume_bucket': '>=3.0', 'ema50_distance_bucket': '0.0025-0.005'}",
+      "sample_n": 1,
+      "pass_n": 0,
+      "wait_n": 0,
+      "sample_win_rate": 0.0,
+      "sample_sum_return": -0.9181337836862079
+    }
+  ],
+  "ai_results": [
+    {
+      "signal_time": "2025-12-21T08:35:00+00:00",
+      "candidate": {
+        "money_maker": "MONEY_MAKER_01",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "signal": "BUY",
+        "setup": "ATR_EXPANSION_EMA50",
+        "signal_time": "2025-12-21 08:35:00+00:00",
+        "entry_time": "2025-12-21 08:40:00+00:00",
+        "entry": 88390.69,
+        "planned_horizon_bars": 20,
+        "planned_exit_time": "2025-12-21 10:20:00+00:00",
+        "reference_exit": 88776.16,
+        "features": {
+          "atr": 50.82928571428575,
+          "atr_expansion_ratio": 1.5112877763540389,
+          "candle_range": 84.19000000000233,
+          "relative_volume": 1.8554264020150046,
+          "ema50": 88151.6810085571,
+          "ema50_distance": 0.0027113378747671835,
+          "bullish": true,
+          "higher_close": true
+        },
+        "research_cost_round_trip": 0.0014
+      },
+      "stratum": {
+        "atr_expansion_bucket": "1.5-2.0",
+        "relative_volume_bucket": "1.5-2.0",
+        "ema50_distance_bucket": "0.0025-0.005"
+      },
+      "outcome_return": 0.00436097964615958,
+      "ai": {
+        "decision": "PASS",
+        "quality": "MEDIUM",
+        "reasons": [
+          "Signal and entry data provided",
+          "Features indicate bullish setup"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 54
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "signal_time": "2025-10-26T09:45:00+00:00",
+      "candidate": {
+        "money_maker": "MONEY_MAKER_01",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "signal": "BUY",
+        "setup": "ATR_EXPANSION_EMA50",
+        "signal_time": "2025-10-26 09:45:00+00:00",
+        "entry_time": "2025-10-26 09:50:00+00:00",
+        "entry": 112407.01,
+        "planned_horizon_bars": 20,
+        "planned_exit_time": "2025-10-26 11:30:00+00:00",
+        "reference_exit": 112783.12,
+        "features": {
+          "atr": 187.5449999999993,
+          "atr_expansion_ratio": 1.604816758620115,
+          "candle_range": 363.36999999999534,
+          "relative_volume": 1.6994588131443937,
+          "ema50": 111843.04178128358,
+          "ema50_distance": 0.005042407732608778,
+          "bullish": true,
+          "higher_close": true
+        },
+        "research_cost_round_trip": 0.0014
+      },
+      "stratum": {
+        "atr_expansion_bucket": "1.5-2.0",
+        "relative_volume_bucket": "1.5-2.0",
+        "ema50_distance_bucket": "0.005-0.01"
+      },
+      "outcome_return": 0.0033459657008935704,
+      "ai": {
+        "decision": "PASS",
+        "quality": "HIGH",
+        "reasons": [
+          "All required fields present and internally consistent",
+          "Signal and exit times align with planned horizon and ATR-based features support the trade"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 55
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "signal_time": "2026-08-08T12:15:00+00:00",
+      "candidate": {
+        "money_maker": "MONEY_MAKER_01",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "signal": "BUY",
+        "setup": "ATR_EXPANSION_EMA50",
+        "signal_time": "2026-08-08 12:15:00+00:00",
+        "entry_time": "2026-08-08 12:20:00+00:00",
+        "entry": 65027.96,
+        "planned_horizon_bars": 20,
+        "planned_exit_time": "2026-08-08 14:00:00+00:00",
+        "reference_exit": 65015.27,
+        "features": {
+          "atr": 18.601428571428965,
+          "atr_expansion_ratio": 1.9608955373725645,
+          "candle_range": 42.84000000000378,
+          "relative_volume": 1.9475551350301952,
+          "ema50": 64989.81387051386,
+          "ema50_distance": 0.0005869555121689185,
+          "bullish": true,
+          "higher_close": true
+        },
+        "research_cost_round_trip": 0.0014
+      },
+      "stratum": {
+        "atr_expansion_bucket": "1.5-2.0",
+        "relative_volume_bucket": "1.5-2.0",
+        "ema50_distance_bucket": "<0.0025"
+      },
+      "outcome_return": -0.00019514682607300502,
+      "ai": {
+        "decision": "PASS",
+        "quality": "MEDIUM",
+        "reasons": [
+          "Signal includes entry/exit times, price, and breakout features",
+          "Missing explicit stop‑loss and risk/reward details"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 56
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "signal_time": "2026-06-29T12:10:00+00:00",
+      "candidate": {
+        "money_maker": "MONEY_MAKER_01",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "signal": "BUY",
+        "setup": "ATR_EXPANSION_EMA50",
+        "signal_time": "2026-06-29 12:10:00+00:00",
+        "entry_time": "2026-06-29 12:15:00+00:00",
+        "entry": 60672.01,
+        "planned_horizon_bars": 20,
+        "planned_exit_time": "2026-06-29 13:55:00+00:00",
+        "reference_exit": 59580.0,
+        "features": {
+          "atr": 195.9114285714282,
+          "atr_expansion_ratio": 1.7011087427977236,
+          "candle_range": 376.9400000000023,
+          "relative_volume": 1.830840512922172,
+          "ema50": 60047.25746663745,
+          "ema50_distance": 0.010404180968792032,
+          "bullish": true,
+          "higher_close": true
+        },
+        "research_cost_round_trip": 0.0014
+      },
+      "stratum": {
+        "atr_expansion_bucket": "1.5-2.0",
+        "relative_volume_bucket": "1.5-2.0",
+        "ema50_distance_bucket": ">=0.01"
+      },
+      "outcome_return": -0.01799857957565609,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Missing current price and trend confirmation",
+          "Unclear risk/reward metrics and stop‑loss placement"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 57
+      },
+      "ai_bucket": "GROQ_WAIT"
+    },
+    {
+      "signal_time": "2026-07-19T22:10:00+00:00",
+      "candidate": {
+        "money_maker": "MONEY_MAKER_01",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "signal": "BUY",
+        "setup": "ATR_EXPANSION_EMA50",
+        "signal_time": "2026-07-19 22:10:00+00:00",
+        "entry_time": "2026-07-19 22:15:00+00:00",
+        "entry": 64662.72,
+        "planned_horizon_bars": 20,
+        "planned_exit_time": "2026-07-19 23:55:00+00:00",
+        "reference_exit": 64722.54,
+        "features": {
+          "atr": 82.68285714285854,
+          "atr_expansion_ratio": 1.705131824777005,
+          "candle_range": 165.5,
+          "relative_volume": 2.492343186177793,
+          "ema50": 64485.50600433308,
+          "ema50_distance": 0.002748276421294049,
+          "bullish": true,
+          "higher_close": true
+        },
+        "research_cost_round_trip": 0.0014
+      },
+      "stratum": {
+        "atr_expansion_bucket": "1.5-2.0",
+        "relative_volume_bucket": "2.0-3.0",
+        "ema50_distance_bucket": "0.0025-0.005"
+      },
+      "outcome_return": 0.000925108006591738,
+      "ai": {
+        "decision": "PASS",
+        "quality": "MEDIUM",
+        "reasons": [
+          "Consistent bullish setup with high volume and ATR expansion",
+          "Target within one ATR, but still reasonable given the setup"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 58
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "signal_time": "2026-08-02T02:10:00+00:00",
+      "candidate": {
+        "money_maker": "MONEY_MAKER_01",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "signal": "BUY",
+        "setup": "ATR_EXPANSION_EMA50",
+        "signal_time": "2026-08-02 02:10:00+00:00",
+        "entry_time": "2026-08-02 02:15:00+00:00",
+        "entry": 63460.0,
+        "planned_horizon_bars": 20,
+        "planned_exit_time": "2026-08-02 03:55:00+00:00",
+        "reference_exit": 63461.95,
+        "features": {
+          "atr": 79.72642857142844,
+          "atr_expansion_ratio": 1.943046311501581,
+          "candle_range": 110.37000000000262,
+          "relative_volume": 2.578047883895207,
+          "ema50": 62923.94326066413,
+          "ema50_distance": 0.008518962918698358,
+          "bullish": true,
+          "higher_close": true
+        },
+        "research_cost_round_trip": 0.0014
+      },
+      "stratum": {
+        "atr_expansion_bucket": "1.5-2.0",
+        "relative_volume_bucket": "2.0-3.0",
+        "ema50_distance_bucket": "0.005-0.01"
+      },
+      "outcome_return": 3.072801764886684e-05,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Reference exit price is only ~2 points above entry, far below ATR (≈80), indicating an unrealistic profit target",
+          "No stop‑loss or risk‑reward information provided, limiting assessment of trade viability"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 59
+      },
+      "ai_bucket": "GROQ_WAIT"
+    },
+    {
+      "signal_time": "2026-07-18T12:00:00+00:00",
+      "candidate": {
+        "money_maker": "MONEY_MAKER_01",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "signal": "BUY",
+        "setup": "ATR_EXPANSION_EMA50",
+        "signal_time": "2026-07-18 12:00:00+00:00",
+        "entry_time": "2026-07-18 12:05:00+00:00",
+        "entry": 64130.81,
+        "planned_horizon_bars": 20,
+        "planned_exit_time": "2026-07-18 13:45:00+00:00",
+        "reference_exit": 64042.0,
+        "features": {
+          "atr": 17.355714285715553,
+          "atr_expansion_ratio": 1.9116227840133493,
+          "candle_range": 71.02000000000407,
+          "relative_volume": 2.6182280842904446,
+          "ema50": 64010.00306336742,
+          "ema50_distance": 0.001887313401828461,
+          "bullish": true,
+          "higher_close": true
+        },
+        "research_cost_round_trip": 0.0014
+      },
+      "stratum": {
+        "atr_expansion_bucket": "1.5-2.0",
+        "relative_volume_bucket": "2.0-3.0",
+        "ema50_distance_bucket": "<0.0025"
+      },
+      "outcome_return": -0.0013848257959005613,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Reference exit price lower than entry for a BUY signal is ambiguous",
+          "Missing explicit stop‑loss or risk‑management details"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 60
+      },
+      "ai_bucket": "GROQ_WAIT"
+    },
+    {
+      "signal_time": "2026-08-20T08:15:00+00:00",
+      "candidate": {
+        "money_maker": "MONEY_MAKER_01",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "signal": "BUY",
+        "setup": "ATR_EXPANSION_EMA50",
+        "signal_time": "2026-08-20 08:15:00+00:00",
+        "entry_time": "2026-08-20 08:20:00+00:00",
+        "entry": 71315.84,
+        "planned_horizon_bars": 20,
+        "planned_exit_time": "2026-08-20 10:00:00+00:00",
+        "reference_exit": 71768.69,
+        "features": {
+          "atr": 262.4864285714284,
+          "atr_expansion_ratio": 1.7144330065245106,
+          "candle_range": 550.5,
+          "relative_volume": 2.960490287654851,
+          "ema50": 69763.89576886003,
+          "ema50_distance": 0.022245664667033926,
+          "bullish": true,
+          "higher_close": true
+        },
+        "research_cost_round_trip": 0.0014
+      },
+      "stratum": {
+        "atr_expansion_bucket": "1.5-2.0",
+        "relative_volume_bucket": "2.0-3.0",
+        "ema50_distance_bucket": ">=0.01"
+      },
+      "outcome_return": 0.00634992170042456,
+      "ai": {
+        "decision": "PASS",
+        "quality": "MEDIUM",
+        "reasons": [
+          "Consistent timing and price data",
+          "Sufficient technical features provided"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 61
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "signal_time": "2026-04-12T20:40:00+00:00",
+      "candidate": {
+        "money_maker": "MONEY_MAKER_01",
+        "symbol": "BTCUSDT",
+        "timeframe": "5m",
+        "signal": "BUY",
+        "setup": "ATR_EXPANSION_EMA50",
+        "signal_time": "2026-04-12 20:40:00+00:00",
+        "entry_time": "2026-04-12 20:45:00+00:00",
+        "entry": 71321.85,
+        "planned_horizon_bars": 20,
+        "planned_exit_time": "2026-04-12 22:25:00+00:00",
+        "reference_exit": 70667.02,
+        "features": {
+          "atr": 63.720714285711956,
+          "atr_expansion_ratio": 1.5828518030033256,
+          "candle_range": 289.11999999999534,
+          "relative_volume": 3.2399945324915502,
+          "ema50": 71085.11476737681,
+          "ema50_distance": 0.003330306680912054,
+          "bullish": true,
+          "higher_close": true
+        },
+        "research_cost_round_trip": 0.0014
+      },
+      "stratum": {
+        "atr_expansion_bucket": "1.5-2.0",
+        "relative_volume_bucket": ">=3.0",
+        "ema50_distance_bucket": "0.0025-0.005"
+      },
+      "outcome_return": -0.009181337836862079,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Groq HTTP error: 429"
+        ],
+        "source": "SAFE_FALLBACK",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 62
+      },
+      "ai_bucket": "SAFE_FALLBACK"
+    }
+  ]
+}

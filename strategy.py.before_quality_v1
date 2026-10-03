@@ -1,0 +1,258 @@
+from data import get_closed_candles
+from features import calculate_features
+from regime import detect_regime
+
+
+def analyze_market(features, regime):
+    """
+    Strategy V2 — Session Profit Mode
+
+    Goal:
+    - Increase valid trading opportunities within a 24H session.
+    - Allow smaller positive edges to participate.
+    - Keep market-regime and weak-volume safety filters.
+    - Risk sizing / capital protection remains outside this module.
+
+    IMPORTANT:
+    This file changes signal generation only.
+    Risk management remains the final gate.
+    """
+
+    raw_score = 0
+    reasons = []
+    warnings = []
+
+    rsi = features["rsi14"]
+    relative_volume = features["relative_volume"]
+    structure = features["structure"]
+
+    price = features["close"]
+    ema20 = features["ema20"]
+    ema50 = features["ema50"]
+    ema200 = features["ema200"]
+
+    # --------------------------------------------------
+    # 1. SHORT-TERM TREND
+    # --------------------------------------------------
+
+    if price > ema20 and ema20 > ema50:
+        raw_score += 20
+        reasons.append("Short-term trend bullish")
+
+    elif price < ema20 and ema20 < ema50:
+        raw_score -= 20
+        reasons.append("Short-term trend bearish")
+
+    else:
+        warnings.append("Trend alignment is mixed")
+
+    # --------------------------------------------------
+    # 2. LONG-TERM TREND
+    # --------------------------------------------------
+
+    if price > ema200:
+        raw_score += 15
+        reasons.append("Price above EMA200")
+
+    elif price < ema200:
+        raw_score -= 15
+        reasons.append("Price below EMA200")
+
+    # --------------------------------------------------
+    # 3. MOMENTUM
+    # --------------------------------------------------
+
+    if 50 < rsi < 70:
+        raw_score += 15
+        reasons.append("Bullish momentum")
+
+    elif 30 < rsi < 50:
+        raw_score -= 15
+        reasons.append("Bearish momentum")
+
+    elif rsi >= 70:
+        warnings.append("Momentum potentially overextended")
+
+    elif rsi <= 30:
+        warnings.append("Market potentially oversold")
+
+    # --------------------------------------------------
+    # 4. PRICE STRUCTURE
+    # --------------------------------------------------
+
+    if structure["structure"] == "BULLISH":
+        raw_score += 20
+        reasons.append("Bullish price structure")
+
+    elif structure["structure"] == "BEARISH":
+        raw_score -= 20
+        reasons.append("Bearish price structure")
+
+    else:
+        warnings.append("Price structure is mixed")
+
+    # --------------------------------------------------
+    # 5. VOLUME
+    # --------------------------------------------------
+
+    if relative_volume >= 1.2:
+
+        if raw_score > 0:
+            raw_score += 15
+            reasons.append("Volume confirms bullish pressure")
+
+        elif raw_score < 0:
+            raw_score -= 15
+            reasons.append("Volume confirms bearish pressure")
+
+    elif relative_volume < 0.7:
+        warnings.append("Low volume")
+
+    # --------------------------------------------------
+    # 6. REGIME
+    # --------------------------------------------------
+
+    regime_multiplier = 1.0
+
+    if regime == "HIGH_VOLATILITY":
+        regime_multiplier = 0.5
+        warnings.append("Extreme volatility")
+
+    elif regime == "UNCERTAIN":
+        regime_multiplier = 0.7
+        warnings.append("Market regime uncertain")
+
+    elif regime == "RANGE":
+        warnings.append("Market is ranging")
+
+    final_score = int(raw_score * regime_multiplier)
+
+    # --------------------------------------------------
+    # 7. SESSION-PROFIT SIGNAL THRESHOLD
+    #
+    # V1 used +/-60.
+    # V2 allows smaller qualified edges to participate.
+    #
+    # +/-40 requires directional evidence but increases
+    # opportunity frequency.
+    # --------------------------------------------------
+
+    if final_score >= 40:
+        signal = "BUY"
+
+    elif final_score <= -40:
+        signal = "SELL"
+
+    else:
+        signal = "WAIT"
+
+    # --------------------------------------------------
+    # 8. SAFETY OVERRIDES
+    # --------------------------------------------------
+
+    safety_override = None
+
+    if regime == "HIGH_VOLATILITY":
+        signal = "WAIT"
+        safety_override = "HIGH_VOLATILITY"
+
+    elif regime == "UNCERTAIN" and abs(final_score) < 50:
+        signal = "WAIT"
+        safety_override = "UNCERTAIN_SCORE_TOO_LOW"
+
+    elif relative_volume < 0.5:
+        signal = "WAIT"
+        safety_override = "VOLUME_TOO_WEAK"
+        warnings.append("Volume too weak for entry")
+
+    # --------------------------------------------------
+    # 9. CONFIDENCE
+    # --------------------------------------------------
+
+    confidence = min(abs(final_score), 100)
+
+    # --------------------------------------------------
+    # 10. DECISION AUDIT
+    # --------------------------------------------------
+
+    audit = {
+        "raw_score": raw_score,
+        "regime": regime,
+        "regime_multiplier": regime_multiplier,
+        "final_score": final_score,
+        "base_signal": (
+            "BUY"
+            if final_score >= 40
+            else "SELL"
+            if final_score <= -40
+            else "WAIT"
+        ),
+        "safety_override": safety_override,
+        "final_signal": signal,
+    }
+
+    return {
+        "signal": signal,
+        "score": final_score,
+        "confidence": confidence,
+        "regime": regime,
+        "reasons": reasons,
+        "warnings": warnings,
+        "audit": audit,
+    }
+
+
+if __name__ == "__main__":
+    candles = get_closed_candles(
+        symbol="BTCUSDT",
+        interval="5m",
+        limit=250,
+    )
+
+    features = calculate_features(candles)
+    regime = detect_regime(features)
+
+    decision = analyze_market(
+        features,
+        regime,
+    )
+
+    print()
+    print("BTC/USDT - STRATEGY ENGINE V2")
+    print("=" * 60)
+
+    print(f"Price:      {features['close']:.2f}")
+    print(f"Regime:     {decision['regime']}")
+
+    print()
+    print("DECISION AUDIT")
+    print("-" * 60)
+
+    audit = decision["audit"]
+
+    print(f"Raw Score:          {audit['raw_score']}")
+    print(f"Regime Multiplier:  {audit['regime_multiplier']:.2f}")
+    print(f"Final Score:        {audit['final_score']}")
+    print(f"Base Signal:        {audit['base_signal']}")
+    print(f"Safety Override:    {audit['safety_override']}")
+    print(f"Final Signal:       {audit['final_signal']}")
+
+    print()
+    print(f"Confidence: {decision['confidence']}/100")
+
+    print()
+    print("REASONS")
+    print("-" * 60)
+
+    for reason in decision["reasons"]:
+        print(f"+ {reason}")
+
+    print()
+    print("WARNINGS")
+    print("-" * 60)
+
+    if decision["warnings"]:
+        for warning in decision["warnings"]:
+            print(f"! {warning}")
+    else:
+        print("None")

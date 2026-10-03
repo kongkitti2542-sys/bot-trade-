@@ -1,0 +1,240 @@
+{
+  "research_version": "GROQ_HISTORICAL_V3",
+  "generated_at": "2026-10-03T09:36:47.561314+00:00",
+  "symbol": "BTCUSDT",
+  "interval": "5m",
+  "requested_candle_limit": 100000,
+  "actual_candles": 100000,
+  "first_candle": "2025-10-21T04:15:00+00:00",
+  "last_candle": "2026-10-03T09:30:00+00:00",
+  "candidates_found": 864,
+  "ai_sample_requested": 50,
+  "ai_sample_selected": 50,
+  "ai_evaluated": 8,
+  "local_full_summary": {
+    "n": 864,
+    "win_rate": 47.10648148148148,
+    "sum_return": 28.473430811105477,
+    "avg_return": 0.03295535973507578
+  },
+  "ai_sample_summary": {
+    "ai_sample_resolved": {
+      "n": 8,
+      "win_rate": 75.0,
+      "sum_return": -3.5800990706496005,
+      "avg_return": -0.44751238383120007
+    },
+    "groq_pass": {
+      "n": 4,
+      "win_rate": 100.0,
+      "sum_return": 0.8512710830374627,
+      "avg_return": 0.21281777075936567
+    },
+    "groq_wait": {
+      "n": 3,
+      "win_rate": 33.33333333333333,
+      "sum_return": -4.4802022399386265,
+      "avg_return": -1.493400746646209
+    },
+    "safe_fallback": {
+      "n": 1,
+      "win_rate": 100.0,
+      "sum_return": 0.04883208625156353,
+      "avg_return": 0.04883208625156353
+    },
+    "unresolved": 0
+  },
+  "ai_results": [
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-10-21T10:45:00+00:00",
+      "entry_time": "2025-10-21T10:50:00+00:00",
+      "entry": 108588.56,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-10-21T12:30:00+00:00",
+      "reference_exit": 108910.03,
+      "actual_exit_close": 108910.03,
+      "outcome_return": 0.0029604407683461423,
+      "ai": {
+        "decision": "PASS",
+        "quality": "HIGH",
+        "reasons": [
+          "Consistent signal and entry timing",
+          "Clear target and features provided"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 46
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-10-26T11:40:00+00:00",
+      "entry_time": "2025-10-26T11:45:00+00:00",
+      "entry": 113324.2,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-10-26T13:25:00+00:00",
+      "reference_exit": 113632.01,
+      "actual_exit_close": 113632.01,
+      "outcome_return": 0.002716189481152284,
+      "ai": {
+        "decision": "PASS",
+        "quality": "HIGH",
+        "reasons": [
+          "Consistent entry and exit timing with planned horizon",
+          "Positive technical indicators (bullish, higher close, ATR expansion, high relative volume)"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 47
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-11-05T14:40:00+00:00",
+      "entry_time": "2025-11-05T14:45:00+00:00",
+      "entry": 102994.62,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-11-05T16:25:00+00:00",
+      "reference_exit": 103514.6,
+      "actual_exit_close": 103514.6,
+      "outcome_return": 0.005048613218826483,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Missing stop loss information",
+          "Incomplete risk parameters"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 48
+      },
+      "ai_bucket": "GROQ_WAIT"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-11-17T14:35:00+00:00",
+      "entry_time": "2025-11-17T14:40:00+00:00",
+      "entry": 95550.12,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-11-17T16:20:00+00:00",
+      "reference_exit": 93243.92,
+      "actual_exit_close": 93243.92,
+      "outcome_return": -0.024136024109650486,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Missing explicit stop loss / take profit details",
+          "Reference exit price lower than entry for a BUY signal, indicating incomplete risk context"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 49
+      },
+      "ai_bucket": "GROQ_WAIT"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-11-30T08:40:00+00:00",
+      "entry_time": "2025-11-30T08:45:00+00:00",
+      "entry": 91179.78,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-11-30T10:25:00+00:00",
+      "reference_exit": 91396.87,
+      "actual_exit_close": 91396.87,
+      "outcome_return": 0.0023809006777598773,
+      "ai": {
+        "decision": "PASS",
+        "quality": "MEDIUM",
+        "reasons": [
+          "Consistent timeframe and entry/exit alignment",
+          "Sufficient technical features provided"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 50
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-12-12T14:35:00+00:00",
+      "entry_time": "2025-12-12T14:40:00+00:00",
+      "entry": 92433.44,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-12-12T16:20:00+00:00",
+      "reference_exit": 90056.55,
+      "actual_exit_close": 90056.55,
+      "outcome_return": -0.025714611508562264,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Reference exit price lower than entry for a BUY signal",
+          "Contradictory exit target suggests incomplete or suspicious data"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 51
+      },
+      "ai_bucket": "GROQ_WAIT"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-12-18T13:35:00+00:00",
+      "entry_time": "2025-12-18T13:40:00+00:00",
+      "entry": 88272.79,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-12-18T15:20:00+00:00",
+      "reference_exit": 88312.97,
+      "actual_exit_close": 88312.97,
+      "outcome_return": 0.0004551799031163235,
+      "ai": {
+        "decision": "PASS",
+        "quality": "MEDIUM",
+        "reasons": [
+          "Consistent timing and clear entry/exit plan",
+          "ATR expansion and high volume support bullish breakout signal"
+        ],
+        "source": "GROQ",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 52
+      },
+      "ai_bucket": "GROQ_PASS"
+    },
+    {
+      "status": "RESOLVED",
+      "signal_time": "2025-12-22T08:20:00+00:00",
+      "entry_time": "2025-12-22T08:25:00+00:00",
+      "entry": 89613.21,
+      "signal": "BUY",
+      "setup": "ATR_EXPANSION_EMA50",
+      "planned_exit_time": "2025-12-22T10:05:00+00:00",
+      "reference_exit": 89656.97,
+      "actual_exit_close": 89656.97,
+      "outcome_return": 0.0004883208625156353,
+      "ai": {
+        "decision": "WAIT",
+        "quality": "LOW",
+        "reasons": [
+          "Groq HTTP error: 429"
+        ],
+        "source": "SAFE_FALLBACK",
+        "model": "openai/gpt-oss-20b",
+        "calls_today": 53
+      },
+      "ai_bucket": "SAFE_FALLBACK"
+    }
+  ]
+}

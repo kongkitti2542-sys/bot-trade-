@@ -1,0 +1,30 @@
+# Trading capital policy
+# Concept:
+# Pot First -> Quality Trade -> Net Profit -> Compound -> Pot Grows
+#
+# The bot manages the current pot.
+# No forced profit target.
+# No forced number of trades.
+# If there is no quality setup -> WAIT.
+
+BASE_CURRENCY = "THB"
+
+# Current starting pot
+STARTING_CAPITAL_THB = 1500.0
+
+# Risk controls
+RISK_PER_TRADE = 0.005
+MAX_DAILY_LOSS = 0.03
+MAX_POSITION_VALUE = 0.25
+
+# Execution cost assumptions from validated research
+FEE_RATE = 0.0005
+SLIPPAGE_RATE = 0.0002
+
+# Research reference only.
+# Paper/live execution should refresh FX from the FX provider.
+REFERENCE_USDTHB = 33.58
+
+STARTING_CAPITAL_USDT = (
+    STARTING_CAPITAL_THB / REFERENCE_USDTHB
+)

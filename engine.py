@@ -1,0 +1,267 @@
+from data import get_closed_candles
+from features import calculate_features
+from regime import detect_regime
+from strategy import analyze_market
+from risk import evaluate_risk
+from paper_trader import PaperTrader
+from position_manager import monitor_position
+
+
+SYMBOL = "BTCUSDT"
+INTERVAL = "5m"
+
+
+def run_engine():
+
+    print("=" * 60)
+    print("PERSONAL TRADING BOT - ENGINE V2.0")
+    print("=" * 60)
+
+    # --------------------------------------------------
+    # 1. PAPER ACCOUNT STATE
+    # --------------------------------------------------
+
+    trader = PaperTrader()
+
+    capital = trader.capital
+    daily_pnl = trader.daily_pnl
+
+    if trader.position is None:
+        open_positions = 0
+    else:
+        open_positions = 1
+
+    print("\n[PAPER ACCOUNT]")
+    print(f"Starting Capital: ${trader.starting_capital:.2f}")
+    print(f"Current Capital:  ${capital:.2f}")
+    print(f"Daily P/L:        ${daily_pnl:.2f}")
+    print(f"Open Positions:   {open_positions}")
+
+    # --------------------------------------------------
+    # 2. MARKET DATA
+    # --------------------------------------------------
+
+    candles = get_closed_candles(
+        symbol=SYMBOL,
+        interval=INTERVAL,
+        limit=250
+    )
+
+    if not candles:
+        print("ERROR: No market data.")
+        return
+
+    print(f"\nMarket Data: {len(candles)} closed candles")
+
+    # --------------------------------------------------
+    # 3. POSITION MANAGEMENT
+    # --------------------------------------------------
+
+    if trader.position is not None:
+
+        current_price = candles[-1]["close"]
+
+        print("\n[POSITION MANAGER]")
+        print(f"Current Price: {current_price:.2f}")
+        print(
+            f"Stop Loss:    {trader.position['stop_loss']:.2f}"
+        )
+
+        closed, result = monitor_position(
+            trader=trader,
+            current_price=current_price,
+        )
+
+        if closed:
+            print("Action: POSITION CLOSED")
+            print(f"Reason: {result['exit_reason']}")
+            print(f"P/L: ${result['pnl']:.4f}")
+        else:
+            print(f"Action: HOLD")
+            print(f"Reason: {result}")
+
+        print()
+        print("Existing position was managed.")
+        print("No new entry evaluated in this cycle.")
+        return
+
+    # --------------------------------------------------
+    # 4. FEATURES
+    # --------------------------------------------------
+
+    features = calculate_features(candles)
+
+    print("\n[FEATURES]")
+    print(f"Price: {features['close']:.2f}")
+    print(f"EMA20: {features['ema20']:.2f}")
+    print(f"EMA50: {features['ema50']:.2f}")
+    print(f"EMA200: {features['ema200']:.2f}")
+    print(f"RSI: {features['rsi14']:.2f}")
+    print(f"ATR: {features['atr14']:.2f}")
+    print(
+        f"Relative Volume: "
+        f"{features['relative_volume']:.2f}x"
+    )
+    print(
+        f"Structure: "
+        f"{features['structure']['structure']}"
+    )
+
+    # --------------------------------------------------
+    # 5. MARKET REGIME
+    # --------------------------------------------------
+
+    regime = detect_regime(features)
+
+    print("\n[MARKET REGIME]")
+    print(f"Regime: {regime}")
+
+    # --------------------------------------------------
+    # 6. STRATEGY
+    # --------------------------------------------------
+
+    decision = analyze_market(
+        candles,
+        features,
+        regime
+    )
+
+    print("\n[STRATEGY]")
+    print(f"Signal: {decision['signal']}")
+    print(f"Score: {decision['score']}")
+    print(
+        f"Confidence: "
+        f"{decision['confidence']}/100"
+    )
+
+    # --------------------------------------------------
+    # 6.1 DECISION AUDIT
+    # --------------------------------------------------
+
+    audit = decision["audit"]
+
+    print("\n[DECISION AUDIT]")
+    print("-" * 60)
+    print(
+        f"Raw Score:         "
+        f"{audit['raw_score']}"
+    )
+    print(
+        f"Regime:            "
+        f"{audit['regime']}"
+    )
+    print(
+        f"Regime Multiplier: "
+        f"{audit['regime_multiplier']:.2f}"
+    )
+    print(
+        f"Final Score:       "
+        f"{audit['final_score']}"
+    )
+    print(
+        f"Base Signal:       "
+        f"{audit['base_signal']}"
+    )
+    print(
+        f"Safety Override:   "
+        f"{audit['safety_override']}"
+    )
+    print(
+        f"Final Signal:      "
+        f"{audit['final_signal']}"
+    )
+
+    print("\nReasons:")
+
+    for reason in decision["reasons"]:
+        print(f"  + {reason}")
+
+    if decision["warnings"]:
+
+        print("\nWarnings:")
+
+        for warning in decision["warnings"]:
+            print(f"  ! {warning}")
+
+    # --------------------------------------------------
+    # 7. RISK MANAGER
+    # --------------------------------------------------
+
+    risk = evaluate_risk(
+        decision=decision,
+        features=features,
+        capital=capital,
+        daily_pnl=daily_pnl,
+        open_positions=open_positions
+    )
+
+    print("\n[RISK MANAGER]")
+
+    if risk["allowed"]:
+        print("Decision: ALLOW")
+    else:
+        print("Decision: REJECT")
+
+    print(f"Reason: {risk['reason']}")
+
+    if risk["allowed"]:
+
+        print(
+            f"Risk Amount: "
+            f"${risk['risk_amount']:.2f}"
+        )
+
+        print(
+            f"Position Size: "
+            f"{risk['position_size']:.8f}"
+        )
+
+        print(
+            f"Position Value: "
+            f"${risk['position_value']:.2f}"
+        )
+
+        print(
+            f"Stop Loss: "
+            f"{risk['stop_loss']:.2f}"
+        )
+
+    if risk["warnings"]:
+
+        print("\nRisk Warnings:")
+
+        for warning in risk["warnings"]:
+            print(f"  ! {warning}")
+
+    # --------------------------------------------------
+    # 8. PAPER TRADER
+    # --------------------------------------------------
+
+    print("\n[PAPER TRADER]")
+
+    if not risk["allowed"]:
+
+        print("No trade executed.")
+        print(
+            "System remains in "
+            "WAIT / SAFE state."
+        )
+
+        return
+
+    opened, message = trader.open_position(
+        symbol=SYMBOL,
+        side=decision["signal"],
+        price=features["close"],
+        position_size=risk["position_size"],
+        position_value=risk["position_value"],
+        stop_loss=risk["stop_loss"],
+        decision=decision
+    )
+
+    print(f"Open: {opened}")
+    print(f"Message: {message}")
+
+
+if __name__ == "__main__":
+    run_engine()

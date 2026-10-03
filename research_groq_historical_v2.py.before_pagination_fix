@@ -1,0 +1,266 @@
+"""
+Groq Historical Evaluation V2
+
+Research-only expansion:
+Money Maker #1 -> Groq Judge -> historical outcome.
+
+V2 expands the historical candle request to 100,000.
+It does not modify the locked Money Maker, Core, Risk,
+PaperTrader, Position Manager, or Groq Judge behavior.
+"""
+
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+
+from data import get_closed_candles
+from money_maker_01_adapter_v1 import find_candidates
+from groq_judge_v1 import judge, remaining_calls
+
+SYMBOL = "BTCUSDT"
+INTERVAL = "5m"
+CANDLE_LIMIT = 100_000
+
+OUTPUT_FILE = Path("research_groq_historical_v2_results.json")
+
+RESEARCH_VERSION = "GROQ_HISTORICAL_V2"
+
+
+def find_candle(candles, candle_time):
+    for candle in candles:
+        if candle["time"] == candle_time:
+            return candle
+    return None
+
+
+def historical_return(candidate, exit_candle):
+    entry = candidate["entry"]
+    exit_price = exit_candle["close"]
+
+    if candidate["signal"] == "BUY":
+        return (exit_price - entry) / entry
+
+    if candidate["signal"] == "SELL":
+        return (entry - exit_price) / entry
+
+    return None
+
+
+def evaluate_candidate(candidate, candles):
+    exit_time = candidate["planned_exit_time"]
+    exit_candle = find_candle(candles, exit_time)
+
+    if exit_candle is None:
+        return {
+            "status": "UNRESOLVED",
+            "reason": "EXIT_CANDLE_NOT_FOUND",
+            "signal_time": candidate["signal_time"].isoformat(),
+        }
+
+    result = {
+        "status": "RESOLVED",
+        "signal_time": candidate["signal_time"].isoformat(),
+        "entry_time": candidate["entry_time"].isoformat(),
+        "entry": candidate["entry"],
+        "signal": candidate["signal"],
+        "setup": candidate["setup"],
+        "planned_exit_time": exit_time.isoformat(),
+        "reference_exit": candidate["reference_exit"],
+        "actual_exit_close": exit_candle["close"],
+        "outcome_return": historical_return(candidate, exit_candle),
+    }
+
+    ai = judge(candidate)
+    result["ai"] = ai
+
+    source = ai.get("source")
+
+    if source == "GROQ":
+        result["ai_bucket"] = (
+            "GROQ_PASS"
+            if ai.get("decision") == "PASS"
+            else "GROQ_WAIT"
+        )
+    elif source == "SAFE_FALLBACK":
+        result["ai_bucket"] = "SAFE_FALLBACK"
+    elif source == "BUDGET_GUARD":
+        result["ai_bucket"] = "BUDGET_GUARD"
+    else:
+        result["ai_bucket"] = "OTHER"
+
+    return result
+
+
+def stats(items):
+    returns = [
+        x["outcome_return"]
+        for x in items
+        if x.get("status") == "RESOLVED"
+        and x.get("outcome_return") is not None
+    ]
+
+    if not returns:
+        return {
+            "n": 0,
+            "win_rate": 0.0,
+            "sum_return": 0.0,
+            "avg_return": 0.0,
+        }
+
+    return {
+        "n": len(returns),
+        "win_rate": (
+            sum(1 for r in returns if r > 0)
+            / len(returns)
+            * 100.0
+        ),
+        "sum_return": sum(returns) * 100.0,
+        "avg_return": sum(returns)
+        / len(returns)
+        * 100.0,
+    }
+
+
+def summarize(results):
+    resolved = [
+        x for x in results
+        if x.get("status") == "RESOLVED"
+    ]
+
+    return {
+        "all_resolved": stats(resolved),
+        "groq_pass": stats(
+            [x for x in resolved if x.get("ai_bucket") == "GROQ_PASS"]
+        ),
+        "groq_wait": stats(
+            [x for x in resolved if x.get("ai_bucket") == "GROQ_WAIT"]
+        ),
+        "safe_fallback": stats(
+            [x for x in resolved if x.get("ai_bucket") == "SAFE_FALLBACK"]
+        ),
+        "budget_guard": stats(
+            [x for x in resolved if x.get("ai_bucket") == "BUDGET_GUARD"]
+        ),
+        "unresolved": len(results) - len(resolved),
+    }
+
+
+def main():
+    print("=" * 72)
+    print("GROQ HISTORICAL EVALUATION V2")
+    print("=" * 72)
+    print(f"Symbol       : {SYMBOL}")
+    print(f"Interval     : {INTERVAL}")
+    print(f"Requested    : {CANDLE_LIMIT:,}")
+    print("Execution    : NONE")
+    print("Paper DB     : NOT USED")
+    print("=" * 72)
+
+    print(
+        "Groq calls made today:",
+        remaining_calls(),
+    )
+
+    candles = get_closed_candles(
+        symbol=SYMBOL,
+        interval=INTERVAL,
+        limit=CANDLE_LIMIT,
+    )
+
+    print(f"Actual candles returned: {len(candles):,}")
+
+    if not candles:
+        print("RESULT: STOPPED")
+        print("Reason: NO_CANDLES")
+        return
+
+    print(
+        "First candle:",
+        candles[0]["time"],
+    )
+    print(
+        "Last candle :",
+        candles[-1]["time"],
+    )
+
+    candidates = find_candidates(candles)
+
+    print(f"Candidates found: {len(candidates)}")
+    print("=" * 72)
+
+    results = []
+
+    for index, candidate in enumerate(candidates, start=1):
+        if remaining_calls() <= 0 and index > 1:
+            print("Stopping: Groq API budget/rate limit reached.")
+            break
+
+        print(
+            f"[{index}/{len(candidates)}] "
+            f"{candidate['signal_time']} "
+            f"{candidate['signal']} "
+            f"{candidate['setup']}"
+        )
+
+        result = evaluate_candidate(
+            candidate,
+            candles,
+        )
+
+        results.append(result)
+
+        ai = result.get("ai", {})
+        print(
+            f"  AI: {ai.get('decision')} "
+            f"{ai.get('quality')} "
+            f"{ai.get('source')}"
+        )
+        print(
+            f"  Return: {result.get('outcome_return')}"
+        )
+
+        if ai.get("source") == "SAFE_FALLBACK":
+            print("  NOTE: Not counted as a real AI decision.")
+
+    summary = summarize(results)
+
+    output = {
+        "research_version": RESEARCH_VERSION,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "symbol": SYMBOL,
+        "interval": INTERVAL,
+        "requested_candle_limit": CANDLE_LIMIT,
+        "actual_candles": len(candles),
+        "first_candle": candles[0]["time"].isoformat(),
+        "last_candle": candles[-1]["time"].isoformat(),
+        "candidates_found": len(candidates),
+        "evaluated": len(results),
+        "summary": summary,
+        "results": results,
+    }
+
+    OUTPUT_FILE.write_text(
+        json.dumps(
+            output,
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    print("=" * 72)
+    print("SUMMARY")
+    print("=" * 72)
+    print(
+        json.dumps(
+            summary,
+            indent=2,
+            ensure_ascii=False,
+        )
+    )
+    print("=" * 72)
+    print(f"Results saved: {OUTPUT_FILE}")
+
+
+if __name__ == "__main__":
+    main()

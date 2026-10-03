@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.git/
+*.db
+*.db-*
+*.zip
+.paper_thb_*/
+research_cache/
+*_state.json

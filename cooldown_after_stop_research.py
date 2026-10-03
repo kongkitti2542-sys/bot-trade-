@@ -1,0 +1,317 @@
+from datetime import datetime
+
+from incremental_features import IncrementalFeatures
+from regime import detect_regime
+from strategy import analyze_market
+from risk import evaluate_risk
+from research_data_cache import load_candles
+
+
+STARTING_CAPITAL = 1000.0
+MAX_HOLD_BARS = 240
+FEE_RATE = 0.0005
+SLIPPAGE_RATE = 0.0002
+
+SCORE_MIN = 60
+SCORE_MAX = 79
+
+TEST_START = datetime.fromisoformat(
+    "2026-05-01T00:00:00+00:00"
+)
+
+TEST_END = datetime.fromisoformat(
+    "2026-10-01T00:00:00+00:00"
+)
+
+COOLDOWN_BARS = {
+    "0h": 0,
+    "1h": 12,
+    "2h": 24,
+    "4h": 48,
+    "8h": 96,
+}
+
+
+def close_position(position, exit_price, exit_time, exit_reason):
+    if position["side"] == "BUY":
+        pnl = (
+            exit_price - position["entry_price"]
+        ) * position["position_size"]
+    else:
+        pnl = (
+            position["entry_price"] - exit_price
+        ) * position["position_size"]
+
+    return {
+        "entry_time": position["entry_time"],
+        "exit_time": exit_time,
+        "side": position["side"],
+        "entry_price": position["entry_price"],
+        "exit_price": exit_price,
+        "position_size": position["position_size"],
+        "pnl": pnl,
+        "exit_reason": exit_reason,
+        "score": position["score"],
+        "regime": position["regime"],
+        "bars_held": position["bars_held"],
+    }
+
+
+def calculate_trade_cost(trade):
+    entry = trade["entry_price"]
+    exit_price = trade["exit_price"]
+    size = trade["position_size"]
+
+    if trade["side"] == "BUY":
+        entry_exec = entry * (1 + SLIPPAGE_RATE)
+        exit_exec = exit_price * (1 - SLIPPAGE_RATE)
+
+        gross = (
+            exit_exec - entry_exec
+        ) * size
+    else:
+        entry_exec = entry * (1 - SLIPPAGE_RATE)
+        exit_exec = exit_price * (1 + SLIPPAGE_RATE)
+
+        gross = (
+            entry_exec - exit_exec
+        ) * size
+
+    fees = (
+        entry_exec * size * FEE_RATE
+        + exit_exec * size * FEE_RATE
+    )
+
+    slippage = (
+        abs(entry_exec - entry) * size
+        + abs(exit_exec - exit_price) * size
+    )
+
+    return gross, fees, slippage
+
+
+def run_backtest(candles, cooldown_bars):
+    capital = STARTING_CAPITAL
+    position = None
+    trades = []
+    risk_rejections = 0
+    cooldown_remaining = 0
+
+    feature_engine = IncrementalFeatures()
+
+    for index, candle in enumerate(candles):
+        features = feature_engine.update(candle)
+
+        if index < 200:
+            continue
+
+        candle_time = candle["time"]
+
+        if candle_time >= TEST_END:
+            break
+
+        if position is not None:
+            position["bars_held"] += 1
+
+            if position["side"] == "BUY":
+                if candle["low"] <= position["stop_loss"]:
+                    trade = close_position(
+                        position,
+                        position["stop_loss"],
+                        candle_time,
+                        "STOP_LOSS",
+                    )
+                    capital += trade["pnl"]
+                    trades.append(trade)
+                    position = None
+                    cooldown_remaining = cooldown_bars
+                    continue
+
+            elif position["side"] == "SELL":
+                if candle["high"] >= position["stop_loss"]:
+                    trade = close_position(
+                        position,
+                        position["stop_loss"],
+                        candle_time,
+                        "STOP_LOSS",
+                    )
+                    capital += trade["pnl"]
+                    trades.append(trade)
+                    position = None
+                    cooldown_remaining = cooldown_bars
+                    continue
+
+            if position["bars_held"] >= MAX_HOLD_BARS:
+                trade = close_position(
+                    position,
+                    candle["close"],
+                    candle_time,
+                    "TIME_EXIT",
+                )
+                capital += trade["pnl"]
+                trades.append(trade)
+                position = None
+                continue
+
+            continue
+
+        if candle_time < TEST_START:
+            continue
+
+        if cooldown_remaining > 0:
+            cooldown_remaining -= 1
+            continue
+
+        regime = detect_regime(features)
+        decision = analyze_market(features, regime)
+
+        if decision["signal"] == "WAIT":
+            continue
+
+        if not (
+            SCORE_MIN
+            <= decision["score"]
+            <= SCORE_MAX
+        ):
+            continue
+
+        risk = evaluate_risk(
+            decision,
+            features,
+            capital=capital,
+            daily_pnl=0.0,
+            open_positions=0,
+        )
+
+        if not risk["allowed"]:
+            risk_rejections += 1
+            continue
+
+        position = {
+            "side": decision["signal"],
+            "entry_time": candle_time,
+            "entry_price": features["close"],
+            "position_size": risk["position_size"],
+            "stop_loss": risk["stop_loss"],
+            "score": decision["score"],
+            "regime": regime,
+            "bars_held": 0,
+        }
+
+    if position is not None:
+        last_candle = next(
+            candle
+            for candle in reversed(candles)
+            if candle["time"] < TEST_END
+        )
+
+        trade = close_position(
+            position,
+            last_candle["close"],
+            last_candle["time"],
+            "BACKTEST_END",
+        )
+        capital += trade["pnl"]
+        trades.append(trade)
+
+    realized = [
+        trade
+        for trade in trades
+        if trade["exit_reason"] != "BACKTEST_END"
+    ]
+
+    gross = 0.0
+    fees = 0.0
+    slippage = 0.0
+
+    for trade in realized:
+        g, f, s = calculate_trade_cost(trade)
+        gross += g
+        fees += f
+        slippage += s
+
+    net = gross - fees
+
+    net_after_slippage = net - slippage
+
+    stop_losses = sum(
+        1
+        for trade in realized
+        if trade["exit_reason"] == "STOP_LOSS"
+    )
+
+    time_exits = sum(
+        1
+        for trade in realized
+        if trade["exit_reason"] == "TIME_EXIT"
+    )
+
+    return {
+        "trades": len(realized),
+        "stop_losses": stop_losses,
+        "time_exits": time_exits,
+        "gross": gross,
+        "fees": fees,
+        "slippage": slippage,
+        "net": net_after_slippage,
+        "equity": STARTING_CAPITAL + net_after_slippage,
+        "risk_rejections": risk_rejections,
+    }
+
+
+def main():
+    print("=" * 120)
+    print("COOLDOWN AFTER STOP-LOSS RESEARCH")
+    print("=" * 120)
+    print("Dataset : research_cache/btc_usdt_5m_100k.json")
+    print("Test    : 2026-05-01 → 2026-10-01")
+    print("Score   : 60-79")
+    print("Hold    : 20h")
+    print("Fee     : 0.05% / side")
+    print("Slippage: 0.02%")
+    print()
+
+    candles = load_candles(
+        "btc_usdt_5m_100k.json"
+    )
+
+    print(f"Candles: {len(candles)}")
+    print()
+
+    print(
+        f"{'COOLDOWN':<12}"
+        f"{'TRADES':>8}"
+        f"{'STOP':>8}"
+        f"{'TIME':>8}"
+        f"{'GROSS':>14}"
+        f"{'FEES':>14}"
+        f"{'SLIP':>14}"
+        f"{'NET':>14}"
+        f"{'EQUITY':>14}"
+    )
+    print("-" * 120)
+
+    for label, bars in COOLDOWN_BARS.items():
+        result = run_backtest(
+            candles,
+            bars,
+        )
+
+        print(
+            f"{label:<12}"
+            f"{result['trades']:>8}"
+            f"{result['stop_losses']:>8}"
+            f"{result['time_exits']:>8}"
+            f"${result['gross']:>13.4f}"
+            f"${result['fees']:>13.4f}"
+            f"${result['slippage']:>13.4f}"
+            f"${result['net']:>13.4f}"
+            f"${result['equity']:>13.4f}"
+        )
+
+    print("-" * 120)
+    print("Research only. No Core files modified.")
+
+
+if __name__ == "__main__":
+    main()

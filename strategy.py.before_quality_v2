@@ -1,0 +1,473 @@
+from data import get_closed_candles
+from features import calculate_features
+from regime import detect_regime
+
+
+TRADEABLE_REGIMES = {
+    "TREND_UP",
+    "TREND_DOWN",
+    "BREAKOUT_UP",
+    "BREAKOUT_DOWN",
+}
+
+
+def analyze_market(features, regime):
+    """
+    Strategy V1 — Quality Trade
+
+    Core setup:
+        TREND
+
+    Secondary setup:
+        BREAKOUT
+
+    Non-tradeable:
+        RANGE
+        UNCERTAIN
+        HIGH_VOLATILITY
+        INSUFFICIENT_DATA
+
+    Risk management remains outside this module.
+    """
+
+    reasons = []
+    warnings = []
+
+    price = features["close"]
+    ema20 = features["ema20"]
+    ema50 = features["ema50"]
+    ema200 = features["ema200"]
+    rsi = features["rsi14"]
+    relative_volume = features["relative_volume"]
+    bollinger = features["bollinger"]
+    structure = features["structure"]
+
+    # --------------------------------------------------
+    # 1. Data validation
+    # --------------------------------------------------
+
+    required = [
+        price,
+        ema20,
+        ema50,
+        ema200,
+        rsi,
+        relative_volume,
+        bollinger,
+        structure,
+    ]
+
+    if not all(required):
+        return {
+            "signal": "WAIT",
+            "confidence": 0,
+            "quality": "REJECTED",
+            "setup": None,
+            "regime": regime,
+            "reasons": ["Insufficient market data"],
+            "warnings": [],
+            "audit": {
+                "strategy_version": "QUALITY_V1",
+                "regime": regime,
+                "setup": None,
+                "signal": "WAIT",
+                "quality": "REJECTED",
+            },
+        }
+
+    # --------------------------------------------------
+    # 2. Regime Gate
+    # --------------------------------------------------
+
+    if regime not in TRADEABLE_REGIMES:
+        return {
+            "signal": "WAIT",
+            "confidence": 0,
+            "quality": "REJECTED",
+            "setup": None,
+            "regime": regime,
+            "reasons": [f"Regime not tradeable: {regime}"],
+            "warnings": [],
+            "audit": {
+                "strategy_version": "QUALITY_V1",
+                "regime": regime,
+                "setup": None,
+                "signal": "WAIT",
+                "quality": "REJECTED",
+            },
+        }
+
+    # --------------------------------------------------
+    # 3. Minimum volume safety
+    # --------------------------------------------------
+
+    if relative_volume < 0.5:
+        return {
+            "signal": "WAIT",
+            "confidence": 0,
+            "quality": "REJECTED",
+            "setup": None,
+            "regime": regime,
+            "reasons": ["Relative volume too weak"],
+            "warnings": ["Volume below 0.5x"],
+            "audit": {
+                "strategy_version": "QUALITY_V1",
+                "regime": regime,
+                "setup": None,
+                "signal": "WAIT",
+                "quality": "REJECTED",
+            },
+        }
+
+    # --------------------------------------------------
+    # 4. TREND setup
+    # --------------------------------------------------
+
+    if regime == "TREND_UP":
+        trend_setup = (
+            price > ema200
+            and ema20 > ema50
+            and structure["structure"] == "BULLISH"
+        )
+
+        if not trend_setup:
+            return {
+                "signal": "WAIT",
+                "confidence": 0,
+                "quality": "REJECTED",
+                "setup": "TREND",
+                "regime": regime,
+                "reasons": ["Bullish trend setup not fully confirmed"],
+                "warnings": [],
+                "audit": {
+                    "strategy_version": "QUALITY_V1",
+                    "regime": regime,
+                    "setup": "TREND",
+                    "signal": "WAIT",
+                    "quality": "REJECTED",
+                },
+            }
+
+        if not (50 < rsi < 70):
+            return {
+                "signal": "WAIT",
+                "confidence": 0,
+                "quality": "REJECTED",
+                "setup": "TREND",
+                "regime": regime,
+                "reasons": ["Bullish momentum filter failed"],
+                "warnings": [f"RSI={rsi:.2f}"],
+                "audit": {
+                    "strategy_version": "QUALITY_V1",
+                    "regime": regime,
+                    "setup": "TREND",
+                    "signal": "WAIT",
+                    "quality": "REJECTED",
+                },
+            }
+
+        reasons.extend([
+            "Bullish trend regime",
+            "Price above EMA200",
+            "EMA20 above EMA50",
+            "Bullish price structure",
+            "RSI confirms bullish momentum",
+        ])
+
+        if relative_volume >= 1.0:
+            reasons.append("Volume acceptable")
+        else:
+            warnings.append("Volume below average")
+
+        return {
+            "signal": "BUY",
+            "confidence": 1,
+            "quality": "PASSED",
+            "setup": "TREND",
+            "regime": regime,
+            "reasons": reasons,
+            "warnings": warnings,
+            "audit": {
+                "strategy_version": "QUALITY_V1",
+                "regime": regime,
+                "setup": "TREND",
+                "signal": "BUY",
+                "quality": "PASSED",
+                "relative_volume": relative_volume,
+                "rsi": rsi,
+            },
+        }
+
+    if regime == "TREND_DOWN":
+        trend_setup = (
+            price < ema200
+            and ema20 < ema50
+            and structure["structure"] == "BEARISH"
+        )
+
+        if not trend_setup:
+            return {
+                "signal": "WAIT",
+                "confidence": 0,
+                "quality": "REJECTED",
+                "setup": "TREND",
+                "regime": regime,
+                "reasons": ["Bearish trend setup not fully confirmed"],
+                "warnings": [],
+                "audit": {
+                    "strategy_version": "QUALITY_V1",
+                    "regime": regime,
+                    "setup": "TREND",
+                    "signal": "WAIT",
+                    "quality": "REJECTED",
+                },
+            }
+
+        if not (30 < rsi < 50):
+            return {
+                "signal": "WAIT",
+                "confidence": 0,
+                "quality": "REJECTED",
+                "setup": "TREND",
+                "regime": regime,
+                "reasons": ["Bearish momentum filter failed"],
+                "warnings": [f"RSI={rsi:.2f}"],
+                "audit": {
+                    "strategy_version": "QUALITY_V1",
+                    "regime": regime,
+                    "setup": "TREND",
+                    "signal": "WAIT",
+                    "quality": "REJECTED",
+                },
+            }
+
+        reasons.extend([
+            "Bearish trend regime",
+            "Price below EMA200",
+            "EMA20 below EMA50",
+            "Bearish price structure",
+            "RSI confirms bearish momentum",
+        ])
+
+        if relative_volume >= 1.0:
+            reasons.append("Volume acceptable")
+        else:
+            warnings.append("Volume below average")
+
+        return {
+            "signal": "SELL",
+            "confidence": 1,
+            "quality": "PASSED",
+            "setup": "TREND",
+            "regime": regime,
+            "reasons": reasons,
+            "warnings": warnings,
+            "audit": {
+                "strategy_version": "QUALITY_V1",
+                "regime": regime,
+                "setup": "TREND",
+                "signal": "SELL",
+                "quality": "PASSED",
+                "relative_volume": relative_volume,
+                "rsi": rsi,
+            },
+        }
+
+    # --------------------------------------------------
+    # 5. BREAKOUT setup
+    # --------------------------------------------------
+
+    if regime == "BREAKOUT_UP":
+        breakout_setup = (
+            price > bollinger["upper"]
+            and relative_volume >= 1.5
+            and structure["structure"] == "BULLISH"
+        )
+
+        if not breakout_setup:
+            return {
+                "signal": "WAIT",
+                "confidence": 0,
+                "quality": "REJECTED",
+                "setup": "BREAKOUT",
+                "regime": regime,
+                "reasons": ["Bullish breakout confirmation failed"],
+                "warnings": [],
+                "audit": {
+                    "strategy_version": "QUALITY_V1",
+                    "regime": regime,
+                    "setup": "BREAKOUT",
+                    "signal": "WAIT",
+                    "quality": "REJECTED",
+                },
+            }
+
+        if not (50 < rsi < 70):
+            return {
+                "signal": "WAIT",
+                "confidence": 0,
+                "quality": "REJECTED",
+                "setup": "BREAKOUT",
+                "regime": regime,
+                "reasons": ["Bullish breakout momentum filter failed"],
+                "warnings": [f"RSI={rsi:.2f}"],
+                "audit": {
+                    "strategy_version": "QUALITY_V1",
+                    "regime": regime,
+                    "setup": "BREAKOUT",
+                    "signal": "WAIT",
+                    "quality": "REJECTED",
+                },
+            }
+
+        reasons.extend([
+            "Bullish breakout regime",
+            "Price above Bollinger upper band",
+            "Volume confirms breakout",
+            "Bullish price structure",
+            "RSI confirms momentum",
+        ])
+
+        return {
+            "signal": "BUY",
+            "confidence": 1,
+            "quality": "PASSED",
+            "setup": "BREAKOUT",
+            "regime": regime,
+            "reasons": reasons,
+            "warnings": warnings,
+            "audit": {
+                "strategy_version": "QUALITY_V1",
+                "regime": regime,
+                "setup": "BREAKOUT",
+                "signal": "BUY",
+                "quality": "PASSED",
+                "relative_volume": relative_volume,
+                "rsi": rsi,
+            },
+        }
+
+    if regime == "BREAKOUT_DOWN":
+        breakout_setup = (
+            price < bollinger["lower"]
+            and relative_volume >= 1.5
+            and structure["structure"] == "BEARISH"
+        )
+
+        if not breakout_setup:
+            return {
+                "signal": "WAIT",
+                "confidence": 0,
+                "quality": "REJECTED",
+                "setup": "BREAKOUT",
+                "regime": regime,
+                "reasons": ["Bearish breakout confirmation failed"],
+                "warnings": [],
+                "audit": {
+                    "strategy_version": "QUALITY_V1",
+                    "regime": regime,
+                    "setup": "BREAKOUT",
+                    "signal": "WAIT",
+                    "quality": "REJECTED",
+                },
+            }
+
+        if not (30 < rsi < 50):
+            return {
+                "signal": "WAIT",
+                "confidence": 0,
+                "quality": "REJECTED",
+                "setup": "BREAKOUT",
+                "regime": regime,
+                "reasons": ["Bearish breakout momentum filter failed"],
+                "warnings": [f"RSI={rsi:.2f}"],
+                "audit": {
+                    "strategy_version": "QUALITY_V1",
+                    "regime": regime,
+                    "setup": "BREAKOUT",
+                    "signal": "WAIT",
+                    "quality": "REJECTED",
+                },
+            }
+
+        reasons.extend([
+            "Bearish breakout regime",
+            "Price below Bollinger lower band",
+            "Volume confirms breakout",
+            "Bearish price structure",
+            "RSI confirms momentum",
+        ])
+
+        return {
+            "signal": "SELL",
+            "confidence": 1,
+            "quality": "PASSED",
+            "setup": "BREAKOUT",
+            "regime": regime,
+            "reasons": reasons,
+            "warnings": warnings,
+            "audit": {
+                "strategy_version": "QUALITY_V1",
+                "regime": regime,
+                "setup": "BREAKOUT",
+                "signal": "SELL",
+                "quality": "PASSED",
+                "relative_volume": relative_volume,
+                "rsi": rsi,
+            },
+        }
+
+    return {
+        "signal": "WAIT",
+        "confidence": 0,
+        "quality": "REJECTED",
+        "setup": None,
+        "regime": regime,
+        "reasons": ["No valid quality setup"],
+        "warnings": [],
+        "audit": {
+            "strategy_version": "QUALITY_V1",
+            "regime": regime,
+            "setup": None,
+            "signal": "WAIT",
+            "quality": "REJECTED",
+        },
+    }
+
+
+if __name__ == "__main__":
+    candles = get_closed_candles(
+        symbol="BTCUSDT",
+        interval="5m",
+        limit=250,
+    )
+
+    features = calculate_features(candles)
+    regime = detect_regime(features)
+    decision = analyze_market(features, regime)
+
+    print()
+    print("BTC/USDT - STRATEGY ENGINE V1")
+    print("=" * 60)
+    print(f"Price:      {features['close']:.2f}")
+    print(f"Regime:     {decision['regime']}")
+    print(f"Setup:      {decision['setup']}")
+    print(f"Quality:    {decision['quality']}")
+    print(f"Signal:     {decision['signal']}")
+    print(f"Confidence: {decision['confidence']}")
+    print()
+
+    print("REASONS")
+    print("-" * 60)
+    for reason in decision["reasons"]:
+        print(f"+ {reason}")
+
+    print()
+    print("WARNINGS")
+    print("-" * 60)
+
+    if decision["warnings"]:
+        for warning in decision["warnings"]:
+            print(f"! {warning}")
+    else:
+        print("None")
