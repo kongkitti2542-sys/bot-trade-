@@ -1,0 +1,1675 @@
+{
+  "symbol": "BTCUSDT",
+  "interval": "5m",
+  "candles": 8640,
+  "resolved_candidates": 79,
+  "actual_pl050_trades": 39,
+  "summary": {
+    "avg_mfe_pct": 0.5832844588523397,
+    "max_mfe_pct": 3.7206590466926017,
+    "avg_giveback_pct": 0.5610962710133268,
+    "max_giveback_pct": 1.7978481541489448
+  },
+  "trigger_summary": {
+    "0.20%": {
+      "trigger_hit_count": 21,
+      "trigger_hit_rate_pct": 53.84615384615385
+    },
+    "0.30%": {
+      "trigger_hit_count": 19,
+      "trigger_hit_rate_pct": 48.717948717948715
+    },
+    "0.50%": {
+      "trigger_hit_count": 13,
+      "trigger_hit_rate_pct": 33.33333333333333
+    },
+    "0.75%": {
+      "trigger_hit_count": 8,
+      "trigger_hit_rate_pct": 20.51282051282051
+    },
+    "1.00%": {
+      "trigger_hit_count": 6,
+      "trigger_hit_rate_pct": 15.384615384615385
+    }
+  },
+  "trades": [
+    {
+      "entry_time": "2026-09-05T12:40:00+00:00",
+      "entry": 79711.98,
+      "fixed_exit_time": "2026-09-05T14:20:00+00:00",
+      "fixed_exit_price": 79677.34,
+      "fixed_return_pct": -0.043456454098868724,
+      "peak_time": "2026-09-05T12:40:00+00:00",
+      "peak_price": 79774.0,
+      "mfe_pct": 0.07780511787563686,
+      "giveback_pct": 0.12126157197450559,
+      "actual_exit_time": "2026-09-05T14:20:00+00:00",
+      "actual_exit_price": 79677.34,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.043456454098868724,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-05T17:10:00+00:00",
+      "entry": 80116.05,
+      "fixed_exit_time": "2026-09-05T18:50:00+00:00",
+      "fixed_exit_price": 79960.19,
+      "fixed_return_pct": -0.19454279136327934,
+      "peak_time": "2026-09-05T17:15:00+00:00",
+      "peak_price": 80152.0,
+      "mfe_pct": 0.04487240696464327,
+      "giveback_pct": 0.23941519832792266,
+      "actual_exit_time": "2026-09-05T18:50:00+00:00",
+      "actual_exit_price": 79960.19,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.19454279136327934,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-06T20:25:00+00:00",
+      "entry": 79926.52,
+      "fixed_exit_time": "2026-09-06T22:05:00+00:00",
+      "fixed_exit_price": 79687.4,
+      "fixed_return_pct": -0.2991747920465071,
+      "peak_time": "2026-09-06T21:15:00+00:00",
+      "peak_price": 80034.0,
+      "mfe_pct": 0.13447351392253276,
+      "giveback_pct": 0.43364830596903986,
+      "actual_exit_time": "2026-09-06T22:05:00+00:00",
+      "actual_exit_price": 79687.4,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.2991747920465071,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-09T04:05:00+00:00",
+      "entry": 78928.0,
+      "fixed_exit_time": "2026-09-09T05:45:00+00:00",
+      "fixed_exit_price": 78858.38,
+      "fixed_return_pct": -0.08820697344414573,
+      "peak_time": "2026-09-09T05:15:00+00:00",
+      "peak_price": 79370.01,
+      "mfe_pct": 0.5600167241029733,
+      "giveback_pct": 0.6482236975471191,
+      "actual_exit_time": "2026-09-09T05:30:00+00:00",
+      "actual_exit_price": 79085.856,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.1999999999999997,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 1550,
+          "time": "2026-09-09T04:40:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 1550,
+          "time": "2026-09-09T04:40:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 1556,
+          "time": "2026-09-09T05:10:00+00:00"
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-11T12:30:00+00:00",
+      "entry": 77094.01,
+      "fixed_exit_time": "2026-09-11T14:10:00+00:00",
+      "fixed_exit_price": 79065.47,
+      "fixed_return_pct": 2.55721553464401,
+      "peak_time": "2026-09-11T14:00:00+00:00",
+      "peak_price": 79890.0,
+      "mfe_pct": 3.6267279390448173,
+      "giveback_pct": 1.069512404400807,
+      "actual_exit_time": "2026-09-11T14:10:00+00:00",
+      "actual_exit_price": 79065.47,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": 2.55721553464401,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 2220,
+          "time": "2026-09-11T12:30:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 2221,
+          "time": "2026-09-11T12:35:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 2221,
+          "time": "2026-09-11T12:35:00+00:00"
+        },
+        "0.75%": {
+          "hit": true,
+          "index": 2221,
+          "time": "2026-09-11T12:35:00+00:00"
+        },
+        "1.00%": {
+          "hit": true,
+          "index": 2223,
+          "time": "2026-09-11T12:45:00+00:00"
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-12T13:00:00+00:00",
+      "entry": 77340.01,
+      "fixed_exit_time": "2026-09-12T14:40:00+00:00",
+      "fixed_exit_price": 77454.01,
+      "fixed_return_pct": 0.14740106705442632,
+      "peak_time": "2026-09-12T14:40:00+00:00",
+      "peak_price": 77481.17,
+      "mfe_pct": 0.18251872478423975,
+      "giveback_pct": 0.035117657729813435,
+      "actual_exit_time": "2026-09-12T14:40:00+00:00",
+      "actual_exit_price": 77454.01,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": 0.14740106705442632,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-13T00:55:00+00:00",
+      "entry": 77276.01,
+      "fixed_exit_time": "2026-09-13T02:35:00+00:00",
+      "fixed_exit_price": 77257.0,
+      "fixed_return_pct": -0.024600131399116962,
+      "peak_time": "2026-09-13T01:20:00+00:00",
+      "peak_price": 77341.37,
+      "mfe_pct": 0.08457993625706164,
+      "giveback_pct": 0.10918006765617862,
+      "actual_exit_time": "2026-09-13T02:35:00+00:00",
+      "actual_exit_price": 77257.0,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.024600131399116962,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-14T06:45:00+00:00",
+      "entry": 77742.99,
+      "fixed_exit_time": "2026-09-14T08:25:00+00:00",
+      "fixed_exit_price": 77760.0,
+      "fixed_return_pct": 0.02187978620322522,
+      "peak_time": "2026-09-14T08:25:00+00:00",
+      "peak_price": 77999.99,
+      "mfe_pct": 0.3305764288201418,
+      "giveback_pct": 0.3086966426169166,
+      "actual_exit_time": "2026-09-14T08:25:00+00:00",
+      "actual_exit_price": 77760.0,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": 0.02187978620322522,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 3035,
+          "time": "2026-09-14T08:25:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 3035,
+          "time": "2026-09-14T08:25:00+00:00"
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-14T13:45:00+00:00",
+      "entry": 78150.01,
+      "fixed_exit_time": "2026-09-14T15:25:00+00:00",
+      "fixed_exit_price": 78407.67,
+      "fixed_return_pct": 0.32969925403720807,
+      "peak_time": "2026-09-14T14:30:00+00:00",
+      "peak_price": 78712.29,
+      "mfe_pct": 0.7194880717225741,
+      "giveback_pct": 0.38978881768536605,
+      "actual_exit_time": "2026-09-14T14:20:00+00:00",
+      "actual_exit_price": 78306.31001999999,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.19999999999999377,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 3099,
+          "time": "2026-09-14T13:45:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 3099,
+          "time": "2026-09-14T13:45:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 3105,
+          "time": "2026-09-14T14:15:00+00:00"
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-15T17:40:00+00:00",
+      "entry": 76965.85,
+      "fixed_exit_time": "2026-09-15T19:20:00+00:00",
+      "fixed_exit_price": 76126.26,
+      "fixed_return_pct": -1.0908604270595479,
+      "peak_time": "2026-09-15T18:25:00+00:00",
+      "peak_price": 77205.39,
+      "mfe_pct": 0.3112289411472667,
+      "giveback_pct": 1.4020893682068147,
+      "actual_exit_time": "2026-09-15T19:20:00+00:00",
+      "actual_exit_price": 76126.26,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -1.0908604270595479,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 3443,
+          "time": "2026-09-15T18:25:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 3443,
+          "time": "2026-09-15T18:25:00+00:00"
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-16T11:45:00+00:00",
+      "entry": 76236.01,
+      "fixed_exit_time": "2026-09-16T13:25:00+00:00",
+      "fixed_exit_price": 75770.29,
+      "fixed_return_pct": -0.610892411604439,
+      "peak_time": "2026-09-16T11:50:00+00:00",
+      "peak_price": 76304.01,
+      "mfe_pct": 0.08919669326870597,
+      "giveback_pct": 0.7000891048731449,
+      "actual_exit_time": "2026-09-16T13:25:00+00:00",
+      "actual_exit_price": 75770.29,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.610892411604439,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-16T18:00:00+00:00",
+      "entry": 75770.45,
+      "fixed_exit_time": "2026-09-16T19:40:00+00:00",
+      "fixed_exit_price": 75976.41,
+      "fixed_return_pct": 0.27182100673812337,
+      "peak_time": "2026-09-16T18:05:00+00:00",
+      "peak_price": 76560.76,
+      "mfe_pct": 1.0430319471508982,
+      "giveback_pct": 0.7712109404127748,
+      "actual_exit_time": "2026-09-16T18:10:00+00:00",
+      "actual_exit_price": 75921.9909,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.20000000000000956,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 3726,
+          "time": "2026-09-16T18:00:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 3727,
+          "time": "2026-09-16T18:05:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 3727,
+          "time": "2026-09-16T18:05:00+00:00"
+        },
+        "0.75%": {
+          "hit": true,
+          "index": 3727,
+          "time": "2026-09-16T18:05:00+00:00"
+        },
+        "1.00%": {
+          "hit": true,
+          "index": 3727,
+          "time": "2026-09-16T18:05:00+00:00"
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-16T18:10:00+00:00",
+      "entry": 76224.0,
+      "fixed_exit_time": "2026-09-16T19:50:00+00:00",
+      "fixed_exit_price": 76082.96,
+      "fixed_return_pct": -0.1850335852224937,
+      "peak_time": "2026-09-16T18:40:00+00:00",
+      "peak_price": 76332.01,
+      "mfe_pct": 0.1417007766582635,
+      "giveback_pct": 0.32673436188075716,
+      "actual_exit_time": "2026-09-16T19:50:00+00:00",
+      "actual_exit_price": 76082.96,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.1850335852224937,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-17T12:05:00+00:00",
+      "entry": 76502.84,
+      "fixed_exit_time": "2026-09-17T13:45:00+00:00",
+      "fixed_exit_price": 76350.01,
+      "fixed_return_pct": -0.1997703614663217,
+      "peak_time": "2026-09-17T12:30:00+00:00",
+      "peak_price": 77179.47,
+      "mfe_pct": 0.8844508256164146,
+      "giveback_pct": 1.0842211870827363,
+      "actual_exit_time": "2026-09-17T13:10:00+00:00",
+      "actual_exit_price": 76655.84568,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.20000000000000265,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 3944,
+          "time": "2026-09-17T12:10:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 3944,
+          "time": "2026-09-17T12:10:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 3945,
+          "time": "2026-09-17T12:15:00+00:00"
+        },
+        "0.75%": {
+          "hit": true,
+          "index": 3948,
+          "time": "2026-09-17T12:30:00+00:00"
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T03:20:00+00:00",
+      "entry": 77436.45,
+      "fixed_exit_time": "2026-09-18T05:00:00+00:00",
+      "fixed_exit_price": 77467.97,
+      "fixed_return_pct": 0.04070434530509092,
+      "peak_time": "2026-09-18T05:00:00+00:00",
+      "peak_price": 77669.0,
+      "mfe_pct": 0.3003107709612242,
+      "giveback_pct": 0.25960642565613334,
+      "actual_exit_time": "2026-09-18T05:00:00+00:00",
+      "actual_exit_price": 77467.97,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": 0.04070434530509092,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 4146,
+          "time": "2026-09-18T05:00:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 4146,
+          "time": "2026-09-18T05:00:00+00:00"
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T13:40:00+00:00",
+      "entry": 78958.41,
+      "fixed_exit_time": "2026-09-18T15:20:00+00:00",
+      "fixed_exit_price": 81105.85,
+      "fixed_return_pct": 2.7197102879857917,
+      "peak_time": "2026-09-18T15:20:00+00:00",
+      "peak_price": 81105.86,
+      "mfe_pct": 2.7197229528811397,
+      "giveback_pct": 1.2664895348082905e-05,
+      "actual_exit_time": "2026-09-18T15:20:00+00:00",
+      "actual_exit_price": 81105.85,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": 2.7197102879857917,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 4250,
+          "time": "2026-09-18T13:40:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 4250,
+          "time": "2026-09-18T13:40:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 4251,
+          "time": "2026-09-18T13:45:00+00:00"
+        },
+        "0.75%": {
+          "hit": true,
+          "index": 4251,
+          "time": "2026-09-18T13:45:00+00:00"
+        },
+        "1.00%": {
+          "hit": true,
+          "index": 4251,
+          "time": "2026-09-18T13:45:00+00:00"
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-19T01:00:00+00:00",
+      "entry": 81668.99,
+      "fixed_exit_time": "2026-09-19T02:40:00+00:00",
+      "fixed_exit_price": 81322.01,
+      "fixed_return_pct": -0.42486138251496736,
+      "peak_time": "2026-09-19T01:00:00+00:00",
+      "peak_price": 81741.0,
+      "mfe_pct": 0.08817300177214725,
+      "giveback_pct": 0.5130343842871146,
+      "actual_exit_time": "2026-09-19T02:40:00+00:00",
+      "actual_exit_price": 81322.01,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.42486138251496736,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-19T08:25:00+00:00",
+      "entry": 81286.0,
+      "fixed_exit_time": "2026-09-19T10:05:00+00:00",
+      "fixed_exit_price": 81268.7,
+      "fixed_return_pct": -0.021282877740327867,
+      "peak_time": "2026-09-19T09:05:00+00:00",
+      "peak_price": 81528.01,
+      "mfe_pct": 0.29772654577663404,
+      "giveback_pct": 0.31900942351696193,
+      "actual_exit_time": "2026-09-19T10:05:00+00:00",
+      "actual_exit_price": 81268.7,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.021282877740327867,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 4483,
+          "time": "2026-09-19T09:05:00+00:00"
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T00:15:00+00:00",
+      "entry": 81683.96,
+      "fixed_exit_time": "2026-09-21T01:55:00+00:00",
+      "fixed_exit_price": 80996.97,
+      "fixed_return_pct": -0.8410341516253682,
+      "peak_time": "2026-09-21T01:20:00+00:00",
+      "peak_price": 82100.0,
+      "mfe_pct": 0.509328881704552,
+      "giveback_pct": 1.3503630333299204,
+      "actual_exit_time": "2026-09-21T01:25:00+00:00",
+      "actual_exit_price": 81847.32792000001,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.20000000000000517,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 4959,
+          "time": "2026-09-21T00:45:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 4966,
+          "time": "2026-09-21T01:20:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 4966,
+          "time": "2026-09-21T01:20:00+00:00"
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T08:30:00+00:00",
+      "entry": 82240.0,
+      "fixed_exit_time": "2026-09-21T10:10:00+00:00",
+      "fixed_exit_price": 84565.25,
+      "fixed_return_pct": 2.8273954280155644,
+      "peak_time": "2026-09-21T09:35:00+00:00",
+      "peak_price": 85299.87,
+      "mfe_pct": 3.7206590466926017,
+      "giveback_pct": 0.8932636186770374,
+      "actual_exit_time": "2026-09-21T10:10:00+00:00",
+      "actual_exit_price": 84565.25,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": 2.8273954280155644,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 5052,
+          "time": "2026-09-21T08:30:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 5052,
+          "time": "2026-09-21T08:30:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 5052,
+          "time": "2026-09-21T08:30:00+00:00"
+        },
+        "0.75%": {
+          "hit": true,
+          "index": 5053,
+          "time": "2026-09-21T08:35:00+00:00"
+        },
+        "1.00%": {
+          "hit": true,
+          "index": 5053,
+          "time": "2026-09-21T08:35:00+00:00"
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T19:35:00+00:00",
+      "entry": 86841.83,
+      "fixed_exit_time": "2026-09-21T21:15:00+00:00",
+      "fixed_exit_price": 86600.01,
+      "fixed_return_pct": -0.27846027657409683,
+      "peak_time": "2026-09-21T20:25:00+00:00",
+      "peak_price": 87395.67,
+      "mfe_pct": 0.6377571730121262,
+      "giveback_pct": 0.916217449586223,
+      "actual_exit_time": "2026-09-21T20:30:00+00:00",
+      "actual_exit_price": 87015.51366,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.1999999999999944,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 5195,
+          "time": "2026-09-21T20:25:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 5195,
+          "time": "2026-09-21T20:25:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 5195,
+          "time": "2026-09-21T20:25:00+00:00"
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-22T08:40:00+00:00",
+      "entry": 85899.99,
+      "fixed_exit_time": "2026-09-22T10:20:00+00:00",
+      "fixed_exit_price": 85931.69,
+      "fixed_return_pct": 0.036903380314709106,
+      "peak_time": "2026-09-22T08:50:00+00:00",
+      "peak_price": 86377.77,
+      "mfe_pct": 0.5562049541565707,
+      "giveback_pct": 0.5193015738418616,
+      "actual_exit_time": "2026-09-22T09:00:00+00:00",
+      "actual_exit_price": 86071.78998,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.1999999999999955,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 5342,
+          "time": "2026-09-22T08:40:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 5343,
+          "time": "2026-09-22T08:45:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 5344,
+          "time": "2026-09-22T08:50:00+00:00"
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-22T13:35:00+00:00",
+      "entry": 86098.15,
+      "fixed_exit_time": "2026-09-22T15:15:00+00:00",
+      "fixed_exit_price": 86210.33,
+      "fixed_return_pct": 0.13029315960912932,
+      "peak_time": "2026-09-22T14:10:00+00:00",
+      "peak_price": 86470.58,
+      "mfe_pct": 0.4325644627672111,
+      "giveback_pct": 0.30227130315808187,
+      "actual_exit_time": "2026-09-22T15:15:00+00:00",
+      "actual_exit_price": 86210.33,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": 0.13029315960912932,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 5405,
+          "time": "2026-09-22T13:55:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 5405,
+          "time": "2026-09-22T13:55:00+00:00"
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-23T04:25:00+00:00",
+      "entry": 87120.85,
+      "fixed_exit_time": "2026-09-23T06:05:00+00:00",
+      "fixed_exit_price": 86550.95,
+      "fixed_return_pct": -0.6541488059402643,
+      "peak_time": "2026-09-23T04:35:00+00:00",
+      "peak_price": 87278.54,
+      "mfe_pct": 0.18100144798861326,
+      "giveback_pct": 0.8351502539288775,
+      "actual_exit_time": "2026-09-23T06:05:00+00:00",
+      "actual_exit_price": 86550.95,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.6541488059402643,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-23T22:10:00+00:00",
+      "entry": 84610.02,
+      "fixed_exit_time": "2026-09-23T23:50:00+00:00",
+      "fixed_exit_price": 84418.01,
+      "fixed_return_pct": -0.2269352967887365,
+      "peak_time": "2026-09-23T22:10:00+00:00",
+      "peak_price": 84660.22,
+      "mfe_pct": 0.05933103431484484,
+      "giveback_pct": 0.28626633110358135,
+      "actual_exit_time": "2026-09-23T23:50:00+00:00",
+      "actual_exit_price": 84418.01,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.2269352967887365,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-24T13:35:00+00:00",
+      "entry": 84137.74,
+      "fixed_exit_time": "2026-09-24T15:15:00+00:00",
+      "fixed_exit_price": 84023.5,
+      "fixed_return_pct": -0.1357773574617113,
+      "peak_time": "2026-09-24T14:25:00+00:00",
+      "peak_price": 84942.45,
+      "mfe_pct": 0.9564197944941137,
+      "giveback_pct": 1.092197151955825,
+      "actual_exit_time": "2026-09-24T14:45:00+00:00",
+      "actual_exit_price": 84306.01548,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.19999999999999596,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 5977,
+          "time": "2026-09-24T13:35:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 5987,
+          "time": "2026-09-24T14:25:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 5987,
+          "time": "2026-09-24T14:25:00+00:00"
+        },
+        "0.75%": {
+          "hit": true,
+          "index": 5987,
+          "time": "2026-09-24T14:25:00+00:00"
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-25T00:10:00+00:00",
+      "entry": 84711.33,
+      "fixed_exit_time": "2026-09-25T01:50:00+00:00",
+      "fixed_exit_price": 84544.0,
+      "fixed_return_pct": -0.19752965748501614,
+      "peak_time": "2026-09-25T01:10:00+00:00",
+      "peak_price": 84796.51,
+      "mfe_pct": 0.10055325539097663,
+      "giveback_pct": 0.2980829128759928,
+      "actual_exit_time": "2026-09-25T01:50:00+00:00",
+      "actual_exit_price": 84544.0,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.19752965748501614,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-25T11:10:00+00:00",
+      "entry": 85075.19,
+      "fixed_exit_time": "2026-09-25T12:50:00+00:00",
+      "fixed_exit_price": 84449.6,
+      "fixed_return_pct": -0.735337764158971,
+      "peak_time": "2026-09-25T11:15:00+00:00",
+      "peak_price": 85255.0,
+      "mfe_pct": 0.21135421501850027,
+      "giveback_pct": 0.9466919791774713,
+      "actual_exit_time": "2026-09-25T12:50:00+00:00",
+      "actual_exit_price": 84449.6,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.735337764158971,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 6237,
+          "time": "2026-09-25T11:15:00+00:00"
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-26T08:35:00+00:00",
+      "entry": 84270.0,
+      "fixed_exit_time": "2026-09-26T10:15:00+00:00",
+      "fixed_exit_price": 84151.99,
+      "fixed_return_pct": -0.1400379731814344,
+      "peak_time": "2026-09-26T08:35:00+00:00",
+      "peak_price": 84336.96,
+      "mfe_pct": 0.07945888216447894,
+      "giveback_pct": 0.21949685534591334,
+      "actual_exit_time": "2026-09-26T10:15:00+00:00",
+      "actual_exit_price": 84151.99,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.1400379731814344,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-26T15:40:00+00:00",
+      "entry": 84145.26,
+      "fixed_exit_time": "2026-09-26T17:20:00+00:00",
+      "fixed_exit_price": 84070.71,
+      "fixed_return_pct": -0.08859679083526317,
+      "peak_time": "2026-09-26T16:30:00+00:00",
+      "peak_price": 84174.33,
+      "mfe_pct": 0.0345474005309473,
+      "giveback_pct": 0.12314419136621048,
+      "actual_exit_time": "2026-09-26T17:20:00+00:00",
+      "actual_exit_price": 84070.71,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.08859679083526317,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-27T02:10:00+00:00",
+      "entry": 84535.96,
+      "fixed_exit_time": "2026-09-27T03:50:00+00:00",
+      "fixed_exit_price": 84397.34,
+      "fixed_return_pct": -0.16397755464066402,
+      "peak_time": "2026-09-27T02:20:00+00:00",
+      "peak_price": 84540.01,
+      "mfe_pct": 0.00479086059942817,
+      "giveback_pct": 0.16876841524009217,
+      "actual_exit_time": "2026-09-27T03:50:00+00:00",
+      "actual_exit_price": 84397.34,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.16397755464066402,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-27T05:40:00+00:00",
+      "entry": 84556.0,
+      "fixed_exit_time": "2026-09-27T07:20:00+00:00",
+      "fixed_exit_price": 84502.01,
+      "fixed_return_pct": -0.0638511755523029,
+      "peak_time": "2026-09-27T06:20:00+00:00",
+      "peak_price": 84636.91,
+      "mfe_pct": 0.09568806471451287,
+      "giveback_pct": 0.15953924026681576,
+      "actual_exit_time": "2026-09-27T07:20:00+00:00",
+      "actual_exit_price": 84502.01,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.0638511755523029,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-27T08:05:00+00:00",
+      "entry": 84811.32,
+      "fixed_exit_time": "2026-09-27T09:45:00+00:00",
+      "fixed_exit_price": 84942.0,
+      "fixed_return_pct": 0.1540832049306543,
+      "peak_time": "2026-09-27T09:45:00+00:00",
+      "peak_price": 84942.01,
+      "mfe_pct": 0.15409499580950722,
+      "giveback_pct": 1.1790878852923833e-05,
+      "actual_exit_time": "2026-09-27T09:45:00+00:00",
+      "actual_exit_price": 84942.0,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": 0.1540832049306543,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-27T13:35:00+00:00",
+      "entry": 85004.61,
+      "fixed_exit_time": "2026-09-27T15:15:00+00:00",
+      "fixed_exit_price": 84564.0,
+      "fixed_return_pct": -0.51833659374474,
+      "peak_time": "2026-09-27T14:00:00+00:00",
+      "peak_price": 85048.14,
+      "mfe_pct": 0.05120898737138943,
+      "giveback_pct": 0.5695455811161294,
+      "actual_exit_time": "2026-09-27T15:15:00+00:00",
+      "actual_exit_price": 84564.0,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.51833659374474,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-30T12:35:00+00:00",
+      "entry": 84494.9,
+      "fixed_exit_time": "2026-09-30T14:15:00+00:00",
+      "fixed_exit_price": 84130.86,
+      "fixed_return_pct": -0.43084257156348327,
+      "peak_time": "2026-09-30T13:05:00+00:00",
+      "peak_price": 85649.95,
+      "mfe_pct": 1.3670055825854615,
+      "giveback_pct": 1.7978481541489448,
+      "actual_exit_time": "2026-09-30T13:35:00+00:00",
+      "actual_exit_price": 84663.88979999999,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.19999999999999496,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 7693,
+          "time": "2026-09-30T12:35:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 7693,
+          "time": "2026-09-30T12:35:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 7694,
+          "time": "2026-09-30T12:40:00+00:00"
+        },
+        "0.75%": {
+          "hit": true,
+          "index": 7695,
+          "time": "2026-09-30T12:45:00+00:00"
+        },
+        "1.00%": {
+          "hit": true,
+          "index": 7696,
+          "time": "2026-09-30T12:50:00+00:00"
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-01T13:40:00+00:00",
+      "entry": 83806.01,
+      "fixed_exit_time": "2026-10-01T15:20:00+00:00",
+      "fixed_exit_price": 84154.0,
+      "fixed_return_pct": 0.41523275001399695,
+      "peak_time": "2026-10-01T15:05:00+00:00",
+      "peak_price": 84744.0,
+      "mfe_pct": 1.1192395390259067,
+      "giveback_pct": 0.7040067890119098,
+      "actual_exit_time": "2026-10-01T14:45:00+00:00",
+      "actual_exit_price": 83973.62202,
+      "actual_exit_type": "PROFIT_LOCK",
+      "actual_return_pct": 0.20000000000000062,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 7995,
+          "time": "2026-10-01T13:45:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 8003,
+          "time": "2026-10-01T14:25:00+00:00"
+        },
+        "0.50%": {
+          "hit": true,
+          "index": 8005,
+          "time": "2026-10-01T14:35:00+00:00"
+        },
+        "0.75%": {
+          "hit": true,
+          "index": 8010,
+          "time": "2026-10-01T15:00:00+00:00"
+        },
+        "1.00%": {
+          "hit": true,
+          "index": 8011,
+          "time": "2026-10-01T15:05:00+00:00"
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-02T04:30:00+00:00",
+      "entry": 86788.12,
+      "fixed_exit_time": "2026-10-02T06:10:00+00:00",
+      "fixed_exit_price": 85902.73,
+      "fixed_return_pct": -1.0201741897393324,
+      "peak_time": "2026-10-02T04:30:00+00:00",
+      "peak_price": 86912.75,
+      "mfe_pct": 0.14360260367433314,
+      "giveback_pct": 1.1637767934136654,
+      "actual_exit_time": "2026-10-02T06:10:00+00:00",
+      "actual_exit_price": 85902.73,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -1.0201741897393324,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.30%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-02T12:35:00+00:00",
+      "entry": 86829.39,
+      "fixed_exit_time": "2026-10-02T14:15:00+00:00",
+      "fixed_exit_price": 86536.0,
+      "fixed_return_pct": -0.33789250390910197,
+      "peak_time": "2026-10-02T13:35:00+00:00",
+      "peak_price": 87150.0,
+      "mfe_pct": 0.3692413363723972,
+      "giveback_pct": 0.7071338402814992,
+      "actual_exit_time": "2026-10-02T14:15:00+00:00",
+      "actual_exit_price": 86536.0,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": -0.33789250390910197,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 8281,
+          "time": "2026-10-02T13:35:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 8281,
+          "time": "2026-10-02T13:35:00+00:00"
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-03T11:05:00+00:00",
+      "entry": 84644.5,
+      "fixed_exit_time": "2026-10-03T12:45:00+00:00",
+      "fixed_exit_price": 84838.01,
+      "fixed_return_pct": 0.22861497203007256,
+      "peak_time": "2026-10-03T12:25:00+00:00",
+      "peak_price": 84921.66,
+      "mfe_pct": 0.32744005812545823,
+      "giveback_pct": 0.09882508609538568,
+      "actual_exit_time": "2026-10-03T12:45:00+00:00",
+      "actual_exit_price": 84838.01,
+      "actual_exit_type": "FIXED_FALLBACK",
+      "actual_return_pct": 0.22861497203007256,
+      "trigger_hits": {
+        "0.20%": {
+          "hit": true,
+          "index": 8554,
+          "time": "2026-10-03T12:20:00+00:00"
+        },
+        "0.30%": {
+          "hit": true,
+          "index": 8555,
+          "time": "2026-10-03T12:25:00+00:00"
+        },
+        "0.50%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "0.75%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        },
+        "1.00%": {
+          "hit": false,
+          "index": null,
+          "time": null
+        }
+      }
+    }
+  ]
+}
