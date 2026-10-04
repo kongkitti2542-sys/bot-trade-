@@ -122,6 +122,35 @@ def settle(candidate, exit_price, position_value):
     return gross_pnl, cost, gross_pnl - cost
 
 
+def summarize_daily(trades):
+    daily = {}
+    for trade in trades:
+        day = trade["entry_time"][:10]
+        daily[day] = daily.get(day, 0.0) + trade["net_pnl_thb"]
+    values = list(daily.values())
+    positive = [v for v in values if v > 0]
+    negative = [v for v in values if v < 0]
+    cumulative = 0.0
+    peak = 0.0
+    max_drawdown = 0.0
+    for value in values:
+        cumulative += value
+        peak = max(peak, cumulative)
+        max_drawdown = max(max_drawdown, peak - cumulative)
+    return {
+        "active_days": len(values),
+        "positive_days": len(positive),
+        "negative_days": len(negative),
+        "flat_days": len(values) - len(positive) - len(negative),
+        "positive_day_rate_pct": len(positive) / len(values) * 100.0 if values else 0.0,
+        "avg_daily_net_thb": sum(values) / len(values) if values else 0.0,
+        "best_day_net_thb": max(values) if values else 0.0,
+        "worst_day_net_thb": min(values) if values else 0.0,
+        "max_daily_drawdown_thb": max_drawdown,
+        "daily_net_pnl_thb": daily,
+    }
+
+
 def summarize(trades):
     if not trades:
         return {
@@ -191,6 +220,7 @@ def simulate(prepared, candles, horizon):
 
     return {
         **summarize(trades),
+        "daily_summary": summarize_daily(trades),
         "horizon_bars": horizon,
         "ending_pot_thb": pot,
         "net_profit_thb": pot - STARTING_POT_THB,
@@ -264,7 +294,7 @@ def run_window(window_name, candle_count):
 
 def main():
     print("=" * 72)
-    print("FIXED HORIZON EVOLUTION V2")
+    print("FIXED HORIZON EVOLUTION V3")
     print("=" * 72)
     print(f"Symbol              : {SYMBOL}")
     print(f"Interval            : {INTERVAL}")
