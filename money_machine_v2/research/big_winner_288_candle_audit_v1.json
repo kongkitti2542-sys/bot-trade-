@@ -1,0 +1,993 @@
+{
+  "standard": {
+    "symbol": "BTCUSDT",
+    "interval": "5m",
+    "candles": 8640,
+    "candles_per_window": 288,
+    "windows": 30,
+    "starting_pot_thb": 1500.0,
+    "round_trip_cost_pct": 0.13999999999999999
+  },
+  "windows": [
+    {
+      "window": 1,
+      "start_time": "2026-09-04T03:05:00+00:00",
+      "end_time": "2026-09-05T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 0,
+      "net_pnl_thb": 0,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": 0.0,
+      "max_mfe_pct": 0.0,
+      "trades": []
+    },
+    {
+      "window": 2,
+      "start_time": "2026-09-05T03:05:00+00:00",
+      "end_time": "2026-09-06T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 4,
+      "net_pnl_thb": -2.921526926219301,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -0.7303817315548252,
+      "max_mfe_pct": 0.07780511787562894,
+      "trades": [
+        {
+          "entry_time": "2026-09-05T12:40:00+00:00",
+          "mfe_pct": 0.07780511787562894,
+          "gross_pnl_thb": -0.16296170287075773,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.6879617028707578
+        },
+        {
+          "entry_time": "2026-09-05T12:45:00+00:00",
+          "mfe_pct": 0.04795118737199733,
+          "gross_pnl_thb": 0.014675095272076312,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.5103249047279237
+        },
+        {
+          "entry_time": "2026-09-05T12:50:00+00:00",
+          "mfe_pct": 0.035115882411962396,
+          "gross_pnl_thb": 0.05629514899167799,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.46870485100832204
+        },
+        {
+          "entry_time": "2026-09-05T17:10:00+00:00",
+          "mfe_pct": 0.04487240696464667,
+          "gross_pnl_thb": -0.7295354676122976,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.2545354676122975
+        }
+      ]
+    },
+    {
+      "window": 3,
+      "start_time": "2026-09-06T03:05:00+00:00",
+      "end_time": "2026-09-07T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 1,
+      "net_pnl_thb": -1.6469054701744015,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -1.6469054701744015,
+      "max_mfe_pct": 0.13447351392252838,
+      "trades": [
+        {
+          "entry_time": "2026-09-06T20:25:00+00:00",
+          "mfe_pct": 0.13447351392252838,
+          "gross_pnl_thb": -1.1219054701744016,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.6469054701744015
+        }
+      ]
+    },
+    {
+      "window": 4,
+      "start_time": "2026-09-07T03:05:00+00:00",
+      "end_time": "2026-09-08T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 0,
+      "net_pnl_thb": 0,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": 0.0,
+      "max_mfe_pct": 0.0,
+      "trades": []
+    },
+    {
+      "window": 5,
+      "start_time": "2026-09-08T03:05:00+00:00",
+      "end_time": "2026-09-09T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 0,
+      "net_pnl_thb": 0,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": 0.0,
+      "max_mfe_pct": 0.0,
+      "trades": []
+    },
+    {
+      "window": 6,
+      "start_time": "2026-09-09T03:05:00+00:00",
+      "end_time": "2026-09-10T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 1,
+      "net_pnl_thb": -0.8557761504155466,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -0.8557761504155466,
+      "max_mfe_pct": 0.5600167241029741,
+      "trades": [
+        {
+          "entry_time": "2026-09-09T04:05:00+00:00",
+          "mfe_pct": 0.5600167241029741,
+          "gross_pnl_thb": -0.3307761504155465,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.8557761504155466
+        }
+      ]
+    },
+    {
+      "window": 7,
+      "start_time": "2026-09-10T03:05:00+00:00",
+      "end_time": "2026-09-11T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 0,
+      "net_pnl_thb": 0,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": 0.0,
+      "max_mfe_pct": 0.0,
+      "trades": []
+    },
+    {
+      "window": 8,
+      "start_time": "2026-09-11T03:05:00+00:00",
+      "end_time": "2026-09-12T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 4,
+      "net_pnl_thb": 28.531204708580585,
+      "biggest_winner_thb": 9.391504532203758,
+      "average_winner_thb": 7.132801177145146,
+      "average_loser_thb": 0.0,
+      "max_mfe_pct": 3.626727939044816,
+      "trades": [
+        {
+          "entry_time": "2026-09-11T12:30:00+00:00",
+          "mfe_pct": 3.626727939044816,
+          "gross_pnl_thb": 9.589558254915039,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 9.064558254915038
+        },
+        {
+          "entry_time": "2026-09-11T12:35:00+00:00",
+          "mfe_pct": 3.5543417254390697,
+          "gross_pnl_thb": 9.916504532203758,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 9.391504532203758
+        },
+        {
+          "entry_time": "2026-09-11T12:40:00+00:00",
+          "mfe_pct": 2.907573696004917,
+          "gross_pnl_thb": 6.845836494047532,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 6.320836494047532
+        },
+        {
+          "entry_time": "2026-09-11T12:50:00+00:00",
+          "mfe_pct": 2.6000752066642097,
+          "gross_pnl_thb": 4.279305427414256,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 3.754305427414256
+        }
+      ]
+    },
+    {
+      "window": 9,
+      "start_time": "2026-09-12T03:05:00+00:00",
+      "end_time": "2026-09-13T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 3,
+      "net_pnl_thb": -0.5629670986873775,
+      "biggest_winner_thb": 0.027754001454098676,
+      "average_winner_thb": 0.027141697029655576,
+      "average_loser_thb": -0.6172504927466886,
+      "max_mfe_pct": 0.1825187247842308,
+      "trades": [
+        {
+          "entry_time": "2026-09-12T13:00:00+00:00",
+          "mfe_pct": 0.1825187247842308,
+          "gross_pnl_thb": 0.5527540014540987,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.027754001454098676
+        },
+        {
+          "entry_time": "2026-09-12T13:10:00+00:00",
+          "mfe_pct": 0.1767117170389465,
+          "gross_pnl_thb": 0.5515293926052125,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.026529392605212476
+        },
+        {
+          "entry_time": "2026-09-13T00:55:00+00:00",
+          "mfe_pct": 0.08457993625705651,
+          "gross_pnl_thb": -0.09225049274668862,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.6172504927466886
+        }
+      ]
+    },
+    {
+      "window": 10,
+      "start_time": "2026-09-13T03:05:00+00:00",
+      "end_time": "2026-09-14T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 0,
+      "net_pnl_thb": 0,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": 0.0,
+      "max_mfe_pct": 0.0,
+      "trades": []
+    },
+    {
+      "window": 11,
+      "start_time": "2026-09-14T03:05:00+00:00",
+      "end_time": "2026-09-15T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 3,
+      "net_pnl_thb": 0.1875670355380592,
+      "biggest_winner_thb": 0.7113722026395303,
+      "average_winner_thb": 0.7113722026395303,
+      "average_loser_thb": -0.26190258355073553,
+      "max_mfe_pct": 0.7194880717225738,
+      "trades": [
+        {
+          "entry_time": "2026-09-14T06:45:00+00:00",
+          "mfe_pct": 0.3305764288201507,
+          "gross_pnl_thb": 0.08204919826209457,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.44295080173790546
+        },
+        {
+          "entry_time": "2026-09-14T13:45:00+00:00",
+          "mfe_pct": 0.7194880717225738,
+          "gross_pnl_thb": 1.2363722026395303,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.7113722026395303
+        },
+        {
+          "entry_time": "2026-09-14T13:50:00+00:00",
+          "mfe_pct": 0.3508288359935552,
+          "gross_pnl_thb": 0.4441456346364344,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.0808543653635656
+        }
+      ]
+    },
+    {
+      "window": 12,
+      "start_time": "2026-09-15T03:05:00+00:00",
+      "end_time": "2026-09-16T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 2,
+      "net_pnl_thb": -9.416713781767204,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -4.708356890883602,
+      "max_mfe_pct": 0.31122894114725685,
+      "trades": [
+        {
+          "entry_time": "2026-09-15T17:40:00+00:00",
+          "mfe_pct": 0.31122894114725685,
+          "gross_pnl_thb": -4.090726601473305,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -4.615726601473305
+        },
+        {
+          "entry_time": "2026-09-15T18:30:00+00:00",
+          "mfe_pct": 0.0414461535421351,
+          "gross_pnl_thb": -4.275987180293897,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -4.800987180293897
+        }
+      ]
+    },
+    {
+      "window": 13,
+      "start_time": "2026-09-16T03:05:00+00:00",
+      "end_time": "2026-09-17T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 6,
+      "net_pnl_thb": -0.5325793722550684,
+      "biggest_winner_thb": 1.7872670120992402,
+      "average_winner_thb": 0.8755357789614823,
+      "average_loser_thb": -2.0173612440504987,
+      "max_mfe_pct": 1.0430319471508964,
+      "trades": [
+        {
+          "entry_time": "2026-09-16T11:45:00+00:00",
+          "mfe_pct": 0.0891966932687005,
+          "gross_pnl_thb": -2.290846543516646,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -2.815846543516646
+        },
+        {
+          "entry_time": "2026-09-16T18:00:00+00:00",
+          "mfe_pct": 1.0430319471508964,
+          "gross_pnl_thb": 1.0193287752679627,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.4943287752679627
+        },
+        {
+          "entry_time": "2026-09-16T18:05:00+00:00",
+          "mfe_pct": 0.9450317829977628,
+          "gross_pnl_thb": 1.0975982150733061,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.5725982150733061
+        },
+        {
+          "entry_time": "2026-09-16T18:10:00+00:00",
+          "mfe_pct": 0.1417007766582712,
+          "gross_pnl_thb": -0.6938759445843513,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.2188759445843513
+        },
+        {
+          "entry_time": "2026-09-16T18:40:00+00:00",
+          "mfe_pct": 0.8197823210129851,
+          "gross_pnl_thb": 2.31226701209924,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 1.7872670120992402
+        },
+        {
+          "entry_time": "2026-09-16T18:45:00+00:00",
+          "mfe_pct": 0.583916262472628,
+          "gross_pnl_thb": 1.17294911340542,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.6479491134054199
+        }
+      ]
+    },
+    {
+      "window": 14,
+      "start_time": "2026-09-17T03:05:00+00:00",
+      "end_time": "2026-09-18T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 5,
+      "net_pnl_thb": -8.261817282053173,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -1.6523634564106344,
+      "max_mfe_pct": 0.8844508256164119,
+      "trades": [
+        {
+          "entry_time": "2026-09-17T12:05:00+00:00",
+          "mfe_pct": 0.8844508256164119,
+          "gross_pnl_thb": -0.7491388554987064,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.2741388554987063
+        },
+        {
+          "entry_time": "2026-09-17T12:10:00+00:00",
+          "mfe_pct": 0.8117504621658833,
+          "gross_pnl_thb": -0.24030797038741117,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.7653079703874112
+        },
+        {
+          "entry_time": "2026-09-17T12:15:00+00:00",
+          "mfe_pct": 0.4679511153281801,
+          "gross_pnl_thb": -0.6146837561421101,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.13968375614211
+        },
+        {
+          "entry_time": "2026-09-17T12:20:00+00:00",
+          "mfe_pct": 0.28780641071921576,
+          "gross_pnl_thb": -2.6121560103318355,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -3.1371560103318354
+        },
+        {
+          "entry_time": "2026-09-17T12:35:00+00:00",
+          "mfe_pct": 0.011486902270596566,
+          "gross_pnl_thb": -1.42053068969311,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.94553068969311
+        }
+      ]
+    },
+    {
+      "window": 15,
+      "start_time": "2026-09-18T03:05:00+00:00",
+      "end_time": "2026-09-19T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 9,
+      "net_pnl_thb": 22.708994587993054,
+      "biggest_winner_thb": 9.673913579946719,
+      "average_winner_thb": 4.394453044454537,
+      "average_loser_thb": -1.219241226244724,
+      "max_mfe_pct": 2.719722952881143,
+      "trades": [
+        {
+          "entry_time": "2026-09-18T03:20:00+00:00",
+          "mfe_pct": 0.3003107709612207,
+          "gross_pnl_thb": 0.15264129489409095,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.37235870510590907
+        },
+        {
+          "entry_time": "2026-09-18T13:40:00+00:00",
+          "mfe_pct": 2.719722952881143,
+          "gross_pnl_thb": 10.19891357994672,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 9.673913579946719
+        },
+        {
+          "entry_time": "2026-09-18T13:45:00+00:00",
+          "mfe_pct": 2.3426221205734787,
+          "gross_pnl_thb": 7.892555005836339,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 7.367555005836339
+        },
+        {
+          "entry_time": "2026-09-18T13:50:00+00:00",
+          "mfe_pct": 1.4496907868855269,
+          "gross_pnl_thb": 3.8812118108895994,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 3.3562118108895995
+        },
+        {
+          "entry_time": "2026-09-18T13:55:00+00:00",
+          "mfe_pct": 1.3867130207779077,
+          "gross_pnl_thb": 3.394385485706272,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 2.869385485706272
+        },
+        {
+          "entry_time": "2026-09-18T14:00:00+00:00",
+          "mfe_pct": 1.3507409293184613,
+          "gross_pnl_thb": 2.677444444819132,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 2.152444444819132
+        },
+        {
+          "entry_time": "2026-09-18T14:05:00+00:00",
+          "mfe_pct": 0.9870778821285286,
+          "gross_pnl_thb": 1.4722079395291636,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.9472079395291636
+        },
+        {
+          "entry_time": "2026-09-18T14:25:00+00:00",
+          "mfe_pct": 0.2495780557098648,
+          "gross_pnl_thb": -0.6421347891971355,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.1671347891971355
+        },
+        {
+          "entry_time": "2026-09-19T01:00:00+00:00",
+          "mfe_pct": 0.0881730017721516,
+          "gross_pnl_thb": -1.5932301844311276,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -2.1182301844311278
+        }
+      ]
+    },
+    {
+      "window": 16,
+      "start_time": "2026-09-19T03:05:00+00:00",
+      "end_time": "2026-09-20T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 1,
+      "net_pnl_thb": -0.6048107915262295,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -0.6048107915262295,
+      "max_mfe_pct": 0.29772654577664426,
+      "trades": [
+        {
+          "entry_time": "2026-09-19T08:25:00+00:00",
+          "mfe_pct": 0.29772654577664426,
+          "gross_pnl_thb": -0.0798107915262295,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.6048107915262295
+        }
+      ]
+    },
+    {
+      "window": 17,
+      "start_time": "2026-09-20T03:05:00+00:00",
+      "end_time": "2026-09-21T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 2,
+      "net_pnl_thb": -6.683808489979844,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -3.341904244989922,
+      "max_mfe_pct": 0.5093288817045627,
+      "trades": [
+        {
+          "entry_time": "2026-09-21T00:15:00+00:00",
+          "mfe_pct": 0.5093288817045627,
+          "gross_pnl_thb": -3.1538780685951306,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -3.6788780685951306
+        },
+        {
+          "entry_time": "2026-09-21T00:20:00+00:00",
+          "mfe_pct": 0.39374893003008005,
+          "gross_pnl_thb": -2.4799304213847138,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -3.0049304213847137
+        }
+      ]
+    },
+    {
+      "window": 18,
+      "start_time": "2026-09-21T03:05:00+00:00",
+      "end_time": "2026-09-22T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 6,
+      "net_pnl_thb": 26.701981160176423,
+      "biggest_winner_thb": 10.077732855058365,
+      "average_winner_thb": 5.654241439465858,
+      "average_loser_thb": -1.569226037152863,
+      "max_mfe_pct": 3.7206590466926093,
+      "trades": [
+        {
+          "entry_time": "2026-09-21T08:30:00+00:00",
+          "mfe_pct": 3.7206590466926093,
+          "gross_pnl_thb": 10.602732855058365,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 10.077732855058365
+        },
+        {
+          "entry_time": "2026-09-21T08:35:00+00:00",
+          "mfe_pct": 3.336264227232544,
+          "gross_pnl_thb": 9.679021688776412,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 9.154021688776412
+        },
+        {
+          "entry_time": "2026-09-21T08:40:00+00:00",
+          "mfe_pct": 2.1286125657177024,
+          "gross_pnl_thb": 4.641456186219675,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 4.116456186219675
+        },
+        {
+          "entry_time": "2026-09-21T08:45:00+00:00",
+          "mfe_pct": 2.1173520511253097,
+          "gross_pnl_thb": 3.75730774673231,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 3.2323077467323102
+        },
+        {
+          "entry_time": "2026-09-21T08:50:00+00:00",
+          "mfe_pct": 1.8273683255520146,
+          "gross_pnl_thb": 2.2156887205425257,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 1.6906887205425258
+        },
+        {
+          "entry_time": "2026-09-21T19:35:00+00:00",
+          "mfe_pct": 0.6377571730121323,
+          "gross_pnl_thb": -1.044226037152863,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.569226037152863
+        }
+      ]
+    },
+    {
+      "window": 19,
+      "start_time": "2026-09-22T03:05:00+00:00",
+      "end_time": "2026-09-23T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 4,
+      "net_pnl_thb": -4.479409596832536,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -1.119852399208134,
+      "max_mfe_pct": 0.5562049541565806,
+      "trades": [
+        {
+          "entry_time": "2026-09-22T08:40:00+00:00",
+          "mfe_pct": 0.5562049541565806,
+          "gross_pnl_thb": 0.13838767618015915,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.3866123238198409
+        },
+        {
+          "entry_time": "2026-09-22T08:45:00+00:00",
+          "mfe_pct": 0.2647834013506323,
+          "gross_pnl_thb": -1.2346537409433742,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.7596537409433743
+        },
+        {
+          "entry_time": "2026-09-22T08:50:00+00:00",
+          "mfe_pct": 0.207368946885933,
+          "gross_pnl_thb": -1.7717428806035553,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -2.2967428806035555
+        },
+        {
+          "entry_time": "2026-09-22T13:35:00+00:00",
+          "mfe_pct": 0.4325644627672043,
+          "gross_pnl_thb": 0.4885993485342349,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.0364006514657651
+        }
+      ]
+    },
+    {
+      "window": 20,
+      "start_time": "2026-09-23T03:05:00+00:00",
+      "end_time": "2026-09-24T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 2,
+      "net_pnl_thb": -4.354065385233753,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -2.1770326926168764,
+      "max_mfe_pct": 0.18100144798860462,
+      "trades": [
+        {
+          "entry_time": "2026-09-23T04:25:00+00:00",
+          "mfe_pct": 0.18100144798860462,
+          "gross_pnl_thb": -2.453058022275991,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -2.9780580222759907
+        },
+        {
+          "entry_time": "2026-09-23T22:10:00+00:00",
+          "mfe_pct": 0.05933103431483566,
+          "gross_pnl_thb": -0.8510073629577619,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.376007362957762
+        }
+      ]
+    },
+    {
+      "window": 21,
+      "start_time": "2026-09-24T03:05:00+00:00",
+      "end_time": "2026-09-25T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 3,
+      "net_pnl_thb": -2.9076010334586404,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -0.9692003444862135,
+      "max_mfe_pct": 0.9564197944941233,
+      "trades": [
+        {
+          "entry_time": "2026-09-24T13:35:00+00:00",
+          "mfe_pct": 0.9564197944941233,
+          "gross_pnl_thb": -0.5091650904814173,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.0341650904814172
+        },
+        {
+          "entry_time": "2026-09-24T13:40:00+00:00",
+          "mfe_pct": 0.8212050290929751,
+          "gross_pnl_thb": -0.08269972740841255,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.6076997274084126
+        },
+        {
+          "entry_time": "2026-09-25T00:10:00+00:00",
+          "mfe_pct": 0.10055325539097826,
+          "gross_pnl_thb": -0.7407362155688105,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.2657362155688106
+        }
+      ]
+    },
+    {
+      "window": 22,
+      "start_time": "2026-09-25T03:05:00+00:00",
+      "end_time": "2026-09-26T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 1,
+      "net_pnl_thb": -3.2825166155961414,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -3.2825166155961414,
+      "max_mfe_pct": 0.21135421501849994,
+      "trades": [
+        {
+          "entry_time": "2026-09-25T11:10:00+00:00",
+          "mfe_pct": 0.21135421501849994,
+          "gross_pnl_thb": -2.7575166155961415,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -3.2825166155961414
+        }
+      ]
+    },
+    {
+      "window": 23,
+      "start_time": "2026-09-26T03:05:00+00:00",
+      "end_time": "2026-09-27T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 5,
+      "net_pnl_thb": -5.030457826701264,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -1.006091565340253,
+      "max_mfe_pct": 0.07945888216447372,
+      "trades": [
+        {
+          "entry_time": "2026-09-26T08:35:00+00:00",
+          "mfe_pct": 0.07945888216447372,
+          "gross_pnl_thb": -0.525142399430379,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.0501423994303791
+        },
+        {
+          "entry_time": "2026-09-26T08:40:00+00:00",
+          "mfe_pct": 0.04578297729820324,
+          "gross_pnl_thb": -0.6393630151133939,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.164363015113394
+        },
+        {
+          "entry_time": "2026-09-26T15:40:00+00:00",
+          "mfe_pct": 0.034547400530948735,
+          "gross_pnl_thb": -0.3322379656322369,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.8572379656322369
+        },
+        {
+          "entry_time": "2026-09-26T15:55:00+00:00",
+          "mfe_pct": 0.02649965782168806,
+          "gross_pnl_thb": -0.2937986166227646,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.8187986166227645
+        },
+        {
+          "entry_time": "2026-09-27T02:10:00+00:00",
+          "mfe_pct": 0.0047908605994351205,
+          "gross_pnl_thb": -0.61491582990249,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.13991582990249
+        }
+      ]
+    },
+    {
+      "window": 24,
+      "start_time": "2026-09-27T03:05:00+00:00",
+      "end_time": "2026-09-28T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 3,
+      "net_pnl_thb": -3.1803921163739575,
+      "biggest_winner_thb": 0.05281201848995365,
+      "average_winner_thb": 0.05281201848995365,
+      "average_loser_thb": -1.6166020674319554,
+      "max_mfe_pct": 0.15409499580951724,
+      "trades": [
+        {
+          "entry_time": "2026-09-27T05:40:00+00:00",
+          "mfe_pct": 0.09568806471451641,
+          "gross_pnl_thb": -0.23944190832113585,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.7644419083211359
+        },
+        {
+          "entry_time": "2026-09-27T08:05:00+00:00",
+          "mfe_pct": 0.15409499580951724,
+          "gross_pnl_thb": 0.5778120184899537,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.05281201848995365
+        },
+        {
+          "entry_time": "2026-09-27T13:35:00+00:00",
+          "mfe_pct": 0.05120898737138724,
+          "gross_pnl_thb": -1.943762226542775,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -2.468762226542775
+        }
+      ]
+    },
+    {
+      "window": 25,
+      "start_time": "2026-09-28T03:05:00+00:00",
+      "end_time": "2026-09-29T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 0,
+      "net_pnl_thb": 0,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": 0.0,
+      "max_mfe_pct": 0.0,
+      "trades": []
+    },
+    {
+      "window": 26,
+      "start_time": "2026-09-29T03:05:00+00:00",
+      "end_time": "2026-09-30T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 0,
+      "net_pnl_thb": 0,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": 0.0,
+      "max_mfe_pct": 0.0,
+      "trades": []
+    },
+    {
+      "window": 27,
+      "start_time": "2026-09-30T03:05:00+00:00",
+      "end_time": "2026-10-01T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 4,
+      "net_pnl_thb": -23.572385725880707,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -5.893096431470177,
+      "max_mfe_pct": 1.3670055825854677,
+      "trades": [
+        {
+          "entry_time": "2026-09-30T12:35:00+00:00",
+          "mfe_pct": 1.3670055825854677,
+          "gross_pnl_thb": -1.6156596433630623,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -2.1406596433630622
+        },
+        {
+          "entry_time": "2026-09-30T12:40:00+00:00",
+          "mfe_pct": 0.9557979543856288,
+          "gross_pnl_thb": -4.210575293974246,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -4.735575293974247
+        },
+        {
+          "entry_time": "2026-09-30T12:50:00+00:00",
+          "mfe_pct": 0.5997699535032597,
+          "gross_pnl_thb": -7.473413279952586,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -7.998413279952587
+        },
+        {
+          "entry_time": "2026-09-30T12:55:00+00:00",
+          "mfe_pct": 0.19442291663620548,
+          "gross_pnl_thb": -8.17273750859081,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -8.69773750859081
+        }
+      ]
+    },
+    {
+      "window": 28,
+      "start_time": "2026-10-01T03:05:00+00:00",
+      "end_time": "2026-10-02T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 3,
+      "net_pnl_thb": 1.0549768117482783,
+      "biggest_winner_thb": 1.0321228125524886,
+      "average_winner_thb": 0.5981155110470204,
+      "average_loser_thb": -0.14125421034576274,
+      "max_mfe_pct": 1.119239539025907,
+      "trades": [
+        {
+          "entry_time": "2026-10-01T13:40:00+00:00",
+          "mfe_pct": 1.119239539025907,
+          "gross_pnl_thb": 1.5571228125524885,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 1.0321228125524886
+        },
+        {
+          "entry_time": "2026-10-01T13:45:00+00:00",
+          "mfe_pct": 0.9578149919210244,
+          "gross_pnl_thb": 0.6891082095415524,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.16410820954155236
+        },
+        {
+          "entry_time": "2026-10-01T14:10:00+00:00",
+          "mfe_pct": 0.8376843363060216,
+          "gross_pnl_thb": 0.3837457896542373,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.14125421034576274
+        }
+      ]
+    },
+    {
+      "window": 29,
+      "start_time": "2026-10-02T03:05:00+00:00",
+      "end_time": "2026-10-03T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 2,
+      "net_pnl_thb": -6.14275010118163,
+      "biggest_winner_thb": 0.0,
+      "average_winner_thb": 0.0,
+      "average_loser_thb": -3.071375050590815,
+      "max_mfe_pct": 0.36924133637239454,
+      "trades": [
+        {
+          "entry_time": "2026-10-02T04:30:00+00:00",
+          "mfe_pct": 0.14360260367434208,
+          "gross_pnl_thb": -3.8256532115224964,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -4.350653211522497
+        },
+        {
+          "entry_time": "2026-10-02T12:35:00+00:00",
+          "mfe_pct": 0.36924133637239454,
+          "gross_pnl_thb": -1.2670968896591326,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.7920968896591325
+        }
+      ]
+    },
+    {
+      "window": 30,
+      "start_time": "2026-10-03T03:05:00+00:00",
+      "end_time": "2026-10-04T03:00:00+00:00",
+      "candles": 288,
+      "candidates": 7,
+      "net_pnl_thb": -5.211308026679361,
+      "biggest_winner_thb": 0.3323061451127721,
+      "average_winner_thb": 0.3323061451127721,
+      "average_loser_thb": -0.9239356952986889,
+      "max_mfe_pct": 0.32744005812546106,
+      "trades": [
+        {
+          "entry_time": "2026-10-03T11:05:00+00:00",
+          "mfe_pct": 0.32744005812546106,
+          "gross_pnl_thb": 0.8573061451127721,
+          "cost_thb": 0.525,
+          "net_pnl_thb": 0.3323061451127721
+        },
+        {
+          "entry_time": "2026-10-03T12:20:00+00:00",
+          "mfe_pct": 0.19747684850772718,
+          "gross_pnl_thb": 0.015788123675140493,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.5092118763248595
+        },
+        {
+          "entry_time": "2026-10-03T12:25:00+00:00",
+          "mfe_pct": 0.11936002100376708,
+          "gross_pnl_thb": -0.21608889181135665,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.7410888918113567
+        },
+        {
+          "entry_time": "2026-10-03T12:30:00+00:00",
+          "mfe_pct": 0.11877012177854418,
+          "gross_pnl_thb": -0.30486472001822695,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.829864720018227
+        },
+        {
+          "entry_time": "2026-10-03T12:40:00+00:00",
+          "mfe_pct": 0.07796597272358152,
+          "gross_pnl_thb": -0.3290348981064777,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -0.8540348981064777
+        },
+        {
+          "entry_time": "2026-10-03T17:45:00+00:00",
+          "mfe_pct": 0.057819594159158605,
+          "gross_pnl_thb": -0.70765464829416,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.23265464829416
+        },
+        {
+          "entry_time": "2026-10-03T17:55:00+00:00",
+          "mfe_pct": 0.06780418124217036,
+          "gross_pnl_thb": -0.8517591372370523,
+          "cost_thb": 0.525,
+          "net_pnl_thb": -1.3767591372370522
+        }
+      ]
+    }
+  ]
+}

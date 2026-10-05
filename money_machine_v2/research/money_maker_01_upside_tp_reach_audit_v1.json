@@ -1,0 +1,3209 @@
+{
+  "research_version": "MONEY_MAKER_01_UPSIDE_TP_REACH_AUDIT_V1",
+  "standard": {
+    "locked_universe": [
+      {
+        "symbol": "SOLUSDT",
+        "timeframe": "30m"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "timeframe": "15m"
+      },
+      {
+        "symbol": "SOLUSDT",
+        "timeframe": "15m"
+      }
+    ],
+    "window_days": 30,
+    "starting_pot_thb": 1500.0,
+    "round_trip_cost_pct": 0.14,
+    "entry_logic": {
+      "atr_period": 14,
+      "atr_lookback": 6,
+      "atr_expansion_multiplier": 1.25,
+      "candle_range_at_least_atr": true,
+      "bullish": true,
+      "higher_close": true,
+      "relative_volume_at_least": 1.5,
+      "close_above_ema50": true,
+      "entry": "NEXT_CANDLE_OPEN"
+    },
+    "mfe_horizons_minutes": [
+      60,
+      120,
+      240,
+      480
+    ],
+    "tp_levels_pct": [
+      0.2,
+      0.3,
+      0.5,
+      0.75,
+      1.0,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "context_horizon_minutes": 480,
+    "entry_lookahead": false,
+    "future_used_only_for_outcome": true,
+    "ai_used": false,
+    "production_changed": false
+  },
+  "results": {
+    "SOLUSDT_30m": {
+      "symbol": "SOLUSDT",
+      "timeframe": "30m",
+      "candles": 1440,
+      "candidates": 16,
+      "selected_non_overlapping": 8,
+      "skipped_overlap": 8,
+      "summary": {
+        "trades": 8,
+        "mfe": {
+          "60": {
+            "mean_pct": 1.193447753067721,
+            "median_pct": 0.7863199534472565,
+            "p75_pct": 1.453154875717022,
+            "p90_pct": 2.2666543812770668,
+            "max_pct": 4.0416953486085205,
+            "ge_0_30_pct": 6,
+            "ge_0_50_pct": 4,
+            "ge_1_00_pct": 4,
+            "ge_1_50_pct": 2,
+            "ge_2_00_pct": 2
+          },
+          "120": {
+            "mean_pct": 1.3661248118838314,
+            "median_pct": 0.878964761309986,
+            "p75_pct": 1.453154875717022,
+            "p90_pct": 3.132774348106526,
+            "max_pct": 4.0416953486085205,
+            "ge_0_30_pct": 6,
+            "ge_0_50_pct": 6,
+            "ge_1_00_pct": 4,
+            "ge_1_50_pct": 2,
+            "ge_2_00_pct": 2
+          },
+          "240": {
+            "mean_pct": 1.5958650749492902,
+            "median_pct": 0.878964761309986,
+            "p75_pct": 1.7017208413002027,
+            "p90_pct": 3.934396019533759,
+            "max_pct": 4.0416953486085205,
+            "ge_0_30_pct": 8,
+            "ge_0_50_pct": 6,
+            "ge_1_00_pct": 4,
+            "ge_1_50_pct": 3,
+            "ge_2_00_pct": 2
+          },
+          "480": {
+            "mean_pct": 2.0465146584885434,
+            "median_pct": 1.3880605263741908,
+            "p75_pct": 1.9789674952198855,
+            "p90_pct": 4.0416953486085205,
+            "max_pct": 5.3349304339813886,
+            "ge_0_30_pct": 8,
+            "ge_0_50_pct": 7,
+            "ge_1_00_pct": 6,
+            "ge_1_50_pct": 3,
+            "ge_2_00_pct": 2
+          }
+        },
+        "tp_reach": {
+          "0.2": {
+            "hits": 8,
+            "hit_rate_pct": 100.0,
+            "median_bars_to_hit": 1.0,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 7
+          },
+          "0.3": {
+            "hits": 8,
+            "hit_rate_pct": 100.0,
+            "median_bars_to_hit": 1.0,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 7
+          },
+          "0.5": {
+            "hits": 7,
+            "hit_rate_pct": 87.5,
+            "median_bars_to_hit": 1,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 10
+          },
+          "0.75": {
+            "hits": 6,
+            "hit_rate_pct": 75.0,
+            "median_bars_to_hit": 1.0,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 13
+          },
+          "1.0": {
+            "hits": 6,
+            "hit_rate_pct": 75.0,
+            "median_bars_to_hit": 1.0,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 13
+          },
+          "1.5": {
+            "hits": 3,
+            "hit_rate_pct": 37.5,
+            "median_bars_to_hit": 1,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 8
+          },
+          "2.0": {
+            "hits": 2,
+            "hit_rate_pct": 25.0,
+            "median_bars_to_hit": 1.0,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 1
+          },
+          "3.0": {
+            "hits": 2,
+            "hit_rate_pct": 25.0,
+            "median_bars_to_hit": 2.5,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 4
+          }
+        },
+        "context_8h": {
+          "mean_final_close_pct": 0.8178880429878341,
+          "median_final_close_pct": 0.8407666872390474,
+          "positive_final_close": 6,
+          "negative_or_flat_final_close": 2
+        }
+      },
+      "trades": [
+        {
+          "signal_time": "2026-09-11T12:30:00+00:00",
+          "entry_time": "2026-09-11T13:00:00+00:00",
+          "entry": 101.69,
+          "atr": 0.7364285714285705,
+          "atr_expansion_ratio": 1.7371524852569455,
+          "relative_volume": 11.643964589062433,
+          "mfe": {
+            "60": {
+              "max_high": 105.8,
+              "mfe_pct": 4.0416953486085205,
+              "bars_observed": 2
+            },
+            "120": {
+              "max_high": 105.8,
+              "mfe_pct": 4.0416953486085205,
+              "bars_observed": 4
+            },
+            "240": {
+              "max_high": 105.8,
+              "mfe_pct": 4.0416953486085205,
+              "bars_observed": 8
+            },
+            "480": {
+              "max_high": 105.8,
+              "mfe_pct": 4.0416953486085205,
+              "bars_observed": 16
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:30:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:30:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:30:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:30:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:30:00+00:00"
+            },
+            "3.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:30:00+00:00"
+            }
+          },
+          "context_8h": {
+            "final_close": 102.86,
+            "final_close_pct": 1.15055561018782,
+            "bars_observed": 16
+          }
+        },
+        {
+          "signal_time": "2026-09-16T18:00:00+00:00",
+          "entry_time": "2026-09-16T18:30:00+00:00",
+          "entry": 98.39,
+          "atr": 0.8007142857142863,
+          "atr_expansion_ratio": 1.4402569593147743,
+          "relative_volume": 6.347023869066224,
+          "mfe": {
+            "60": {
+              "max_high": 98.74,
+              "mfe_pct": 0.35572720804959435,
+              "bars_observed": 2
+            },
+            "120": {
+              "max_high": 98.9,
+              "mfe_pct": 0.5183453603008426,
+              "bars_observed": 4
+            },
+            "240": {
+              "max_high": 98.9,
+              "mfe_pct": 0.5183453603008426,
+              "bars_observed": 8
+            },
+            "480": {
+              "max_high": 99.74,
+              "mfe_pct": 1.3720906596198734,
+              "bars_observed": 16
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T19:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T19:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-09-16T20:00:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 12,
+              "time": "2026-09-17T00:30:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 13,
+              "time": "2026-09-17T01:00:00+00:00"
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 99.37,
+            "final_close_pct": 0.996036182538873,
+            "bars_observed": 16
+          }
+        },
+        {
+          "signal_time": "2026-09-17T14:00:00+00:00",
+          "entry_time": "2026-09-17T14:30:00+00:00",
+          "entry": 101.56,
+          "atr": 0.6985714285714317,
+          "atr_expansion_ratio": 1.3037102866029784,
+          "relative_volume": 2.7092196512828726,
+          "mfe": {
+            "60": {
+              "max_high": 101.34,
+              "mfe_pct": -0.21662071681763928,
+              "bars_observed": 2
+            },
+            "120": {
+              "max_high": 101.51,
+              "mfe_pct": -0.04923198109492155,
+              "bars_observed": 4
+            },
+            "240": {
+              "max_high": 102.05,
+              "mfe_pct": 0.4824734147302001,
+              "bars_observed": 8
+            },
+            "480": {
+              "max_high": 102.05,
+              "mfe_pct": 0.4824734147302001,
+              "bars_observed": 16
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 5,
+              "time": "2026-09-17T17:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 5,
+              "time": "2026-09-17T17:00:00+00:00"
+            },
+            "0.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 101.44,
+            "final_close_pct": -0.11815675462780728,
+            "bars_observed": 16
+          }
+        },
+        {
+          "signal_time": "2026-09-18T03:30:00+00:00",
+          "entry_time": "2026-09-18T04:00:00+00:00",
+          "entry": 104.6,
+          "atr": 0.6649999999999991,
+          "atr_expansion_ratio": 1.274469541409995,
+          "relative_volume": 3.3812418962546897,
+          "mfe": {
+            "60": {
+              "max_high": 106.12,
+              "mfe_pct": 1.453154875717022,
+              "bars_observed": 2
+            },
+            "120": {
+              "max_high": 106.12,
+              "mfe_pct": 1.453154875717022,
+              "bars_observed": 4
+            },
+            "240": {
+              "max_high": 106.38,
+              "mfe_pct": 1.7017208413002027,
+              "bars_observed": 8
+            },
+            "480": {
+              "max_high": 106.67,
+              "mfe_pct": 1.9789674952198855,
+              "bars_observed": 16
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T04:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T04:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T04:30:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T04:30:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T04:30:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 8,
+              "time": "2026-09-18T08:00:00+00:00"
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 105.69,
+            "final_close_pct": 1.0420650095602335,
+            "bars_observed": 16
+          }
+        },
+        {
+          "signal_time": "2026-09-18T13:30:00+00:00",
+          "entry_time": "2026-09-18T14:00:00+00:00",
+          "entry": 108.53,
+          "atr": 0.817142857142854,
+          "atr_expansion_ratio": 1.3212704523580356,
+          "relative_volume": 4.45885306613645,
+          "mfe": {
+            "60": {
+              "max_high": 110.99,
+              "mfe_pct": 2.2666543812770668,
+              "bars_observed": 2
+            },
+            "120": {
+              "max_high": 111.93,
+              "mfe_pct": 3.132774348106526,
+              "bars_observed": 4
+            },
+            "240": {
+              "max_high": 112.8,
+              "mfe_pct": 3.934396019533759,
+              "bars_observed": 8
+            },
+            "480": {
+              "max_high": 114.32,
+              "mfe_pct": 5.3349304339813886,
+              "bars_observed": 16
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:30:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:30:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:30:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:30:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:30:00+00:00"
+            },
+            "3.0": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-18T16:00:00+00:00"
+            }
+          },
+          "context_8h": {
+            "final_close": 113.23,
+            "final_close_pct": 4.330599834147253,
+            "bars_observed": 16
+          }
+        },
+        {
+          "signal_time": "2026-09-25T11:00:00+00:00",
+          "entry_time": "2026-09-25T11:30:00+00:00",
+          "entry": 121.08,
+          "atr": 0.923571428571428,
+          "atr_expansion_ratio": 1.2643415906127764,
+          "relative_volume": 7.588094693838233,
+          "mfe": {
+            "60": {
+              "max_high": 121.17,
+              "mfe_pct": 0.07433102081269016,
+              "bars_observed": 2
+            },
+            "120": {
+              "max_high": 121.17,
+              "mfe_pct": 0.07433102081269016,
+              "bars_observed": 4
+            },
+            "240": {
+              "max_high": 121.48,
+              "mfe_pct": 0.33036009250082543,
+              "bars_observed": 8
+            },
+            "480": {
+              "max_high": 122.78,
+              "mfe_pct": 1.404030393128508,
+              "bars_observed": 16
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 7,
+              "time": "2026-09-25T15:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 7,
+              "time": "2026-09-25T15:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 10,
+              "time": "2026-09-25T16:30:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 13,
+              "time": "2026-09-25T18:00:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 13,
+              "time": "2026-09-25T18:00:00+00:00"
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 121.91,
+            "final_close_pct": 0.6854971919392217,
+            "bars_observed": 16
+          }
+        },
+        {
+          "signal_time": "2026-09-27T07:30:00+00:00",
+          "entry_time": "2026-09-27T08:00:00+00:00",
+          "entry": 124.13,
+          "atr": 0.6714285714285728,
+          "atr_expansion_ratio": 1.268556005398111,
+          "relative_volume": 5.879104431022342,
+          "mfe": {
+            "60": {
+              "max_high": 124.59,
+              "mfe_pct": 0.370579231450896,
+              "bars_observed": 2
+            },
+            "120": {
+              "max_high": 124.82,
+              "mfe_pct": 0.5558688471763551,
+              "bars_observed": 4
+            },
+            "240": {
+              "max_high": 124.82,
+              "mfe_pct": 0.5558688471763551,
+              "bars_observed": 8
+            },
+            "480": {
+              "max_high": 124.82,
+              "mfe_pct": 0.5558688471763551,
+              "bars_observed": 16
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-27T08:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-27T08:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-27T10:00:00+00:00"
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 121.94,
+            "final_close_pct": -1.764279384516232,
+            "bars_observed": 16
+          }
+        },
+        {
+          "signal_time": "2026-10-02T04:00:00+00:00",
+          "entry_time": "2026-10-02T04:30:00+00:00",
+          "entry": 122.29,
+          "atr": 0.74,
+          "atr_expansion_ratio": 1.2696078431372553,
+          "relative_volume": 4.714673729244786,
+          "mfe": {
+            "60": {
+              "max_high": 123.76,
+              "mfe_pct": 1.202060675443617,
+              "bars_observed": 2
+            },
+            "120": {
+              "max_high": 123.76,
+              "mfe_pct": 1.202060675443617,
+              "bars_observed": 4
+            },
+            "240": {
+              "max_high": 123.76,
+              "mfe_pct": 1.202060675443617,
+              "bars_observed": 8
+            },
+            "480": {
+              "max_high": 123.76,
+              "mfe_pct": 1.202060675443617,
+              "bars_observed": 16
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-10-02T05:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-10-02T05:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-10-02T05:00:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-10-02T05:00:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-10-02T05:00:00+00:00"
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 122.56,
+            "final_close_pct": 0.2207866546733106,
+            "bars_observed": 16
+          }
+        }
+      ]
+    },
+    "ETHUSDT_15m": {
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "candles": 2880,
+      "candidates": 32,
+      "selected_non_overlapping": 15,
+      "skipped_overlap": 17,
+      "summary": {
+        "trades": 15,
+        "mfe": {
+          "60": {
+            "mean_pct": 0.9291892268525108,
+            "median_pct": 0.5564628319119302,
+            "p75_pct": 1.0807279514698953,
+            "p90_pct": 1.3199563146130577,
+            "max_pct": 6.172488041155266,
+            "ge_0_30_pct": 10,
+            "ge_0_50_pct": 8,
+            "ge_1_00_pct": 5,
+            "ge_1_50_pct": 2,
+            "ge_2_00_pct": 1
+          },
+          "120": {
+            "mean_pct": 1.1353654416734307,
+            "median_pct": 0.7276797077968133,
+            "p75_pct": 1.0807279514698953,
+            "p90_pct": 1.825843216683265,
+            "max_pct": 6.8974366171205,
+            "ge_0_30_pct": 11,
+            "ge_0_50_pct": 9,
+            "ge_1_00_pct": 5,
+            "ge_1_50_pct": 4,
+            "ge_2_00_pct": 2
+          },
+          "240": {
+            "mean_pct": 1.2588785919734373,
+            "median_pct": 0.8561879034842512,
+            "p75_pct": 1.1737234573477862,
+            "p90_pct": 2.049941078154238,
+            "max_pct": 6.8974366171205,
+            "ge_0_30_pct": 12,
+            "ge_0_50_pct": 10,
+            "ge_1_00_pct": 6,
+            "ge_1_50_pct": 4,
+            "ge_2_00_pct": 3
+          },
+          "480": {
+            "mean_pct": 1.523578552632919,
+            "median_pct": 1.0807279514698953,
+            "p75_pct": 1.8852601424652393,
+            "p90_pct": 2.5341859612614703,
+            "max_pct": 6.8974366171205,
+            "ge_0_30_pct": 12,
+            "ge_0_50_pct": 10,
+            "ge_1_00_pct": 8,
+            "ge_1_50_pct": 6,
+            "ge_2_00_pct": 4
+          }
+        },
+        "tp_reach": {
+          "0.2": {
+            "hits": 12,
+            "hit_rate_pct": 80.0,
+            "median_bars_to_hit": 1.0,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 15
+          },
+          "0.3": {
+            "hits": 12,
+            "hit_rate_pct": 80.0,
+            "median_bars_to_hit": 1.5,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 15
+          },
+          "0.5": {
+            "hits": 10,
+            "hit_rate_pct": 66.66666666666666,
+            "median_bars_to_hit": 2.0,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 15
+          },
+          "0.75": {
+            "hits": 8,
+            "hit_rate_pct": 53.333333333333336,
+            "median_bars_to_hit": 2.5,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 15
+          },
+          "1.0": {
+            "hits": 8,
+            "hit_rate_pct": 53.333333333333336,
+            "median_bars_to_hit": 3.0,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 25
+          },
+          "1.5": {
+            "hits": 6,
+            "hit_rate_pct": 40.0,
+            "median_bars_to_hit": 5.0,
+            "min_bars_to_hit": 3,
+            "max_bars_to_hit": 28
+          },
+          "2.0": {
+            "hits": 4,
+            "hit_rate_pct": 26.666666666666668,
+            "median_bars_to_hit": 8.5,
+            "min_bars_to_hit": 4,
+            "max_bars_to_hit": 24
+          },
+          "3.0": {
+            "hits": 2,
+            "hit_rate_pct": 13.333333333333334,
+            "median_bars_to_hit": 12.5,
+            "min_bars_to_hit": 4,
+            "max_bars_to_hit": 21
+          }
+        },
+        "context_8h": {
+          "mean_final_close_pct": 0.17414974639202052,
+          "median_final_close_pct": 0.09071395240316527,
+          "positive_final_close": 8,
+          "negative_or_flat_final_close": 7
+        }
+      },
+      "trades": [
+        {
+          "signal_time": "2026-09-11T12:30:00+00:00",
+          "entry_time": "2026-09-11T12:45:00+00:00",
+          "entry": 2493.97,
+          "atr": 12.296428571428644,
+          "atr_expansion_ratio": 1.908783471624195,
+          "relative_volume": 16.509665690743983,
+          "mfe": {
+            "60": {
+              "max_high": 2647.91,
+              "mfe_pct": 6.172488041155266,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2665.99,
+              "mfe_pct": 6.8974366171205,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2665.99,
+              "mfe_pct": 6.8974366171205,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2665.99,
+              "mfe_pct": 6.8974366171205,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:00:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-09-11T13:30:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-09-11T13:30:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-11T13:45:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-11T13:45:00+00:00"
+            },
+            "3.0": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-11T13:45:00+00:00"
+            }
+          },
+          "context_8h": {
+            "final_close": 2530.85,
+            "final_close_pct": 1.478766785486596,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-14T20:15:00+00:00",
+          "entry_time": "2026-09-14T20:30:00+00:00",
+          "entry": 2599.06,
+          "atr": 12.844999999999962,
+          "atr_expansion_ratio": 1.362468905079997,
+          "relative_volume": 5.050380543869289,
+          "mfe": {
+            "60": {
+              "max_high": 2592.0,
+              "mfe_pct": -0.2716366686417393,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2592.0,
+              "mfe_pct": -0.2716366686417393,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2592.0,
+              "mfe_pct": -0.2716366686417393,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2592.0,
+              "mfe_pct": -0.2716366686417393,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.3": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2494.24,
+            "final_close_pct": -4.032996544904699,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-16T18:00:00+00:00",
+          "entry_time": "2026-09-16T18:15:00+00:00",
+          "entry": 2402.51,
+          "atr": 14.70642857142853,
+          "atr_expansion_ratio": 1.3944463257704096,
+          "relative_volume": 12.145516842720768,
+          "mfe": {
+            "60": {
+              "max_high": 2423.08,
+              "mfe_pct": 0.8561879034842512,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2423.08,
+              "mfe_pct": 0.8561879034842512,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2423.08,
+              "mfe_pct": 0.8561879034842512,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2445.3,
+              "mfe_pct": 1.7810539810448223,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T18:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T18:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T18:30:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T18:30:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 25,
+              "time": "2026-09-17T00:30:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 28,
+              "time": "2026-09-17T01:15:00+00:00"
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2422.69,
+            "final_close_pct": 0.8399548805207768,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-17T12:15:00+00:00",
+          "entry_time": "2026-09-17T12:30:00+00:00",
+          "entry": 2472.09,
+          "atr": 7.822142857142873,
+          "atr_expansion_ratio": 1.33361748766974,
+          "relative_volume": 5.433849111567637,
+          "mfe": {
+            "60": {
+              "max_high": 2466.55,
+              "mfe_pct": -0.2241018733136757,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2483.74,
+              "mfe_pct": 0.4712611595856009,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2483.74,
+              "mfe_pct": 0.4712611595856009,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2483.74,
+              "mfe_pct": 0.4712611595856009,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 6,
+              "time": "2026-09-17T14:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 6,
+              "time": "2026-09-17T14:00:00+00:00"
+            },
+            "0.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2451.04,
+            "final_close_pct": -0.8515062153886088,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-18T03:15:00+00:00",
+          "entry_time": "2026-09-18T03:30:00+00:00",
+          "entry": 2474.99,
+          "atr": 7.48500000000003,
+          "atr_expansion_ratio": 1.2686952661527888,
+          "relative_volume": 4.41157304285026,
+          "mfe": {
+            "60": {
+              "max_high": 2483.11,
+              "mfe_pct": 0.32808213366519734,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2493.0,
+              "mfe_pct": 0.7276797077968133,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2498.68,
+              "mfe_pct": 0.9571755845478203,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2521.65,
+              "mfe_pct": 1.8852601424652393,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T03:45:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-18T04:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 6,
+              "time": "2026-09-18T05:00:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 14,
+              "time": "2026-09-18T07:00:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 19,
+              "time": "2026-09-18T08:15:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 22,
+              "time": "2026-09-18T09:00:00+00:00"
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2506.08,
+            "final_close_pct": 1.2561666915825942,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-18T13:45:00+00:00",
+          "entry_time": "2026-09-18T14:00:00+00:00",
+          "entry": 2554.63,
+          "atr": 13.013571428571497,
+          "atr_expansion_ratio": 1.4696099915303145,
+          "relative_volume": 6.331960057369158,
+          "mfe": {
+            "60": {
+              "max_high": 2588.35,
+              "mfe_pct": 1.3199563146130577,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2597.66,
+              "mfe_pct": 1.6843926517734475,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2610.0,
+              "mfe_pct": 2.167437163111674,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2646.0,
+              "mfe_pct": 3.576643192947704,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:15:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:15:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:15:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:15:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:15:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 5,
+              "time": "2026-09-18T15:15:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 10,
+              "time": "2026-09-18T16:30:00+00:00"
+            },
+            "3.0": {
+              "hit": true,
+              "bars": 21,
+              "time": "2026-09-18T19:15:00+00:00"
+            }
+          },
+          "context_8h": {
+            "final_close": 2629.6,
+            "final_close_pct": 2.934671557133517,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-19T08:15:00+00:00",
+          "entry_time": "2026-09-19T08:30:00+00:00",
+          "entry": 2645.28,
+          "atr": 8.961428571428574,
+          "atr_expansion_ratio": 1.2592803252086897,
+          "relative_volume": 10.24779924099484,
+          "mfe": {
+            "60": {
+              "max_high": 2660.0,
+              "mfe_pct": 0.5564628319119302,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2660.0,
+              "mfe_pct": 0.5564628319119302,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2660.0,
+              "mfe_pct": 0.5564628319119302,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2660.0,
+              "mfe_pct": 0.5564628319119302,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-19T08:45:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-19T09:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-19T09:00:00+00:00"
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2647.86,
+            "final_close_pct": 0.09753220831065779,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-20T15:00:00+00:00",
+          "entry_time": "2026-09-20T15:15:00+00:00",
+          "entry": 2596.66,
+          "atr": 7.265714285714304,
+          "atr_expansion_ratio": 1.2579508213615795,
+          "relative_volume": 4.425636686492692,
+          "mfe": {
+            "60": {
+              "max_high": 2628.56,
+              "mfe_pct": 1.228501228501222,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2649.89,
+              "mfe_pct": 2.049941078154238,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2649.89,
+              "mfe_pct": 2.049941078154238,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2649.89,
+              "mfe_pct": 2.049941078154238,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-20T15:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-20T15:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-20T15:45:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-09-20T16:00:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-09-20T16:00:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 5,
+              "time": "2026-09-20T16:30:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 7,
+              "time": "2026-09-20T17:00:00+00:00"
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2637.8,
+            "final_close_pct": 1.584342963653329,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-21T00:00:00+00:00",
+          "entry_time": "2026-09-21T00:15:00+00:00",
+          "entry": 2678.75,
+          "atr": 14.062857142857117,
+          "atr_expansion_ratio": 1.275583919142189,
+          "relative_volume": 9.716140592582343,
+          "mfe": {
+            "60": {
+              "max_high": 2707.7,
+              "mfe_pct": 1.0807279514698953,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2707.7,
+              "mfe_pct": 1.0807279514698953,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2707.7,
+              "mfe_pct": 1.0807279514698953,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2707.7,
+              "mfe_pct": 1.0807279514698953,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-21T00:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-21T00:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-21T00:30:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-21T00:45:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-21T00:45:00+00:00"
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2681.18,
+            "final_close_pct": 0.09071395240316527,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-21T08:30:00+00:00",
+          "entry_time": "2026-09-21T08:45:00+00:00",
+          "entry": 2700.67,
+          "atr": 12.774999999999993,
+          "atr_expansion_ratio": 1.252260978142905,
+          "relative_volume": 9.274952548808194,
+          "mfe": {
+            "60": {
+              "max_high": 2749.98,
+              "mfe_pct": 1.825843216683265,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2749.98,
+              "mfe_pct": 1.825843216683265,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2749.98,
+              "mfe_pct": 1.825843216683265,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2769.11,
+              "mfe_pct": 2.5341859612614703,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-21T09:15:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-21T09:15:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-21T09:15:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-21T09:15:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-09-21T09:30:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-09-21T09:30:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 24,
+              "time": "2026-09-21T14:45:00+00:00"
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2754.65,
+            "final_close_pct": 1.9987632698552638,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-30T12:30:00+00:00",
+          "entry_time": "2026-09-30T12:45:00+00:00",
+          "entry": 2729.72,
+          "atr": 9.723571428571404,
+          "atr_expansion_ratio": 1.318876150492488,
+          "relative_volume": 11.947145536142255,
+          "mfe": {
+            "60": {
+              "max_high": 2737.99,
+              "mfe_pct": 0.30296147590229694,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2737.99,
+              "mfe_pct": 0.30296147590229694,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2737.99,
+              "mfe_pct": 0.30296147590229694,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2737.99,
+              "mfe_pct": 0.30296147590229694,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-30T13:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-30T13:15:00+00:00"
+            },
+            "0.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2682.52,
+            "final_close_pct": -1.7291150740735284,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-10-02T04:15:00+00:00",
+          "entry_time": "2026-10-02T04:30:00+00:00",
+          "entry": 2745.11,
+          "atr": 9.545714285714341,
+          "atr_expansion_ratio": 1.283416297197364,
+          "relative_volume": 6.371011942226729,
+          "mfe": {
+            "60": {
+              "max_high": 2747.32,
+              "mfe_pct": 0.0805067920775393,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2747.32,
+              "mfe_pct": 0.0805067920775393,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2777.33,
+              "mfe_pct": 1.1737234573477862,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2777.33,
+              "mfe_pct": 1.1737234573477862,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 15,
+              "time": "2026-10-02T08:15:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 15,
+              "time": "2026-10-02T08:15:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 15,
+              "time": "2026-10-02T08:15:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 15,
+              "time": "2026-10-02T08:15:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 15,
+              "time": "2026-10-02T08:15:00+00:00"
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2741.65,
+            "final_close_pct": -0.12604230795851823,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-10-04T07:45:00+00:00",
+          "entry_time": "2026-10-04T08:00:00+00:00",
+          "entry": 2705.57,
+          "atr": 3.3092857142856764,
+          "atr_expansion_ratio": 1.399979854955691,
+          "relative_volume": 6.098946086581791,
+          "mfe": {
+            "60": {
+              "max_high": 2703.85,
+              "mfe_pct": -0.06357255587547961,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2706.2,
+              "mfe_pct": 0.023285296628783314,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2707.47,
+              "mfe_pct": 0.07022549776940501,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2707.47,
+              "mfe_pct": 0.07022549776940501,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.3": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2700.32,
+            "final_close_pct": -0.19404413857339042,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-10-04T22:00:00+00:00",
+          "entry_time": "2026-10-04T22:15:00+00:00",
+          "entry": 2719.23,
+          "atr": 4.824285714285809,
+          "atr_expansion_ratio": 1.5619796484736383,
+          "relative_volume": 5.5476340599069704,
+          "mfe": {
+            "60": {
+              "max_high": 2739.5,
+              "mfe_pct": 0.7454316111546344,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 2739.5,
+              "mfe_pct": 0.7454316111546344,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 2739.5,
+              "mfe_pct": 0.7454316111546344,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 2739.5,
+              "mfe_pct": 0.7454316111546344,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-10-04T22:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-10-04T22:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-10-04T23:00:00+00:00"
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2712.23,
+            "final_close_pct": -0.25742581539627274,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-10-05T14:00:00+00:00",
+          "entry_time": "2026-10-05T14:15:00+00:00",
+          "entry": 2728.59,
+          "atr": 7.779285714285801,
+          "atr_expansion_ratio": 1.2606053591064363,
+          "relative_volume": 2.4807065028838564,
+          "mfe": {
+            "60": {
+              "max_high": 2728.59,
+              "mfe_pct": 0.0,
+              "bars_observed": 0
+            },
+            "120": {
+              "max_high": 2728.59,
+              "mfe_pct": 0.0,
+              "bars_observed": 0
+            },
+            "240": {
+              "max_high": 2728.59,
+              "mfe_pct": 0.0,
+              "bars_observed": 0
+            },
+            "480": {
+              "max_high": 2728.59,
+              "mfe_pct": 0.0,
+              "bars_observed": 0
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.3": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 2715.56,
+            "final_close_pct": -0.47753601677057445,
+            "bars_observed": 0
+          }
+        }
+      ]
+    },
+    "SOLUSDT_15m": {
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
+      "candles": 2880,
+      "candidates": 32,
+      "selected_non_overlapping": 13,
+      "skipped_overlap": 19,
+      "summary": {
+        "trades": 13,
+        "mfe": {
+          "60": {
+            "mean_pct": 0.8667651033324897,
+            "median_pct": 0.4334416937567642,
+            "p75_pct": 0.9852216748768461,
+            "p90_pct": 1.1196180126780364,
+            "max_pct": 3.9532349152878288,
+            "ge_0_30_pct": 8,
+            "ge_0_50_pct": 6,
+            "ge_1_00_pct": 3,
+            "ge_1_50_pct": 2,
+            "ge_2_00_pct": 2
+          },
+          "120": {
+            "mean_pct": 1.1853431135360808,
+            "median_pct": 0.6605977604124735,
+            "p75_pct": 1.1196180126780364,
+            "p90_pct": 1.9921647078436244,
+            "max_pct": 4.825126325175844,
+            "ge_0_30_pct": 9,
+            "ge_0_50_pct": 7,
+            "ge_1_00_pct": 5,
+            "ge_1_50_pct": 3,
+            "ge_2_00_pct": 2
+          },
+          "240": {
+            "mean_pct": 1.4499512339528604,
+            "median_pct": 0.6605977604124735,
+            "p75_pct": 1.2704174228675313,
+            "p90_pct": 3.1591231141118614,
+            "max_pct": 4.825126325175844,
+            "ge_0_30_pct": 12,
+            "ge_0_50_pct": 8,
+            "ge_1_00_pct": 6,
+            "ge_1_50_pct": 3,
+            "ge_2_00_pct": 3
+          },
+          "480": {
+            "mean_pct": 2.0175081285727074,
+            "median_pct": 1.1196180126780364,
+            "p75_pct": 2.9729496154178747,
+            "p90_pct": 3.1591231141118614,
+            "max_pct": 6.117144713635936,
+            "ge_0_30_pct": 13,
+            "ge_0_50_pct": 12,
+            "ge_1_00_pct": 7,
+            "ge_1_50_pct": 6,
+            "ge_2_00_pct": 5
+          }
+        },
+        "tp_reach": {
+          "0.2": {
+            "hits": 13,
+            "hit_rate_pct": 100.0,
+            "median_bars_to_hit": 2,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 21
+          },
+          "0.3": {
+            "hits": 13,
+            "hit_rate_pct": 100.0,
+            "median_bars_to_hit": 2,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 27
+          },
+          "0.5": {
+            "hits": 12,
+            "hit_rate_pct": 92.3076923076923,
+            "median_bars_to_hit": 4.5,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 28
+          },
+          "0.75": {
+            "hits": 9,
+            "hit_rate_pct": 69.23076923076923,
+            "median_bars_to_hit": 3,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 28
+          },
+          "1.0": {
+            "hits": 7,
+            "hit_rate_pct": 53.84615384615385,
+            "median_bars_to_hit": 6,
+            "min_bars_to_hit": 1,
+            "max_bars_to_hit": 29
+          },
+          "1.5": {
+            "hits": 6,
+            "hit_rate_pct": 46.15384615384615,
+            "median_bars_to_hit": 12.5,
+            "min_bars_to_hit": 2,
+            "max_bars_to_hit": 29
+          },
+          "2.0": {
+            "hits": 5,
+            "hit_rate_pct": 38.46153846153847,
+            "median_bars_to_hit": 9,
+            "min_bars_to_hit": 2,
+            "max_bars_to_hit": 30
+          },
+          "3.0": {
+            "hits": 3,
+            "hit_rate_pct": 23.076923076923077,
+            "median_bars_to_hit": 4,
+            "min_bars_to_hit": 4,
+            "max_bars_to_hit": 10
+          }
+        },
+        "context_8h": {
+          "mean_final_close_pct": 0.6054388732152787,
+          "median_final_close_pct": 0.25636784651008604,
+          "positive_final_close": 8,
+          "negative_or_flat_final_close": 5
+        }
+      },
+      "trades": [
+        {
+          "signal_time": "2026-09-06T03:30:00+00:00",
+          "entry_time": "2026-09-06T03:45:00+00:00",
+          "entry": 106.47,
+          "atr": 0.47142857142857103,
+          "atr_expansion_ratio": 1.4765100671140898,
+          "relative_volume": 8.90385095582184,
+          "mfe": {
+            "60": {
+              "max_high": 106.36,
+              "mfe_pct": -0.1033154879308773,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 106.83,
+              "mfe_pct": 0.33812341504648735,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 106.83,
+              "mfe_pct": 0.33812341504648735,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 107.3,
+              "mfe_pct": 0.779562318023852,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 7,
+              "time": "2026-09-06T05:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 7,
+              "time": "2026-09-06T05:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 22,
+              "time": "2026-09-06T09:15:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 23,
+              "time": "2026-09-06T09:30:00+00:00"
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 106.47,
+            "final_close_pct": 0.0,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-06T14:30:00+00:00",
+          "entry_time": "2026-09-06T14:45:00+00:00",
+          "entry": 106.25,
+          "atr": 0.5807142857142864,
+          "atr_expansion_ratio": 1.2952734997344666,
+          "relative_volume": 1.8496896023180383,
+          "mfe": {
+            "60": {
+              "max_high": 105.99,
+              "mfe_pct": -0.24470588235294688,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 106.38,
+              "mfe_pct": 0.12235294117646234,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 106.59,
+              "mfe_pct": 0.32000000000000917,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 106.59,
+              "mfe_pct": 0.32000000000000917,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 13,
+              "time": "2026-09-06T18:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 15,
+              "time": "2026-09-06T18:30:00+00:00"
+            },
+            "0.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 105.85,
+            "final_close_pct": -0.37647058823530033,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-11T12:30:00+00:00",
+          "entry_time": "2026-09-11T12:45:00+00:00",
+          "entry": 100.93,
+          "atr": 0.6407142857142836,
+          "atr_expansion_ratio": 1.710200190657769,
+          "relative_volume": 14.126129780232576,
+          "mfe": {
+            "60": {
+              "max_high": 104.92,
+              "mfe_pct": 3.9532349152878288,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 105.8,
+              "mfe_pct": 4.825126325175844,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 105.8,
+              "mfe_pct": 4.825126325175844,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 105.8,
+              "mfe_pct": 4.825126325175844,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:00:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-11T13:00:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-11T13:45:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-11T13:45:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-11T13:45:00+00:00"
+            },
+            "3.0": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-11T13:45:00+00:00"
+            }
+          },
+          "context_8h": {
+            "final_close": 102.47,
+            "final_close_pct": 1.5258099673040704,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-16T18:00:00+00:00",
+          "entry_time": "2026-09-16T18:15:00+00:00",
+          "entry": 97.85,
+          "atr": 0.6485714285714295,
+          "atr_expansion_ratio": 1.4954707658523125,
+          "relative_volume": 8.823719169129292,
+          "mfe": {
+            "60": {
+              "max_high": 98.74,
+              "mfe_pct": 0.9095554420030627,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 98.9,
+              "mfe_pct": 1.073071027082273,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 98.9,
+              "mfe_pct": 1.073071027082273,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 99.64,
+              "mfe_pct": 1.8293306080735983,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T18:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T18:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T18:30:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-16T18:30:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 8,
+              "time": "2026-09-16T20:15:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 28,
+              "time": "2026-09-17T01:15:00+00:00"
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 99.12,
+            "final_close_pct": 1.297904956566187,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-17T14:00:00+00:00",
+          "entry_time": "2026-09-17T14:15:00+00:00",
+          "entry": 101.43,
+          "atr": 0.6000000000000004,
+          "atr_expansion_ratio": 1.3249211356466855,
+          "relative_volume": 2.69182206491208,
+          "mfe": {
+            "60": {
+              "max_high": 101.8,
+              "mfe_pct": 0.36478359459723997,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 101.8,
+              "mfe_pct": 0.36478359459723997,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 102.05,
+              "mfe_pct": 0.6112589963521486,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 102.05,
+              "mfe_pct": 0.6112589963521486,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-17T14:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-17T14:30:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 13,
+              "time": "2026-09-17T17:30:00+00:00"
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 100.93,
+            "final_close_pct": -0.49295080350980625,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-18T13:30:00+00:00",
+          "entry_time": "2026-09-18T13:45:00+00:00",
+          "entry": 107.73,
+          "atr": 0.5571428571428539,
+          "atr_expansion_ratio": 1.3367609254498736,
+          "relative_volume": 5.091631467772809,
+          "mfe": {
+            "60": {
+              "max_high": 110.99,
+              "mfe_pct": 3.0260837278381025,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 111.59,
+              "mfe_pct": 3.5830316532070805,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 112.74,
+              "mfe_pct": 4.650515176830949,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 114.32,
+              "mfe_pct": 6.117144713635936,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:00:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:00:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-18T14:00:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-18T14:15:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-18T14:15:00+00:00"
+            },
+            "3.0": {
+              "hit": true,
+              "bars": 4,
+              "time": "2026-09-18T14:45:00+00:00"
+            }
+          },
+          "context_8h": {
+            "final_close": 113.19,
+            "final_close_pct": 5.068226120857688,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-20T16:30:00+00:00",
+          "entry_time": "2026-09-20T16:45:00+00:00",
+          "entry": 110.39,
+          "atr": 0.48142857142857104,
+          "atr_expansion_ratio": 1.3207054212932716,
+          "relative_volume": 3.9397188136014902,
+          "mfe": {
+            "60": {
+              "max_high": 110.58,
+              "mfe_pct": 0.1721170395869276,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 110.58,
+              "mfe_pct": 0.1721170395869276,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 110.85,
+              "mfe_pct": 0.4167044116314855,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 112.92,
+              "mfe_pct": 2.2918742639731926,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 12,
+              "time": "2026-09-20T19:45:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 12,
+              "time": "2026-09-20T19:45:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 24,
+              "time": "2026-09-20T22:45:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 28,
+              "time": "2026-09-20T23:45:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 29,
+              "time": "2026-09-21T00:00:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 29,
+              "time": "2026-09-21T00:00:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 30,
+              "time": "2026-09-21T00:15:00+00:00"
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 112.32,
+            "final_close_pct": 1.7483467705408096,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-21T08:30:00+00:00",
+          "entry_time": "2026-09-21T08:45:00+00:00",
+          "entry": 115.71,
+          "atr": 0.7907142857142883,
+          "atr_expansion_ratio": 1.4505350513212492,
+          "relative_volume": 8.837251460994493,
+          "mfe": {
+            "60": {
+              "max_high": 116.85,
+              "mfe_pct": 0.9852216748768461,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 116.85,
+              "mfe_pct": 0.9852216748768461,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 117.18,
+              "mfe_pct": 1.2704174228675313,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 119.15,
+              "mfe_pct": 2.9729496154178747,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-21T09:15:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-09-21T09:15:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-09-21T09:30:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-09-21T09:30:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 11,
+              "time": "2026-09-21T11:30:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 17,
+              "time": "2026-09-21T13:00:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 18,
+              "time": "2026-09-21T13:15:00+00:00"
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 117.51,
+            "final_close_pct": 1.5556131708581944,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-25T11:00:00+00:00",
+          "entry_time": "2026-09-25T11:15:00+00:00",
+          "entry": 121.6,
+          "atr": 0.7728571428571424,
+          "atr_expansion_ratio": 1.3707770270270254,
+          "relative_volume": 8.721319257630027,
+          "mfe": {
+            "60": {
+              "max_high": 121.69,
+              "mfe_pct": 0.07401315789474783,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 121.69,
+              "mfe_pct": 0.07401315789474783,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 121.69,
+              "mfe_pct": 0.07401315789474783,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 122.78,
+              "mfe_pct": 0.9703947368421062,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 21,
+              "time": "2026-09-25T16:30:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 27,
+              "time": "2026-09-25T18:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 28,
+              "time": "2026-09-25T18:15:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 28,
+              "time": "2026-09-25T18:15:00+00:00"
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 121.85,
+            "final_close_pct": 0.20559210526316374,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-27T07:45:00+00:00",
+          "entry_time": "2026-09-27T08:00:00+00:00",
+          "entry": 124.13,
+          "atr": 0.4985714285714299,
+          "atr_expansion_ratio": 1.4376930998970145,
+          "relative_volume": 6.94894788869979,
+          "mfe": {
+            "60": {
+              "max_high": 124.95,
+              "mfe_pct": 0.6605977604124735,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 124.95,
+              "mfe_pct": 0.6605977604124735,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 124.95,
+              "mfe_pct": 0.6605977604124735,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 124.95,
+              "mfe_pct": 0.6605977604124735,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-27T08:15:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-27T08:15:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-27T08:15:00+00:00"
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 122.12,
+            "final_close_pct": -1.6192701200354431,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-09-30T12:30:00+00:00",
+          "entry_time": "2026-09-30T12:45:00+00:00",
+          "entry": 121.47,
+          "atr": 0.6042857142857139,
+          "atr_expansion_ratio": 1.2978777806187671,
+          "relative_volume": 7.48440671908193,
+          "mfe": {
+            "60": {
+              "max_high": 122.83,
+              "mfe_pct": 1.1196180126780364,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 122.83,
+              "mfe_pct": 1.1196180126780364,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 122.83,
+              "mfe_pct": 1.1196180126780364,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 122.83,
+              "mfe_pct": 1.1196180126780364,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-30T13:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-30T13:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-30T13:00:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-30T13:00:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 1,
+              "time": "2026-09-30T13:00:00+00:00"
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 118.05,
+            "final_close_pct": -2.8155100024697455,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-10-02T02:00:00+00:00",
+          "entry_time": "2026-10-02T02:15:00+00:00",
+          "entry": 119.97,
+          "atr": 0.4442857142857152,
+          "atr_expansion_ratio": 1.2895646164478247,
+          "relative_volume": 3.5058660689226424,
+          "mfe": {
+            "60": {
+              "max_high": 120.49,
+              "mfe_pct": 0.4334416937567642,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 122.36,
+              "mfe_pct": 1.9921647078436244,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 123.76,
+              "mfe_pct": 3.1591231141118614,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 123.76,
+              "mfe_pct": 3.1591231141118614,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 2,
+              "time": "2026-10-02T02:45:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 3,
+              "time": "2026-10-02T03:00:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 6,
+              "time": "2026-10-02T03:45:00+00:00"
+            },
+            "0.75": {
+              "hit": true,
+              "bars": 6,
+              "time": "2026-10-02T03:45:00+00:00"
+            },
+            "1.0": {
+              "hit": true,
+              "bars": 6,
+              "time": "2026-10-02T03:45:00+00:00"
+            },
+            "1.5": {
+              "hit": true,
+              "bars": 8,
+              "time": "2026-10-02T04:15:00+00:00"
+            },
+            "2.0": {
+              "hit": true,
+              "bars": 9,
+              "time": "2026-10-02T04:30:00+00:00"
+            },
+            "3.0": {
+              "hit": true,
+              "bars": 10,
+              "time": "2026-10-02T04:45:00+00:00"
+            }
+          },
+          "context_8h": {
+            "final_close": 121.79,
+            "final_close_pct": 1.5170459281487192,
+            "bars_observed": 32
+          }
+        },
+        {
+          "signal_time": "2026-10-04T03:30:00+00:00",
+          "entry_time": "2026-10-04T03:45:00+00:00",
+          "entry": 120.92,
+          "atr": 0.26857142857142996,
+          "atr_expansion_ratio": 1.3764490543014065,
+          "relative_volume": 5.158145941838085,
+          "mfe": {
+            "60": {
+              "max_high": 120.82,
+              "mfe_pct": -0.08269930532583958,
+              "bars_observed": 4
+            },
+            "120": {
+              "max_high": 121.04,
+              "mfe_pct": 0.0992391663910075,
+              "bars_observed": 8
+            },
+            "240": {
+              "max_high": 121.32,
+              "mfe_pct": 0.3307972213033361,
+              "bars_observed": 16
+            },
+            "480": {
+              "max_high": 121.61,
+              "mfe_pct": 0.5706252067482653,
+              "bars_observed": 32
+            }
+          },
+          "tp_reach": {
+            "0.2": {
+              "hit": true,
+              "bars": 13,
+              "time": "2026-10-04T07:00:00+00:00"
+            },
+            "0.3": {
+              "hit": true,
+              "bars": 14,
+              "time": "2026-10-04T07:15:00+00:00"
+            },
+            "0.5": {
+              "hit": true,
+              "bars": 24,
+              "time": "2026-10-04T09:45:00+00:00"
+            },
+            "0.75": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "1.5": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "2.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            },
+            "3.0": {
+              "hit": false,
+              "bars": null,
+              "time": null
+            }
+          },
+          "context_8h": {
+            "final_close": 121.23,
+            "final_close_pct": 0.25636784651008604,
+            "bars_observed": 32
+          }
+        }
+      ]
+    }
+  }
+}

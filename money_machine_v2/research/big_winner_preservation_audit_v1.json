@@ -1,0 +1,1758 @@
+{
+  "standard": {
+    "symbol": "BTCUSDT",
+    "interval": "5m",
+    "candles": 8640,
+    "horizon_bars": 20,
+    "big_winner_mfe_pct": 1.0,
+    "lookahead": false,
+    "profit_lock_used": false
+  },
+  "summary": {
+    "all_trades": 83,
+    "big_winners": 17,
+    "big_winner_rate_pct": 20.481927710843372,
+    "giveback_levels": {
+      "0.2": {
+        "hits": 17,
+        "avg_post_giveback_max_high_pct": 2.1264440889301617,
+        "max_post_giveback_max_high_pct": 3.7206590466926093,
+        "still_had_upside_0_50pct": 17,
+        "still_had_upside_1_00pct": 15
+      },
+      "0.3": {
+        "hits": 17,
+        "avg_post_giveback_max_high_pct": 2.1264440889301617,
+        "max_post_giveback_max_high_pct": 3.7206590466926093,
+        "still_had_upside_0_50pct": 17,
+        "still_had_upside_1_00pct": 15
+      },
+      "0.5": {
+        "hits": 17,
+        "avg_post_giveback_max_high_pct": 1.9808797598089765,
+        "max_post_giveback_max_high_pct": 3.7206590466926093,
+        "still_had_upside_0_50pct": 17,
+        "still_had_upside_1_00pct": 15
+      }
+    }
+  },
+  "trades": [
+    {
+      "entry_time": "2026-09-05T12:40:00+00:00",
+      "entry": 79711.98,
+      "max_mfe_pct": 0.06669010103625972,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-05T12:45:00+00:00",
+      "entry": 79726.91,
+      "max_mfe_pct": 0.04652130629418938,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-05T12:50:00+00:00",
+      "entry": 79736.0,
+      "max_mfe_pct": 0.035115882411962396,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-05T17:10:00+00:00",
+      "entry": 80116.05,
+      "max_mfe_pct": 0.04487240696464667,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-06T20:25:00+00:00",
+      "entry": 79926.52,
+      "max_mfe_pct": 0.13447351392252838,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-09T04:05:00+00:00",
+      "entry": 78928.0,
+      "max_mfe_pct": 0.5600167241029741,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-11T12:30:00+00:00",
+      "entry": 77094.01,
+      "max_mfe_pct": 3.626727939044816,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-11T12:45:00+00:00",
+          "mfe_at_hit_pct": 1.2141021072843428,
+          "giveback_at_hit_pct": 0.21089321916016374,
+          "bars_remaining": 17,
+          "post_giveback_max_high_pct": 3.626727939044816,
+          "post_giveback_max_close_pct": 3.163475346528233
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-11T13:00:00+00:00",
+          "mfe_at_hit_pct": 1.3681088842051548,
+          "giveback_at_hit_pct": 0.49005268670998553,
+          "bars_remaining": 14,
+          "post_giveback_max_high_pct": 3.626727939044816,
+          "post_giveback_max_close_pct": 3.163475346528233
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-11T13:05:00+00:00",
+          "mfe_at_hit_pct": 1.3681088842051548,
+          "giveback_at_hit_pct": 0.7354437192461519,
+          "bars_remaining": 13,
+          "post_giveback_max_high_pct": 3.626727939044816,
+          "post_giveback_max_close_pct": 3.163475346528233
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-11T12:35:00+00:00",
+      "entry": 77147.9,
+      "max_mfe_pct": 3.5543417254390697,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-11T12:45:00+00:00",
+          "mfe_at_hit_pct": 1.1434011813672207,
+          "giveback_at_hit_pct": 0.21089321916016374,
+          "bars_remaining": 18,
+          "post_giveback_max_high_pct": 3.5543417254390697,
+          "post_giveback_max_close_pct": 3.0914127280198267
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-11T13:00:00+00:00",
+          "mfe_at_hit_pct": 1.2973003801788563,
+          "giveback_at_hit_pct": 0.49005268670998553,
+          "bars_remaining": 15,
+          "post_giveback_max_high_pct": 3.5543417254390697,
+          "post_giveback_max_close_pct": 3.0914127280198267
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-11T13:05:00+00:00",
+          "mfe_at_hit_pct": 1.2973003801788563,
+          "giveback_at_hit_pct": 0.7354437192461519,
+          "bars_remaining": 14,
+          "post_giveback_max_high_pct": 3.5543417254390697,
+          "post_giveback_max_close_pct": 3.0914127280198267
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-11T12:40:00+00:00",
+      "entry": 77632.77,
+      "max_mfe_pct": 2.907573696004917,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-11T14:00:00+00:00",
+          "mfe_at_hit_pct": 2.907573696004917,
+          "giveback_at_hit_pct": 0.44703967955939344,
+          "bars_remaining": 4,
+          "post_giveback_max_high_pct": 2.4999236791370283,
+          "post_giveback_max_close_pct": 2.0033163830171175
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-11T14:00:00+00:00",
+          "mfe_at_hit_pct": 2.907573696004917,
+          "giveback_at_hit_pct": 0.44703967955939344,
+          "bars_remaining": 4,
+          "post_giveback_max_high_pct": 2.4999236791370283,
+          "post_giveback_max_close_pct": 2.0033163830171175
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-11T14:05:00+00:00",
+          "mfe_at_hit_pct": 2.907573696004917,
+          "giveback_at_hit_pct": 1.0739642007760737,
+          "bars_remaining": 3,
+          "post_giveback_max_high_pct": 2.0161975413217847,
+          "post_giveback_max_close_pct": 2.0033163830171175
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-11T12:50:00+00:00",
+      "entry": 77865.44,
+      "max_mfe_pct": 2.6000752066642097,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-11T14:00:00+00:00",
+          "mfe_at_hit_pct": 2.6000752066642097,
+          "giveback_at_hit_pct": 0.44703967955939344,
+          "bars_remaining": 6,
+          "post_giveback_max_high_pct": 2.193643290271008,
+          "post_giveback_max_close_pct": 1.6985199081903213
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-11T14:00:00+00:00",
+          "mfe_at_hit_pct": 2.6000752066642097,
+          "giveback_at_hit_pct": 0.44703967955939344,
+          "bars_remaining": 6,
+          "post_giveback_max_high_pct": 2.193643290271008,
+          "post_giveback_max_close_pct": 1.6985199081903213
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-11T14:05:00+00:00",
+          "mfe_at_hit_pct": 2.6000752066642097,
+          "giveback_at_hit_pct": 1.0739642007760737,
+          "bars_remaining": 5,
+          "post_giveback_max_high_pct": 1.7113625762597673,
+          "post_giveback_max_close_pct": 1.6985199081903213
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-12T13:00:00+00:00",
+      "entry": 77340.01,
+      "max_mfe_pct": 0.1825187247842308,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-12T13:10:00+00:00",
+      "entry": 77368.95,
+      "max_mfe_pct": 0.1767117170389465,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-13T00:55:00+00:00",
+      "entry": 77276.01,
+      "max_mfe_pct": 0.08457993625705651,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-14T06:45:00+00:00",
+      "entry": 77742.99,
+      "max_mfe_pct": 0.3305764288201507,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-14T13:45:00+00:00",
+      "entry": 78150.01,
+      "max_mfe_pct": 0.7194880717225738,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-14T13:50:00+00:00",
+      "entry": 78437.11,
+      "max_mfe_pct": 0.3508288359935552,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-15T17:40:00+00:00",
+      "entry": 76965.85,
+      "max_mfe_pct": 0.31122894114725685,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-15T18:30:00+00:00",
+      "entry": 76919.08,
+      "max_mfe_pct": 0.0,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-16T11:45:00+00:00",
+      "entry": 76236.01,
+      "max_mfe_pct": 0.0891966932687005,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-16T18:00:00+00:00",
+      "entry": 75770.45,
+      "max_mfe_pct": 1.0430319471508964,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-16T18:05:00+00:00",
+          "mfe_at_hit_pct": 1.0430319471508964,
+          "giveback_at_hit_pct": 0.43985979240539774,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 0.7411332518151736,
+          "post_giveback_max_close_pct": 0.37423560240172904
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-16T18:05:00+00:00",
+          "mfe_at_hit_pct": 1.0430319471508964,
+          "giveback_at_hit_pct": 0.43985979240539774,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 0.7411332518151736,
+          "post_giveback_max_close_pct": 0.37423560240172904
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-16T18:10:00+00:00",
+          "mfe_at_hit_pct": 1.0430319471508964,
+          "giveback_at_hit_pct": 0.9962675396639219,
+          "bars_remaining": 18,
+          "post_giveback_max_high_pct": 0.7411332518151736,
+          "post_giveback_max_close_pct": 0.37423560240172904
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-16T18:05:00+00:00",
+      "entry": 75844.01,
+      "max_mfe_pct": 0.6434258948069926,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-16T18:10:00+00:00",
+      "entry": 76224.0,
+      "max_mfe_pct": 0.1417007766582712,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-16T18:40:00+00:00",
+      "entry": 75800.61,
+      "max_mfe_pct": 0.8197823210129851,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-16T18:45:00+00:00",
+      "entry": 75978.36,
+      "max_mfe_pct": 0.583916262472628,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-17T12:05:00+00:00",
+      "entry": 76502.84,
+      "max_mfe_pct": 0.8844508256164119,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-17T12:10:00+00:00",
+      "entry": 76558.01,
+      "max_mfe_pct": 0.8117504621658833,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-17T12:15:00+00:00",
+      "entry": 76819.99,
+      "max_mfe_pct": 0.4679511153281801,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-17T12:20:00+00:00",
+      "entry": 76957.98,
+      "max_mfe_pct": 0.28780641071921576,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-17T12:35:00+00:00",
+      "entry": 77044.27,
+      "max_mfe_pct": 0.0,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T03:20:00+00:00",
+      "entry": 77436.45,
+      "max_mfe_pct": 0.3003107709612207,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T13:40:00+00:00",
+      "entry": 78958.41,
+      "max_mfe_pct": 2.719722952881143,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-18T13:50:00+00:00",
+          "mfe_at_hit_pct": 1.95240760293931,
+          "giveback_at_hit_pct": 0.5656149068323068,
+          "bars_remaining": 18,
+          "post_giveback_max_high_pct": 2.719722952881143,
+          "post_giveback_max_close_pct": 2.719710287985788
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-18T13:50:00+00:00",
+          "mfe_at_hit_pct": 1.95240760293931,
+          "giveback_at_hit_pct": 0.5656149068323068,
+          "bars_remaining": 18,
+          "post_giveback_max_high_pct": 2.719722952881143,
+          "post_giveback_max_close_pct": 2.719710287985788
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-18T13:50:00+00:00",
+          "mfe_at_hit_pct": 1.95240760293931,
+          "giveback_at_hit_pct": 0.5656149068323068,
+          "bars_remaining": 18,
+          "post_giveback_max_high_pct": 2.719722952881143,
+          "post_giveback_max_close_pct": 2.719710287985788
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T13:45:00+00:00",
+      "entry": 79297.04,
+      "max_mfe_pct": 2.3426221205734787,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-18T13:50:00+00:00",
+          "mfe_at_hit_pct": 1.5170301438742317,
+          "giveback_at_hit_pct": 0.5656149068323068,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 2.3426221205734787,
+          "post_giveback_max_close_pct": 2.2810561403048712
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-18T13:50:00+00:00",
+          "mfe_at_hit_pct": 1.5170301438742317,
+          "giveback_at_hit_pct": 0.5656149068323068,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 2.3426221205734787,
+          "post_giveback_max_close_pct": 2.2810561403048712
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-18T13:50:00+00:00",
+          "mfe_at_hit_pct": 1.5170301438742317,
+          "giveback_at_hit_pct": 0.5656149068323068,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 2.3426221205734787,
+          "post_giveback_max_close_pct": 2.2810561403048712
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T13:50:00+00:00",
+      "entry": 79994.99,
+      "max_mfe_pct": 1.4496907868855269,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-18T14:25:00+00:00",
+          "mfe_at_hit_pct": 1.243827894721905,
+          "giveback_at_hit_pct": 0.3517842143208111,
+          "bars_remaining": 13,
+          "post_giveback_max_high_pct": 1.4496907868855269,
+          "post_giveback_max_close_pct": 1.388661964955551
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-18T14:25:00+00:00",
+          "mfe_at_hit_pct": 1.243827894721905,
+          "giveback_at_hit_pct": 0.3517842143208111,
+          "bars_remaining": 13,
+          "post_giveback_max_high_pct": 1.4496907868855269,
+          "post_giveback_max_close_pct": 1.388661964955551
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-18T15:05:00+00:00",
+          "mfe_at_hit_pct": 1.318845092673926,
+          "giveback_at_hit_pct": 0.5675755706354152,
+          "bars_remaining": 5,
+          "post_giveback_max_high_pct": 1.4496907868855269,
+          "post_giveback_max_close_pct": 1.388661964955551
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T13:55:00+00:00",
+      "entry": 80044.68,
+      "max_mfe_pct": 1.3867130207779077,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-18T14:25:00+00:00",
+          "mfe_at_hit_pct": 1.1809779238295626,
+          "giveback_at_hit_pct": 0.3517842143208111,
+          "bars_remaining": 14,
+          "post_giveback_max_high_pct": 1.3867130207779077,
+          "post_giveback_max_close_pct": 1.3257220842159745
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-18T14:25:00+00:00",
+          "mfe_at_hit_pct": 1.1809779238295626,
+          "giveback_at_hit_pct": 0.3517842143208111,
+          "bars_remaining": 14,
+          "post_giveback_max_high_pct": 1.3867130207779077,
+          "post_giveback_max_close_pct": 1.3257220842159745
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-18T15:05:00+00:00",
+          "mfe_at_hit_pct": 1.2559485527332992,
+          "giveback_at_hit_pct": 0.5675755706354152,
+          "bars_remaining": 6,
+          "post_giveback_max_high_pct": 1.3867130207779077,
+          "post_giveback_max_close_pct": 1.3257220842159745
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T14:00:00+00:00",
+      "entry": 80073.09,
+      "max_mfe_pct": 1.3507409293184613,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-18T14:25:00+00:00",
+          "mfe_at_hit_pct": 1.1450788273563717,
+          "giveback_at_hit_pct": 0.3517842143208111,
+          "bars_remaining": 15,
+          "post_giveback_max_high_pct": 1.3507409293184613,
+          "post_giveback_max_close_pct": 1.289771632392367
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-18T14:25:00+00:00",
+          "mfe_at_hit_pct": 1.1450788273563717,
+          "giveback_at_hit_pct": 0.3517842143208111,
+          "bars_remaining": 15,
+          "post_giveback_max_high_pct": 1.3507409293184613,
+          "post_giveback_max_close_pct": 1.289771632392367
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-18T15:05:00+00:00",
+          "mfe_at_hit_pct": 1.2200228566176197,
+          "giveback_at_hit_pct": 0.5675755706354152,
+          "bars_remaining": 7,
+          "post_giveback_max_high_pct": 1.3507409293184613,
+          "post_giveback_max_close_pct": 1.289771632392367
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T14:05:00+00:00",
+      "entry": 80361.44,
+      "max_mfe_pct": 0.9870778821285286,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-18T14:25:00+00:00",
+      "entry": 80952.63,
+      "max_mfe_pct": 0.2495780557098648,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-19T01:00:00+00:00",
+      "entry": 81668.99,
+      "max_mfe_pct": 0.0,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-19T08:25:00+00:00",
+      "entry": 81286.0,
+      "max_mfe_pct": 0.29772654577664426,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T00:15:00+00:00",
+      "entry": 81683.96,
+      "max_mfe_pct": 0.5093288817045627,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T00:20:00+00:00",
+      "entry": 81778.0,
+      "max_mfe_pct": 0.39374893003008005,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T08:30:00+00:00",
+      "entry": 82240.0,
+      "max_mfe_pct": 3.7206590466926093,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-21T08:35:00+00:00",
+          "mfe_at_hit_pct": 2.351775291828795,
+          "giveback_at_hit_pct": 0.7747038578375127,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 3.7206590466926093,
+          "post_giveback_max_close_pct": 3.3929961089494087
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-21T08:35:00+00:00",
+          "mfe_at_hit_pct": 2.351775291828795,
+          "giveback_at_hit_pct": 0.7747038578375127,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 3.7206590466926093,
+          "post_giveback_max_close_pct": 3.3929961089494087
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-21T08:35:00+00:00",
+          "mfe_at_hit_pct": 2.351775291828795,
+          "giveback_at_hit_pct": 0.7747038578375127,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 3.7206590466926093,
+          "post_giveback_max_close_pct": 3.3929961089494087
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T08:35:00+00:00",
+      "entry": 82545.92,
+      "max_mfe_pct": 3.336264227232544,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-21T08:40:00+00:00",
+          "mfe_at_hit_pct": 1.66792011040644,
+          "giveback_at_hit_pct": 0.4664886934074649,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 3.336264227232544,
+          "post_giveback_max_close_pct": 3.0098156274713572
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-21T08:40:00+00:00",
+          "mfe_at_hit_pct": 1.66792011040644,
+          "giveback_at_hit_pct": 0.4664886934074649,
+          "bars_remaining": 19,
+          "post_giveback_max_high_pct": 3.336264227232544,
+          "post_giveback_max_close_pct": 3.0098156274713572
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-21T09:45:00+00:00",
+          "mfe_at_hit_pct": 3.336264227232544,
+          "giveback_at_hit_pct": 0.5976562449626106,
+          "bars_remaining": 6,
+          "post_giveback_max_high_pct": 2.794335564980077,
+          "post_giveback_max_close_pct": 2.6155260005582326
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T08:40:00+00:00",
+      "entry": 83522.01,
+      "max_mfe_pct": 2.1286125657177024,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-21T09:35:00+00:00",
+          "mfe_at_hit_pct": 2.1286125657177024,
+          "giveback_at_hit_pct": 0.4680780873405664,
+          "bars_remaining": 9,
+          "post_giveback_max_high_pct": 1.881228672537949,
+          "post_giveback_max_close_pct": 1.8059790467207293
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-21T09:35:00+00:00",
+          "mfe_at_hit_pct": 2.1286125657177024,
+          "giveback_at_hit_pct": 0.4680780873405664,
+          "bars_remaining": 9,
+          "post_giveback_max_high_pct": 1.881228672537949,
+          "post_giveback_max_close_pct": 1.8059790467207293
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-21T09:45:00+00:00",
+          "mfe_at_hit_pct": 2.1286125657177024,
+          "giveback_at_hit_pct": 0.5976562449626106,
+          "bars_remaining": 7,
+          "post_giveback_max_high_pct": 1.5930172178567181,
+          "post_giveback_max_close_pct": 1.4162973328826656
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T08:45:00+00:00",
+      "entry": 83531.22,
+      "max_mfe_pct": 2.1173520511253097,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-21T09:35:00+00:00",
+          "mfe_at_hit_pct": 2.1173520511253097,
+          "giveback_at_hit_pct": 0.4680780873405664,
+          "bars_remaining": 10,
+          "post_giveback_max_high_pct": 1.869995434042493,
+          "post_giveback_max_close_pct": 1.7947541051118288
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-21T09:35:00+00:00",
+          "mfe_at_hit_pct": 2.1173520511253097,
+          "giveback_at_hit_pct": 0.4680780873405664,
+          "bars_remaining": 10,
+          "post_giveback_max_high_pct": 1.869995434042493,
+          "post_giveback_max_close_pct": 1.7947541051118288
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-21T09:45:00+00:00",
+          "mfe_at_hit_pct": 2.1173520511253097,
+          "giveback_at_hit_pct": 0.5976562449626106,
+          "bars_remaining": 8,
+          "post_giveback_max_high_pct": 1.5818157570307134,
+          "post_giveback_max_close_pct": 1.4051153568689578
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T08:50:00+00:00",
+      "entry": 83769.1,
+      "max_mfe_pct": 1.8273683255520146,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-21T09:35:00+00:00",
+          "mfe_at_hit_pct": 1.8273683255520146,
+          "giveback_at_hit_pct": 0.4680780873405664,
+          "bars_remaining": 11,
+          "post_giveback_max_high_pct": 1.5807141296731109,
+          "post_giveback_max_close_pct": 1.505686464340661
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-21T09:35:00+00:00",
+          "mfe_at_hit_pct": 1.8273683255520146,
+          "giveback_at_hit_pct": 0.4680780873405664,
+          "bars_remaining": 11,
+          "post_giveback_max_high_pct": 1.5807141296731109,
+          "post_giveback_max_close_pct": 1.505686464340661
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-21T09:45:00+00:00",
+          "mfe_at_hit_pct": 1.8273683255520146,
+          "giveback_at_hit_pct": 0.5976562449626106,
+          "bars_remaining": 9,
+          "post_giveback_max_high_pct": 1.2933527995406369,
+          "post_giveback_max_close_pct": 1.1171541773756566
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-21T19:35:00+00:00",
+      "entry": 86841.83,
+      "max_mfe_pct": 0.6377571730121323,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-22T08:40:00+00:00",
+      "entry": 85899.99,
+      "max_mfe_pct": 0.5562049541565806,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-22T08:45:00+00:00",
+      "entry": 86149.66,
+      "max_mfe_pct": 0.2647834013506323,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-22T08:50:00+00:00",
+      "entry": 86199.02,
+      "max_mfe_pct": 0.11714750353308823,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-22T13:35:00+00:00",
+      "entry": 86098.15,
+      "max_mfe_pct": 0.4325644627672043,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-23T04:25:00+00:00",
+      "entry": 87120.85,
+      "max_mfe_pct": 0.18100144798860462,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-23T22:10:00+00:00",
+      "entry": 84610.02,
+      "max_mfe_pct": 0.011795293276128938,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-24T13:35:00+00:00",
+      "entry": 84137.74,
+      "max_mfe_pct": 0.9564197944941233,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-24T13:40:00+00:00",
+      "entry": 84250.58,
+      "max_mfe_pct": 0.8212050290929751,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-25T00:10:00+00:00",
+      "entry": 84711.33,
+      "max_mfe_pct": 0.10055325539097826,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-25T11:10:00+00:00",
+      "entry": 85075.19,
+      "max_mfe_pct": 0.21135421501849994,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-26T08:35:00+00:00",
+      "entry": 84270.0,
+      "max_mfe_pct": 0.06830426011628088,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-26T08:40:00+00:00",
+      "entry": 84288.97,
+      "max_mfe_pct": 0.00491167468292808,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-26T15:40:00+00:00",
+      "entry": 84145.26,
+      "max_mfe_pct": 0.034547400530948735,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-26T15:55:00+00:00",
+      "entry": 84152.03,
+      "max_mfe_pct": 0.02649965782168806,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-27T02:10:00+00:00",
+      "entry": 84535.96,
+      "max_mfe_pct": 0.0047908605994351205,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-27T05:40:00+00:00",
+      "entry": 84556.0,
+      "max_mfe_pct": 0.09568806471451641,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-27T08:05:00+00:00",
+      "entry": 84811.32,
+      "max_mfe_pct": 0.15409499580951724,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-27T13:35:00+00:00",
+      "entry": 85004.61,
+      "max_mfe_pct": 0.05120898737138724,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-30T12:35:00+00:00",
+      "entry": 84494.9,
+      "max_mfe_pct": 1.3670055825854677,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-09-30T12:55:00+00:00",
+          "mfe_at_hit_pct": 1.2061082976605686,
+          "giveback_at_hit_pct": 0.2615712047150093,
+          "bars_remaining": 16,
+          "post_giveback_max_high_pct": 1.3670055825854677,
+          "post_giveback_max_close_pct": 1.3033567706453253
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-09-30T13:00:00+00:00",
+          "mfe_at_hit_pct": 1.2061082976605686,
+          "giveback_at_hit_pct": 0.32229810323455876,
+          "bars_remaining": 15,
+          "post_giveback_max_high_pct": 1.3670055825854677,
+          "post_giveback_max_close_pct": 1.3033567706453253
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-09-30T13:25:00+00:00",
+          "mfe_at_hit_pct": 1.3670055825854677,
+          "giveback_at_hit_pct": 0.5393464911538152,
+          "bars_remaining": 10,
+          "post_giveback_max_high_pct": 1.2640999634297545,
+          "post_giveback_max_close_pct": 0.8699933368759627
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-30T12:40:00+00:00",
+      "entry": 84839.06,
+      "max_mfe_pct": 0.9557979543856288,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-30T12:50:00+00:00",
+      "entry": 85139.31,
+      "max_mfe_pct": 0.5997699535032597,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-09-30T12:55:00+00:00",
+      "entry": 85483.75,
+      "max_mfe_pct": 0.19442291663620548,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-01T13:40:00+00:00",
+      "entry": 83806.01,
+      "max_mfe_pct": 1.119239539025907,
+      "big_winner": true,
+      "giveback_events": {
+        "0.2": {
+          "hit": true,
+          "time": "2026-10-01T15:05:00+00:00",
+          "mfe_at_hit_pct": 1.119239539025907,
+          "giveback_at_hit_pct": 1.0073987538940887,
+          "bars_remaining": 3,
+          "post_giveback_max_high_pct": 0.5284227229049643,
+          "post_giveback_max_close_pct": 0.5115504246056002
+        },
+        "0.3": {
+          "hit": true,
+          "time": "2026-10-01T15:05:00+00:00",
+          "mfe_at_hit_pct": 1.119239539025907,
+          "giveback_at_hit_pct": 1.0073987538940887,
+          "bars_remaining": 3,
+          "post_giveback_max_high_pct": 0.5284227229049643,
+          "post_giveback_max_close_pct": 0.5115504246056002
+        },
+        "0.5": {
+          "hit": true,
+          "time": "2026-10-01T15:05:00+00:00",
+          "mfe_at_hit_pct": 1.119239539025907,
+          "giveback_at_hit_pct": 1.0073987538940887,
+          "bars_remaining": 3,
+          "post_giveback_max_high_pct": 0.5284227229049643,
+          "post_giveback_max_close_pct": 0.5115504246056002
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-01T13:45:00+00:00",
+      "entry": 83940.01,
+      "max_mfe_pct": 0.9578149919210244,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-01T14:10:00+00:00",
+      "entry": 84040.01,
+      "max_mfe_pct": 0.8376843363060216,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-02T04:30:00+00:00",
+      "entry": 86788.12,
+      "max_mfe_pct": 0.0,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-02T12:35:00+00:00",
+      "entry": 86829.39,
+      "max_mfe_pct": 0.36924133637239454,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-03T11:05:00+00:00",
+      "entry": 84644.5,
+      "max_mfe_pct": 0.32744005812546106,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-03T12:20:00+00:00",
+      "entry": 84794.75,
+      "max_mfe_pct": 0.19747684850772718,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-03T12:25:00+00:00",
+      "entry": 84860.91,
+      "max_mfe_pct": 0.11936002100376708,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-03T12:30:00+00:00",
+      "entry": 84861.41,
+      "max_mfe_pct": 0.11877012177854418,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-03T12:40:00+00:00",
+      "entry": 84896.01,
+      "max_mfe_pct": 0.07796597272358152,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-03T17:45:00+00:00",
+      "entry": 84988.49,
+      "max_mfe_pct": 0.057819594159158605,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-03T17:55:00+00:00",
+      "entry": 84980.01,
+      "max_mfe_pct": 0.06780418124217036,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-04T05:45:00+00:00",
+      "entry": 84923.68,
+      "max_mfe_pct": 0.17528679868794583,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    },
+    {
+      "entry_time": "2026-10-04T06:25:00+00:00",
+      "entry": 84961.99,
+      "max_mfe_pct": 0.25673833675505797,
+      "big_winner": false,
+      "giveback_events": {
+        "0.2": {
+          "hit": false
+        },
+        "0.3": {
+          "hit": false
+        },
+        "0.5": {
+          "hit": false
+        }
+      }
+    }
+  ]
+}
