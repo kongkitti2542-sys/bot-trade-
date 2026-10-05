@@ -14,9 +14,9 @@ Design:
 - Test data is never used to choose a gate.
 
 Walk-forward folds use one fetched 30D candle snapshot:
-  Fold 1: Train days 01-15 -> Test days 16-22
-  Fold 2: Train days 08-22 -> Test days 23-29
-  Fold 3: Train days 01-21 -> Test days 22-30
+  Fold 1: Train days 01-15 -> Test days 16-20
+  Fold 2: Train days 01-20 -> Test days 21-25
+  Fold 3: Train days 01-25 -> Test days 26-30
 
 The final OOS score is the chronological concatenation of all test folds.
 This deliberately avoids treating overlapping 1D/7D/30D windows as independent.
@@ -155,11 +155,11 @@ GATES = (
 # time; the entire 30D snapshot is fetched once and then split locally.
 FOLDS = (
     {"name": "FOLD_1", "train_start_day": 1, "train_end_day": 15,
-     "test_start_day": 16, "test_end_day": 22},
-    {"name": "FOLD_2", "train_start_day": 8, "train_end_day": 22,
-     "test_start_day": 23, "test_end_day": 29},
-    {"name": "FOLD_3", "train_start_day": 1, "train_end_day": 21,
-     "test_start_day": 22, "test_end_day": 30},
+     "test_start_day": 16, "test_end_day": 20},
+    {"name": "FOLD_2", "train_start_day": 1, "train_end_day": 20,
+     "test_start_day": 21, "test_end_day": 25},
+    {"name": "FOLD_3", "train_start_day": 1, "train_end_day": 25,
+     "test_start_day": 26, "test_end_day": 30},
 )
 
 OUTPUT_FILE = Path(
