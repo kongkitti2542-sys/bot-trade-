@@ -1,0 +1,219 @@
+{
+  "research_version": "MONEY_MAKER_01_FIELD_TEST_V1",
+  "standard": {
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT"
+    ],
+    "interval": "5m",
+    "windows": {
+      "1D": 288,
+      "7D": 2016,
+      "30D": 8640
+    },
+    "horizon_bars": 10,
+    "starting_pot_thb": 1500.0,
+    "round_trip_cost_pct": 0.13999999999999999,
+    "position_size_policy": "DYNAMIC_FROM_CURRENT_POT",
+    "pot_compounding": "PROFIT_AND_LOSS_FLOW_TO_NEXT_TRADE",
+    "entry_rules": "EXACT_MONEY_MAKER_01_BASELINE",
+    "entry_overlap": "BLOCKED",
+    "lookahead_blocked": true,
+    "ai_used": false,
+    "regime_filter": false,
+    "quality_gate": false,
+    "production_changed": false
+  },
+  "results": {
+    "BTCUSDT": {
+      "1D": {
+        "candidates": 6,
+        "trades": 4,
+        "skipped_overlap": 2,
+        "wins": 1,
+        "losses": 3,
+        "win_rate_pct": 25.0,
+        "profit_factor": 0.2025322148704935,
+        "net_profit_thb": -1.5390853355406762,
+        "ending_pot_thb": 1498.4609146644593,
+        "active_days": 2,
+        "positive_days": 0,
+        "positive_day_rate_pct": 0.0,
+        "avg_daily_net_thb": -0.769542667770336
+      },
+      "7D": {
+        "candidates": 25,
+        "trades": 13,
+        "skipped_overlap": 12,
+        "wins": 3,
+        "losses": 10,
+        "win_rate_pct": 23.076923076923077,
+        "profit_factor": 0.4801331506289646,
+        "net_profit_thb": -4.507896536863882,
+        "ending_pot_thb": 1495.4921034631361,
+        "active_days": 6,
+        "positive_days": 2,
+        "positive_day_rate_pct": 33.33333333333333,
+        "avg_daily_net_thb": -0.7513160894773271
+      },
+      "30D": {
+        "candidates": 87,
+        "trades": 46,
+        "skipped_overlap": 41,
+        "wins": 12,
+        "losses": 34,
+        "win_rate_pct": 26.08695652173913,
+        "profit_factor": 0.7709308942127238,
+        "net_profit_thb": -8.372855940521504,
+        "ending_pot_thb": 1491.6271440594785,
+        "active_days": 25,
+        "positive_days": 9,
+        "positive_day_rate_pct": 36.0,
+        "avg_daily_net_thb": -0.33491423762082895
+      }
+    },
+    "ETHUSDT": {
+      "1D": {
+        "candidates": 5,
+        "trades": 2,
+        "skipped_overlap": 3,
+        "wins": 1,
+        "losses": 1,
+        "win_rate_pct": 50.0,
+        "profit_factor": 4.575715230726827,
+        "net_profit_thb": 1.2079639869859875,
+        "ending_pot_thb": 1501.207963986986,
+        "active_days": 1,
+        "positive_days": 1,
+        "positive_day_rate_pct": 100.0,
+        "avg_daily_net_thb": 1.2079639869859757
+      },
+      "7D": {
+        "candidates": 24,
+        "trades": 15,
+        "skipped_overlap": 9,
+        "wins": 3,
+        "losses": 12,
+        "win_rate_pct": 20.0,
+        "profit_factor": 0.12827010128690566,
+        "net_profit_thb": -14.045144905618372,
+        "ending_pot_thb": 1485.9548550943816,
+        "active_days": 7,
+        "positive_days": 1,
+        "positive_day_rate_pct": 14.285714285714285,
+        "avg_daily_net_thb": -2.0064492722312055
+      },
+      "30D": {
+        "candidates": 94,
+        "trades": 50,
+        "skipped_overlap": 44,
+        "wins": 13,
+        "losses": 37,
+        "win_rate_pct": 26.0,
+        "profit_factor": 0.3707034345496798,
+        "net_profit_thb": -43.817309869262544,
+        "ending_pot_thb": 1456.1826901307375,
+        "active_days": 28,
+        "positive_days": 8,
+        "positive_day_rate_pct": 28.57142857142857,
+        "avg_daily_net_thb": -1.5649039239021878
+      }
+    },
+    "BNBUSDT": {
+      "1D": {
+        "candidates": 6,
+        "trades": 4,
+        "skipped_overlap": 2,
+        "wins": 1,
+        "losses": 3,
+        "win_rate_pct": 25.0,
+        "profit_factor": 0.5983584086812069,
+        "net_profit_thb": -1.9983369726887759,
+        "ending_pot_thb": 1498.0016630273112,
+        "active_days": 2,
+        "positive_days": 0,
+        "positive_day_rate_pct": 0.0,
+        "avg_daily_net_thb": -0.9991684863442984
+      },
+      "7D": {
+        "candidates": 19,
+        "trades": 9,
+        "skipped_overlap": 10,
+        "wins": 1,
+        "losses": 8,
+        "win_rate_pct": 11.11111111111111,
+        "profit_factor": 0.31026384039137306,
+        "net_profit_thb": -6.597930358124586,
+        "ending_pot_thb": 1493.4020696418754,
+        "active_days": 5,
+        "positive_days": 0,
+        "positive_day_rate_pct": 0.0,
+        "avg_daily_net_thb": -1.3195860716249477
+      },
+      "30D": {
+        "candidates": 57,
+        "trades": 32,
+        "skipped_overlap": 25,
+        "wins": 7,
+        "losses": 25,
+        "win_rate_pct": 21.875,
+        "profit_factor": 0.23562529892228876,
+        "net_profit_thb": -33.26716224750476,
+        "ending_pot_thb": 1466.7328377524952,
+        "active_days": 20,
+        "positive_days": 4,
+        "positive_day_rate_pct": 20.0,
+        "avg_daily_net_thb": -1.6633581123752392
+      }
+    },
+    "SOLUSDT": {
+      "1D": {
+        "candidates": 2,
+        "trades": 1,
+        "skipped_overlap": 1,
+        "wins": 0,
+        "losses": 1,
+        "win_rate_pct": 0.0,
+        "profit_factor": 0.0,
+        "net_profit_thb": -1.2935686178061587,
+        "ending_pot_thb": 1498.7064313821938,
+        "active_days": 1,
+        "positive_days": 0,
+        "positive_day_rate_pct": 0.0,
+        "avg_daily_net_thb": -1.2935686178061978
+      },
+      "7D": {
+        "candidates": 12,
+        "trades": 8,
+        "skipped_overlap": 4,
+        "wins": 1,
+        "losses": 7,
+        "win_rate_pct": 12.5,
+        "profit_factor": 0.28254839086367517,
+        "net_profit_thb": -7.235431386695382,
+        "ending_pot_thb": 1492.7645686133046,
+        "active_days": 3,
+        "positive_days": 1,
+        "positive_day_rate_pct": 33.33333333333333,
+        "avg_daily_net_thb": -2.411810462231751
+      },
+      "30D": {
+        "candidates": 53,
+        "trades": 32,
+        "skipped_overlap": 21,
+        "wins": 10,
+        "losses": 22,
+        "win_rate_pct": 31.25,
+        "profit_factor": 0.6186453180619749,
+        "net_profit_thb": -18.271390591969976,
+        "ending_pot_thb": 1481.72860940803,
+        "active_days": 21,
+        "positive_days": 8,
+        "positive_day_rate_pct": 38.095238095238095,
+        "avg_daily_net_thb": -0.8700662186652407
+      }
+    }
+  }
+}
