@@ -118,7 +118,7 @@ def build_candidates(candles):
     return rows
 
 
-def select_non_overlapping(candles, candidates):
+def select_non_overlapping(candles, candidates, timeframe):
     selected = []
     active_until = -1
     skipped = 0
@@ -130,10 +130,10 @@ def select_non_overlapping(candles, candidates):
             continue
 
         selected.append(c)
-        # For this diagnostic, an observation window is 8h.
-        # Non-overlap prevents one market move from contributing
-        # multiple simultaneous entries.
-        active_until = idx + 1
+        # Non-overlap uses the full 8h observation window.
+        # This prevents one market move from contributing multiple
+        # simultaneous entries to the TP statistics.
+        active_until = idx + bars_for_minutes(timeframe, CONTEXT_HORIZON_MINUTES)
 
     return selected, skipped
 
@@ -163,7 +163,7 @@ def analyze(candles, candidates, timeframe):
         CONTEXT_HORIZON_MINUTES,
     )
 
-    selected, skipped = select_non_overlapping(candles, candidates)
+    selected, skipped = select_non_overlapping(candles, candidates, timeframe)
 
     rows = []
 
