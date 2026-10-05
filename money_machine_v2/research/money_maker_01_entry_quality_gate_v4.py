@@ -5,6 +5,8 @@ OOS Pot across chronological test folds.
 
 This version is a methodology correction of V3, not a production change.
 
+A trade is included in a fold only when its H10 exit also remains inside that fold.
+
 Rules:
 - BTCUSDT 5m, one 30D closed-candle snapshot.
 - H10 evaluation.
@@ -287,16 +289,38 @@ def evaluate_gate_from_candidates(candles, base_candidates, gate):
     }
 
 
-def split_candidates(candidates, first_day, fold, which):
+def split_candidates(candidates, candles, first_day, fold, which):
     if which == "train":
         start_day, end_day = fold["train_start_day"], fold["train_end_day"]
     else:
         start_day, end_day = fold["test_start_day"], fold["test_end_day"]
 
-    return [
-        c for c in candidates
-        if start_day <= day_number(c["signal_time"], first_day) <= end_day
-    ]
+    candle_index = {c["time"]: i for i, c in enumerate(candles)}
+    rows = []
+
+    for candidate in candidates:
+        signal_day = day_number(candidate["signal_time"], first_day)
+        if not (start_day <= signal_day <= end_day):
+            continue
+
+        entry_index = candle_index.get(candidate["entry_time"])
+        if entry_index is None:
+            continue
+
+        exit_index = entry_index + EVALUATION_HORIZON
+        if exit_index >= len(candles):
+            continue
+
+        # A trade must fully finish inside the same train/test fold.
+        # This prevents horizon spill from train into test or from one OOS
+        # fold into the next OOS fold.
+        exit_day = day_number(candles[exit_index]["time"], first_day)
+        if exit_day > end_day:
+            continue
+
+        rows.append(candidate)
+
+    return rows
 
 
 def select_gate(train_results):
@@ -426,8 +450,8 @@ def main():
     selected_by_fold = []
 
     for fold in FOLDS:
-        train_candidates = split_candidates(all_candidates, first_day, fold, "train")
-        test_candidates = split_candidates(all_candidates, first_day, fold, "test")
+        train_candidates = split_candidates(all_candidates, candles, first_day, fold, "train")
+        test_candidates = split_candidates(all_candidates, candles, first_day, fold, "test")
 
         train_results = {
             gate["name"]: evaluate_gate_from_candidates(candles, train_candidates, gate)
