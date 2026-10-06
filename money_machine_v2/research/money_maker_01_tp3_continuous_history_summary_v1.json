@@ -1,0 +1,200 @@
+{
+  "research": {
+    "version": "MONEY_MAKER_01_TP3_CONTINUOUS_HISTORY_AUDIT_V1",
+    "research_only": true,
+    "historical_discovery_limit": 100000,
+    "tp_pct": 3.0,
+    "fallback_exit_bars": 20,
+    "starting_pot_thb": 1500.0,
+    "round_trip_cost_pct": 0.13999999999999999,
+    "windows": [
+      "1D",
+      "7D",
+      "30D"
+    ],
+    "universe": [
+      {
+        "symbol": "SOLUSDT",
+        "interval": "30m"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "interval": "15m"
+      },
+      {
+        "symbol": "SOLUSDT",
+        "interval": "15m"
+      }
+    ],
+    "candidate_detection_on_full_history": true,
+    "window_type": "rolling_historical_diagnostic",
+    "window_overlap_across_anchors": true,
+    "ai_used": false,
+    "regime_filter_used": false,
+    "profit_lock_used": false,
+    "giveback_used": false,
+    "production_changed": false,
+    "tax_included": false
+  },
+  "results": [
+    {
+      "symbol": "SOLUSDT",
+      "interval": "30m",
+      "candles": 100000,
+      "first_candle": "2021-01-21T09:30:00+00:00",
+      "last_candle": "2026-10-06T09:30:00+00:00",
+      "candidates_found": 885,
+      "resolved_candidates": 885,
+      "window_summary": {
+        "1D": {
+          "windows_total": 2084,
+          "windows_with_trades": 278,
+          "positive_windows": 203,
+          "positive_window_rate_pct": 73.02158273381295,
+          "mean_net_profit_thb": 4.983261935553303,
+          "best_window_net_profit_thb": 43.36229957551495,
+          "worst_window_net_profit_thb": -24.983963606410043,
+          "total_trade_observations": 358,
+          "total_wins": 272,
+          "total_losses": 86,
+          "tp_hits": 231,
+          "fallback_fixed_horizon": 127
+        },
+        "7D": {
+          "windows_total": 2084,
+          "windows_with_trades": 1600,
+          "positive_windows": 932,
+          "positive_window_rate_pct": 58.25,
+          "mean_net_profit_thb": 2.5986507131789365,
+          "best_window_net_profit_thb": 61.3132402491442,
+          "worst_window_net_profit_thb": -73.80015185283742,
+          "total_trade_observations": 3926,
+          "total_wins": 2408,
+          "total_losses": 1518,
+          "tp_hits": 1803,
+          "fallback_fixed_horizon": 2123
+        },
+        "30D": {
+          "windows_total": 2084,
+          "windows_with_trades": 2076,
+          "positive_windows": 1208,
+          "positive_window_rate_pct": 58.1888246628131,
+          "mean_net_profit_thb": 7.136694750472979,
+          "best_window_net_profit_thb": 156.43729318248074,
+          "worst_window_net_profit_thb": -82.34304977790134,
+          "total_trade_observations": 17501,
+          "total_wins": 10561,
+          "total_losses": 6940,
+          "tp_hits": 7803,
+          "fallback_fixed_horizon": 9698
+        }
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "interval": "15m",
+      "candles": 100000,
+      "first_candle": "2023-11-29T18:00:00+00:00",
+      "last_candle": "2026-10-06T09:45:00+00:00",
+      "candidates_found": 1136,
+      "resolved_candidates": 1136,
+      "window_summary": {
+        "1D": {
+          "windows_total": 1042,
+          "windows_with_trades": 455,
+          "positive_windows": 216,
+          "positive_window_rate_pct": 47.47252747252747,
+          "mean_net_profit_thb": -0.2020520994155764,
+          "best_window_net_profit_thb": 52.07769946432154,
+          "worst_window_net_profit_thb": -38.62706196385011,
+          "total_trade_observations": 577,
+          "total_wins": 283,
+          "total_losses": 294,
+          "tp_hits": 80,
+          "fallback_fixed_horizon": 497
+        },
+        "7D": {
+          "windows_total": 1042,
+          "windows_with_trades": 1026,
+          "positive_windows": 492,
+          "positive_window_rate_pct": 47.953216374269005,
+          "mean_net_profit_thb": -0.7247300242666416,
+          "best_window_net_profit_thb": 46.37253977608748,
+          "worst_window_net_profit_thb": -52.969380248930065,
+          "total_trade_observations": 4390,
+          "total_wins": 2151,
+          "total_losses": 2239,
+          "tp_hits": 596,
+          "fallback_fixed_horizon": 3794
+        },
+        "30D": {
+          "windows_total": 1042,
+          "windows_with_trades": 1041,
+          "positive_windows": 475,
+          "positive_window_rate_pct": 45.629202689721424,
+          "mean_net_profit_thb": -3.2386771609764677,
+          "best_window_net_profit_thb": 65.64867011537922,
+          "worst_window_net_profit_thb": -75.78135819047316,
+          "total_trade_observations": 18822,
+          "total_wins": 9224,
+          "total_losses": 9598,
+          "tp_hits": 2566,
+          "fallback_fixed_horizon": 16256
+        }
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "interval": "15m",
+      "candles": 100000,
+      "first_candle": "2023-11-29T18:00:00+00:00",
+      "last_candle": "2026-10-06T09:45:00+00:00",
+      "candidates_found": 828,
+      "resolved_candidates": 828,
+      "window_summary": {
+        "1D": {
+          "windows_total": 1042,
+          "windows_with_trades": 354,
+          "positive_windows": 182,
+          "positive_window_rate_pct": 51.41242937853108,
+          "mean_net_profit_thb": -0.02499399906115687,
+          "best_window_net_profit_thb": 25.42420681396652,
+          "worst_window_net_profit_thb": -32.37464584674831,
+          "total_trade_observations": 424,
+          "total_wins": 221,
+          "total_losses": 203,
+          "tp_hits": 93,
+          "fallback_fixed_horizon": 331
+        },
+        "7D": {
+          "windows_total": 1042,
+          "windows_with_trades": 982,
+          "positive_windows": 518,
+          "positive_window_rate_pct": 52.74949083503056,
+          "mean_net_profit_thb": 0.10906124472439735,
+          "best_window_net_profit_thb": 52.74731870616415,
+          "worst_window_net_profit_thb": -60.444072963514145,
+          "total_trade_observations": 3242,
+          "total_wins": 1707,
+          "total_losses": 1535,
+          "tp_hits": 685,
+          "fallback_fixed_horizon": 2557
+        },
+        "30D": {
+          "windows_total": 1042,
+          "windows_with_trades": 1041,
+          "positive_windows": 518,
+          "positive_window_rate_pct": 49.75984630163304,
+          "mean_net_profit_thb": 0.4146927518246325,
+          "best_window_net_profit_thb": 101.54190587067569,
+          "worst_window_net_profit_thb": -93.45580413473135,
+          "total_trade_observations": 13865,
+          "total_wins": 7335,
+          "total_losses": 6530,
+          "tp_hits": 2909,
+          "fallback_fixed_horizon": 10956
+        }
+      }
+    }
+  ]
+}
