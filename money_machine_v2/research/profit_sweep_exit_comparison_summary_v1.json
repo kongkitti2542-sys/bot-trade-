@@ -1,0 +1,311 @@
+{
+  "research": {
+    "version": "PROFIT_SWEEP_EXIT_COMPARISON_V1",
+    "research_only": true,
+    "starting_trading_pot_thb": 1500.0,
+    "round_trip_cost_pct": 0.13999999999999999,
+    "tp_pct": 3.0,
+    "fallback_bars": 20,
+    "history_limit": 100000,
+    "windows": [
+      "1D",
+      "7D",
+      "30D"
+    ],
+    "profit_sweep": "positive_net_pnl_to_reserve",
+    "reserve_replenishes_trading_pot": false,
+    "ai_used": false,
+    "production_changed": false,
+    "tax_included": false
+  },
+  "results": [
+    {
+      "symbol": "SOLUSDT",
+      "interval": "30m",
+      "candles": 100000,
+      "first_candle": "2021-01-21T09:30:00+00:00",
+      "last_candle": "2026-10-06T09:30:00+00:00",
+      "candidates_found": 885,
+      "strategies": {
+        "A_FIXED_20": {
+          "window_summary": {
+            "1D": {
+              "windows_total": 2084,
+              "windows_with_trades": 174,
+              "mean_reserve_thb": 4.925080743465671,
+              "mean_total_profit_thb": 1.5372191379629152,
+              "best_reserve_thb": 46.00521914808925,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 93,
+              "positive_reserve_window_rate_pct": 53.44827586206896,
+              "total_trade_observations": 177,
+              "total_tp3_hits": 0,
+              "total_fixed_horizon_exits": 177
+            },
+            "7D": {
+              "windows_total": 2084,
+              "windows_with_trades": 1579,
+              "mean_reserve_thb": 9.750958316850031,
+              "mean_total_profit_thb": 2.332552073884766,
+              "best_reserve_thb": 125.96622827522752,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 1117,
+              "positive_reserve_window_rate_pct": 70.74097530082331,
+              "total_trade_observations": 2989,
+              "total_tp3_hits": 0,
+              "total_fixed_horizon_exits": 2989
+            },
+            "30D": {
+              "windows_total": 2084,
+              "windows_with_trades": 2075,
+              "mean_reserve_thb": 33.8768444072118,
+              "mean_total_profit_thb": 7.9823753697625595,
+              "best_reserve_thb": 249.21566719083128,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 1984,
+              "positive_reserve_window_rate_pct": 95.61445783132531,
+              "total_trade_observations": 13670,
+              "total_tp3_hits": 0,
+              "total_fixed_horizon_exits": 13670
+            }
+          }
+        },
+        "B_TP3_FALLBACK_20": {
+          "window_summary": {
+            "1D": {
+              "windows_total": 2084,
+              "windows_with_trades": 278,
+              "mean_reserve_thb": 7.109688297502928,
+              "mean_total_profit_thb": 4.9724337271314925,
+              "best_reserve_thb": 42.90000000000003,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 205,
+              "positive_reserve_window_rate_pct": 73.7410071942446,
+              "total_trade_observations": 358,
+              "total_tp3_hits": 231,
+              "total_fixed_horizon_exits": 127
+            },
+            "7D": {
+              "windows_total": 2084,
+              "windows_with_trades": 1600,
+              "mean_reserve_thb": 10.30393950297354,
+              "mean_total_profit_thb": 2.5837869822758277,
+              "best_reserve_thb": 61.7125735091873,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 1223,
+              "positive_reserve_window_rate_pct": 76.4375,
+              "total_trade_observations": 3926,
+              "total_tp3_hits": 1803,
+              "total_fixed_horizon_exits": 2123
+            },
+            "30D": {
+              "windows_total": 2084,
+              "windows_with_trades": 2076,
+              "mean_reserve_thb": 34.348505304171304,
+              "mean_total_profit_thb": 7.038761056555456,
+              "best_reserve_thb": 154.57060824167462,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 2000,
+              "positive_reserve_window_rate_pct": 96.33911368015414,
+              "total_trade_observations": 17501,
+              "total_tp3_hits": 7803,
+              "total_fixed_horizon_exits": 9698
+            }
+          }
+        }
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "interval": "15m",
+      "candles": 100000,
+      "first_candle": "2023-11-29T18:15:00+00:00",
+      "last_candle": "2026-10-06T10:00:00+00:00",
+      "candidates_found": 1136,
+      "strategies": {
+        "A_FIXED_20": {
+          "window_summary": {
+            "1D": {
+              "windows_total": 1042,
+              "windows_with_trades": 451,
+              "mean_reserve_thb": 2.9217073004426966,
+              "mean_total_profit_thb": -0.39089739720968,
+              "best_reserve_thb": 42.66957656185105,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 229,
+              "positive_reserve_window_rate_pct": 50.77605321507761,
+              "total_trade_observations": 528,
+              "total_tp3_hits": 0,
+              "total_fixed_horizon_exits": 528
+            },
+            "7D": {
+              "windows_total": 1042,
+              "windows_with_trades": 1026,
+              "mean_reserve_thb": 10.118557482114948,
+              "mean_total_profit_thb": -0.8536364810175595,
+              "best_reserve_thb": 54.38019876250857,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 872,
+              "positive_reserve_window_rate_pct": 84.99025341130604,
+              "total_trade_observations": 4053,
+              "total_tp3_hits": 0,
+              "total_fixed_horizon_exits": 4053
+            },
+            "30D": {
+              "windows_total": 1042,
+              "windows_with_trades": 1041,
+              "mean_reserve_thb": 42.455624479918754,
+              "mean_total_profit_thb": -3.4550514182083534,
+              "best_reserve_thb": 104.74884197536949,
+              "worst_reserve_thb": 2.7609519675926064,
+              "positive_reserve_windows": 1041,
+              "positive_reserve_window_rate_pct": 100.0,
+              "total_trade_observations": 17389,
+              "total_tp3_hits": 0,
+              "total_fixed_horizon_exits": 17389
+            }
+          }
+        },
+        "B_TP3_FALLBACK_20": {
+          "window_summary": {
+            "1D": {
+              "windows_total": 1042,
+              "windows_with_trades": 455,
+              "mean_reserve_thb": 3.2277063844535965,
+              "mean_total_profit_thb": -0.2052352161302554,
+              "best_reserve_thb": 51.37053205641085,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 238,
+              "positive_reserve_window_rate_pct": 52.307692307692314,
+              "total_trade_observations": 577,
+              "total_tp3_hits": 80,
+              "total_fixed_horizon_exits": 497
+            },
+            "7D": {
+              "windows_total": 1042,
+              "windows_with_trades": 1026,
+              "mean_reserve_thb": 10.727126373751831,
+              "mean_total_profit_thb": -0.7250454291820844,
+              "best_reserve_thb": 58.01194347089472,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 880,
+              "positive_reserve_window_rate_pct": 85.7699805068226,
+              "total_trade_observations": 4390,
+              "total_tp3_hits": 596,
+              "total_fixed_horizon_exits": 3794
+            },
+            "30D": {
+              "windows_total": 1042,
+              "windows_with_trades": 1041,
+              "mean_reserve_thb": 44.71079913684906,
+              "mean_total_profit_thb": -3.1288665846070938,
+              "best_reserve_thb": 98.47153371896479,
+              "worst_reserve_thb": 2.7609519675926064,
+              "positive_reserve_windows": 1041,
+              "positive_reserve_window_rate_pct": 100.0,
+              "total_trade_observations": 18822,
+              "total_tp3_hits": 2566,
+              "total_fixed_horizon_exits": 16256
+            }
+          }
+        }
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "interval": "15m",
+      "candles": 100000,
+      "first_candle": "2023-11-29T18:30:00+00:00",
+      "last_candle": "2026-10-06T10:15:00+00:00",
+      "candidates_found": 828,
+      "strategies": {
+        "A_FIXED_20": {
+          "window_summary": {
+            "1D": {
+              "windows_total": 1042,
+              "windows_with_trades": 349,
+              "mean_reserve_thb": 3.3244023857967946,
+              "mean_total_profit_thb": -0.45919773572250844,
+              "best_reserve_thb": 43.94553666792036,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 175,
+              "positive_reserve_window_rate_pct": 50.1432664756447,
+              "total_trade_observations": 379,
+              "total_tp3_hits": 0,
+              "total_fixed_horizon_exits": 379
+            },
+            "7D": {
+              "windows_total": 1042,
+              "windows_with_trades": 982,
+              "mean_reserve_thb": 9.201490446565787,
+              "mean_total_profit_thb": -0.811300400948081,
+              "best_reserve_thb": 53.90501469787028,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 813,
+              "positive_reserve_window_rate_pct": 82.79022403258655,
+              "total_trade_observations": 2941,
+              "total_tp3_hits": 0,
+              "total_fixed_horizon_exits": 2941
+            },
+            "30D": {
+              "windows_total": 1042,
+              "windows_with_trades": 1041,
+              "mean_reserve_thb": 36.97995435000826,
+              "mean_total_profit_thb": -3.030760317692933,
+              "best_reserve_thb": 106.13536201282305,
+              "worst_reserve_thb": 4.768268522888157,
+              "positive_reserve_windows": 1041,
+              "positive_reserve_window_rate_pct": 100.0,
+              "total_trade_observations": 12617,
+              "total_tp3_hits": 0,
+              "total_fixed_horizon_exits": 12617
+            }
+          }
+        },
+        "B_TP3_FALLBACK_20": {
+          "window_summary": {
+            "1D": {
+              "windows_total": 1042,
+              "windows_with_trades": 354,
+              "mean_reserve_thb": 3.7566533653570118,
+              "mean_total_profit_thb": -0.02654623150326797,
+              "best_reserve_thb": 32.17500000000001,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 184,
+              "positive_reserve_window_rate_pct": 51.9774011299435,
+              "total_trade_observations": 424,
+              "total_tp3_hits": 93,
+              "total_fixed_horizon_exits": 331
+            },
+            "7D": {
+              "windows_total": 1042,
+              "windows_with_trades": 982,
+              "mean_reserve_thb": 10.266254473527926,
+              "mean_total_profit_thb": 0.10435592993427581,
+              "best_reserve_thb": 57.81701825806745,
+              "worst_reserve_thb": 0.0,
+              "positive_reserve_windows": 823,
+              "positive_reserve_window_rate_pct": 83.80855397148676,
+              "total_trade_observations": 3242,
+              "total_tp3_hits": 685,
+              "total_fixed_horizon_exits": 2557
+            },
+            "30D": {
+              "windows_total": 1042,
+              "windows_with_trades": 1041,
+              "mean_reserve_thb": 40.9259883411563,
+              "mean_total_profit_thb": 0.4199990581620464,
+              "best_reserve_thb": 121.69431376937827,
+              "worst_reserve_thb": 5.22787643821912,
+              "positive_reserve_windows": 1041,
+              "positive_reserve_window_rate_pct": 100.0,
+              "total_trade_observations": 13865,
+              "total_tp3_hits": 2909,
+              "total_fixed_horizon_exits": 10956
+            }
+          }
+        }
+      }
+    }
+  ]
+}
